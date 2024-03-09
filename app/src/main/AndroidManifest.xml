@@ -319,12 +319,8 @@
             android:exported="false" />
         <activity
             android:name=".Home_page"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SliderView"
@@ -335,7 +331,11 @@
         <activity
             android:name=".Login.Login_pae"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

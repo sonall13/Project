@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ececec"
     tools:context=".Signup.SignUp_page">
 
     <LinearLayout
@@ -108,8 +109,7 @@
             android:layout_marginTop="20dp"
             android:text="Create Account"
             android:textSize="15sp"
-            android:backgroundTint="@color/black"
-            android:background="@drawable/btnbackgraund"/>
+            android:backgroundTint="#374254" />
 
     </LinearLayout>
 
