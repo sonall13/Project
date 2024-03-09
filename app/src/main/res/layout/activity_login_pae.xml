@@ -52,6 +52,7 @@
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEt"
+            android:text="sonalambaliya005@gmail.com"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"/>
@@ -75,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:text="123"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
