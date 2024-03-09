@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C3150"
+    tools:context=".JournalingActivity.Gratitude">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="save"
+        android:layout_marginTop="10dp"
+        android:background="#0C3150"
+        android:textColor="#5690C3"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily affirmation"
+        android:textColor="@color/white"
+        android:id="@+id/tt1"
+        android:layout_below="@+id/save"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:id="@+id/tff11"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:layout_below="@+id/tt1">
+        <EditText
+
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/ee1"
+            android:hint="write here......"
+            android:backgroundTint="#5690C3"
+            android:layout_below="@+id/tt1"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's heighlight."
+        android:textColor="@color/white"
+        android:id="@+id/t1"
+        android:layout_below="@+id/tt1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/textb1"
+        android:text="1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1"
+        android:textSize="18sp"
+        android:clickable="false"
+        android:filterTouchesWhenObscured="true"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:padding="7dp"/>
+    <EditText
+
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:backgroundTint="#5690C3"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/textb1"
+        android:layout_below="@+id/t1" />
+
+    <TextView
+        android:id="@+id/textb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="2"
+        android:textColor="@color/white"
+        android:clickable="false"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/textb1"
+        android:padding="7dp"/>
+    <EditText
+
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/textb2"
+        android:backgroundTint="#5690C3"
+        android:layout_below="@+id/textb1" />
+
+    <TextView
+        android:id="@+id/textb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="3"
+        android:textColor="@color/white"
+        android:clickable="false"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/textb2"
+        android:padding="7dp"/>
+    <EditText
+
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/textb3"
+        android:backgroundTint="#5690C3"
+        android:layout_below="@+id/textb2" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" What i'm greatful for today?"
+        android:textColor="@color/white"
+        android:id="@+id/t3"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textb2"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:layout_below="@+id/t3">
+        <EditText
+
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="write here......"
+            android:backgroundTint="#5690C3"
+            android:layout_below="@+id/t1"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

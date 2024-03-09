@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#195283"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Bottumnavigation.SleepTrekarFregment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/sleep" />
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/card"
+                android:layout_width="400dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/img"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"
+                android:backgroundTint="#0C3150"
+                android:elevation="40dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="20dp">
+
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/img"
+                    android:layout_marginLeft="310dp"
+                    android:layout_toRightOf="@+id/card"
+                    android:backgroundTint="#0C3150"
+                    android:text=">"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/settext"
+                    android:layout_marginStart="200dp"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/img"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Sleep Goal"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="400dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/card"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:animationCache="true"
+                android:background="@color/black"
+                android:backgroundTint="#0C3150"
+                android:elevation="40dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="20dp">
+
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/img"
+                    android:layout_marginLeft="300dp"
+                    android:layout_toRightOf="@+id/card"
+                    android:backgroundTint="#0C3150"
+                    android:text="Set"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Bedtime Goal"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/card2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:animationCache="true"
+                android:background="@color/black"
+                android:backgroundTint="#0C3150"
+                android:elevation="40dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="20dp">
+
+                <Button
+                    android:id="@+id/b3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="300dp"
+                    android:text="set"
+                    android:backgroundTint="#0C3150"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Alarm"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sleeprec"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/card3"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

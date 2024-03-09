@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C3150"
+    tools:context=".JournalingActivity.FreeStyle">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="save"
+        android:layout_marginTop="10dp"
+        android:background="#0C3150"
+        android:textColor="#5690C3"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What's on your mind?"
+        android:textSize="20dp"
+        android:id="@+id/tt1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="20dp"
+        android:id="@+id/tff11"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:layout_below="@+id/tt1">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text=""
+            android:gravity="start"
+            android:id="@+id/ee1"
+            android:hint="write here......"
+            android:backgroundTint="#0C3150"
+            android:alpha="0.7"
+            android:layout_below="@+id/tt1"
+            android:textColor="@color/black"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

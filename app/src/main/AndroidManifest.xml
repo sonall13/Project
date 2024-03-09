@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Serene"
+        tools:targetApi="31">
+        <activity
+            android:name=".sleepHome.Alarm"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.BedtimeGoal"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.SleepGoal"
+            android:exported="false" />
+        <activity
+            android:name=".Login.ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Login.VerifyOtp"
+            android:exported="false" />
+        <activity
+            android:name=".Login.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JournalingActivity.Memories"
+            android:exported="false" />
+        <activity
+            android:name=".JournalingActivity.FreeStyle"
+            android:exported="false" />
+        <activity
+            android:name=".JournalingActivity.Gratitude"
+            android:exported="false" />
+        <activity
+            android:name=".JournalingActivity.NightJournalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JournalingActivity.MorningJournal"
+            android:exported="false" />
+        <activity
+            android:name=".StaminaSculptActivity.SculptifyStrenght"
+            android:exported="false" />
+        <activity
+            android:name=".StaminaSculptActivity.VigorVista"
+            android:exported="false" />
+        <activity
+            android:name=".StaminaSculptActivity.SculptStrong"
+            android:exported="false" />
+        <activity
+            android:name=".StaminaSculptActivity.SculptSquad"
+            android:exported="false" />
+        <activity
+            android:name=".StaminaSculptActivity.CoreCharge"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.RadiantRhythms"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.VibrantVista"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.VitalSpark"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.VitalFlow"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.Energize"
+            android:exported="false" />
+        <activity
+            android:name=".VitalVibeActivity.VitalityVortex"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveAuraActivity.EnergeticEden"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveAuraActivity.SparkSphere"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveAuraActivity.AuraAscend"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveAuraActivity.AuraActivator"
+            android:exported="false" />
+        <activity
+            android:name=".ActiveAuraActivity.DynamicGlow"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.AnlomVilom"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.SuryaNamskar"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.OmOasis"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.YogaEssence"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.Yogicjourney"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.SereneAsanas"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.NamasteNest"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.YogaVibe"
+            android:exported="false" />
+        <activity
+            android:name=".YogaActivity.yogazen"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.BalancedBite"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.CleanCuisine"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.HealthfulHaven"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.NutriNova"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.VibrantVeggies"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.CleanEatsCorner"
+            android:exported="false" />
+        <activity
+            android:name=".HealthyEatingActivity.WholesomeWell"
+            android:exported="false" />
+        <activity
+            android:name=".StretchingActivity.FlexibilityFocus"
+            android:exported="false" />
+        <activity
+            android:name=".StretchingActivity.StretchRevive"
+            android:exported="false" />
+        <activity
+            android:name=".StretchingActivity.FlexEase"
+            android:exported="false" />
+        <activity
+            android:name=".StretchingActivity.StretchSync"
+            android:exported="false" />
+        <activity
+            android:name=".StretchingActivity.FlexFlow"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.PeacefulPause"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.StressFreeZone"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.SereneSanctuary"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.StressEase"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.RelaxationRealm"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.StressBusterHub"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.SereneSolutions"
+            android:exported="false" />
+        <activity
+            android:name=".StressReduce.ChillOutCove"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.BlissfulBreak"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.TranquiTouches"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.CalmCoCoon"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.EmpowermentEden"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.SelfCareSage"
+            android:exported="false" />
+        <activity
+            android:name=".SelfCare.SerenitySelf"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.EncourageU"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.AffirmativeAura"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.ZenAffirm"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.InspireInfinity"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.AffirmArcade"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.ResilienceRise"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.DreamDestiny"
+            android:exported="false" />
+        <activity
+            android:name=".AffirmationActivity.GlowUpGrove"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.EaseAnx"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.CalmWave"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.ComfortCove"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.RelaxationRefuge"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.Calmcare"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.Harmonyheal"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.InnerCalmness"
+            android:exported="false" />
+        <activity
+            android:name=".AnxietyActivity.SereneSupport"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.SereneSoulSpace"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.serenitySphere"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.SereneSoul"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Concentrate"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Chakra"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.Calmcycles"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.ZenBreath"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.SootheSphere"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.Serenepulse"
+            android:exported="false" />
+        <activity
+            android:name=".PhysicalGealthcategory.PhysicalHealthCatRecycler"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Kindness"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Mantra"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Focused"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.Spiritual"
+            android:exported="false" />
+        <activity
+            android:name=".MeditationActivity.MindFulness"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.Wakeup"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.Focus"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.DeStress"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.AumChant"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingActivity.Deepdiaphragm"
+            android:exported="false" />
+        <activity
+            android:name=".MentalHealthCategorys.M_CtegoryFragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentalHealthCategorys.Anxiety"
+            android:exported="false" />
+        <activity
+            android:name=".Home_page"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SliderView"
+            android:exported="false" />
+        <activity
+            android:name=".Signup.SignUp_page"
+            android:exported="false" />
+        <activity
+            android:name=".Login.Login_pae"
+            android:exported="true">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+    </application>
+
+</manifest>
