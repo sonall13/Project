@@ -1,28 +1,23 @@
 package com.example.serene.Apidata
 
 import android.widget.ImageView
-import com.example.serene.JournalingActivity.Answers
+import com.example.serene.JournalingActivity.FreeStyleDataClass
 import com.example.serene.JournalingActivity.JournalingCreateDataClass
 import com.example.serene.JournalingActivity.MemoryDataClass
+import com.example.serene.JournalingActivity.ModelClassJournaling
+import com.example.serene.JournalingActivity.MyData
+import com.example.serene.JournalingActivity.Mymemories
 import com.example.serene.Login.ForgetpasswordData
 import com.example.serene.Login.LoginDataClass
 import com.example.serene.Login.ResetPassworddataClass
 import com.example.serene.Login.VerifyotpdataClass
 import com.example.serene.Signup.RegisterDataClass
-import com.google.gson.JsonObject
-import okhttp3.RequestBody
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
-import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.Header
-import retrofit2.http.Headers
-import retrofit2.http.Multipart
 import retrofit2.http.POST
-import retrofit2.http.Part
-import retrofit2.http.PartMap
 
 interface Myinterface {
 
@@ -69,17 +64,22 @@ interface Myinterface {
 ////        @Body partMap: HashMap<String, Any>,
 //    ): Call<JournalingCreateDataClass>
 
-    @FormUrlEncoded
     @POST("journaling/create")
-    fun create(
-        @Field("category") category: String,
-        @Field("answers") answers: HashMap<String ,Any>
+    fun create(@Header("token") token: String,
+               @Body answers: MyData
     ):Call<JournalingCreateDataClass>
 
-    @FormUrlEncoded
+
     @POST("journaling/memory")
     fun memory(
-        @Field("caption") caption: String,
-        @Field("image") image: ImageView
+        @Header("token") token: String,
+        @Body image : Mymemories
     ) : Call<MemoryDataClass>
+
+
+    @POST("journaling/freestyle")
+    fun freestyle(
+        @Header("token") token: String,
+        @Body text : String
+    ) : Call<FreeStyleDataClass>
 }

@@ -12,9 +12,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
+import com.example.serene.SplaseScreen
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,25 +54,32 @@ class Memories : AppCompatActivity() {
 
         savememory.setOnClickListener {
 
-            RetrofitInstance().method().memory(textarea.text.toString(),i1)
+            var token = SplaseScreen.sp.getString("token"," ")
+            Log.d("=memory-token", "onCreate: ${token}")
+4
+            var dataa = Mymemories(textarea.text.toString(),i1)
+            Log.d("===dataa===", "onCreate: ${dataa}")
+
+            RetrofitInstance().method().memory(token.toString(),dataa)
                 .enqueue(object : Callback<MemoryDataClass> {
                     override fun onResponse(
                         call: Call<MemoryDataClass>,
                         response: Response<MemoryDataClass>,
                     ) {
-                        Log.d("-=-=-=----", "onResponse: ${response.body()}")
+                        Log.d("memory-response=", "onResponse: ${response.body()}")
+                        if(response.body()?.status == "success"){
+
+                            Log.d("=g-status=", "onResponse: data entered")
+                            Toast.makeText(this@Memories, "data entered", Toast.LENGTH_SHORT).show()
+                        }
 
                     }
                     override fun onFailure(call: Call<MemoryDataClass>, t: Throwable) {
-                        Log.d("++__", "onFailure: ${t.localizedMessage}")
+                        Log.d("=memory-fail=", "onFailure: ${t.localizedMessage}")
                     }
                 })
 
-
         }
-
-
-
 
     }
 

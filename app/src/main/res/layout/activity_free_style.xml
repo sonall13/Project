@@ -17,7 +17,7 @@
         android:textStyle="bold"
         android:layout_alignParentRight="true"
         android:layout_height="wrap_content"
-        android:id="@+id/save"/>
+        android:id="@+id/savefreestyle"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_height="300dp"
             android:text=""
             android:gravity="start"
-            android:id="@+id/ee1"
+            android:id="@+id/freestyletext"
             android:hint="write here......"
             android:backgroundTint="#0C3150"
             android:alpha="0.7"

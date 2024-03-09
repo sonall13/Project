@@ -12,6 +12,7 @@ import com.example.serene.Home_page
 import com.example.serene.R
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.Signup.SignUp_page
+import com.example.serene.SplaseScreen
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -52,6 +53,8 @@ class Login_pae : AppCompatActivity() {
 
                         var dd = response.body()!!.token
 
+                        SplaseScreen.edit.putString("token",dd.toString())
+                        SplaseScreen.edit.apply()
                         Log.d("===", "onResponse: $dd ===")
 
                         if (response.body()!!.data.email.toString() == emailEt.text.toString() &&
@@ -60,7 +63,7 @@ class Login_pae : AppCompatActivity() {
                             pb.visibility= View.GONE
 
                             startActivity(Intent(this@Login_pae, Home_page::class.java).
-                            putExtra("token" , dd))
+                            putExtra("token" , dd.toString()))
                             finish()
 
 //                            dd = null

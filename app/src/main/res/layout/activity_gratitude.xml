@@ -17,14 +17,14 @@
         android:textStyle="bold"
         android:layout_marginLeft="320dp"
         android:layout_height="wrap_content"
-        android:id="@+id/save"/>
+        android:id="@+id/savegratitude"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Daily affirmation"
         android:textColor="@color/white"
         android:id="@+id/tt1"
-        android:layout_below="@+id/save"
+        android:layout_below="@+id/savegratitude"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:textSize="20dp"
@@ -43,7 +43,7 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/ee1"
+            android:id="@+id/firstanswer"
             android:hint="write here......"
             android:backgroundTint="#5690C3"
             android:layout_below="@+id/tt1"
@@ -75,6 +75,7 @@
         android:padding="7dp"/>
     <EditText
 
+        android:id="@+id/multianswer1"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text=""
@@ -96,6 +97,7 @@
         android:padding="7dp"/>
     <EditText
 
+        android:id="@+id/multianswer2"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text=""
@@ -117,6 +119,7 @@
         android:padding="7dp"/>
     <EditText
 
+        android:id="@+id/multianswer3"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:text=""
@@ -147,7 +150,7 @@
         app:cardCornerRadius="7dp"
         android:layout_below="@+id/t3">
         <EditText
-
+            android:id="@+id/thirdanswer"
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:text=""
