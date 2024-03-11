@@ -9,6 +9,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/idViewPager"
+        android:background="#1A2643"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -16,7 +17,7 @@
          a simple linear layout-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent"
         android:orientation="horizontal"
@@ -32,7 +33,7 @@
     <LinearLayout
         android:id="@+id/idLLDots"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:gravity="center_horizontal"
@@ -92,10 +93,12 @@
         android:layout_margin="10dp"
         android:layout_weight="2"
         android:padding="4dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:text="Skip"
-        android:background="@color/black"
+        android:backgroundTint="#374254"
         android:textAllCaps="false"
         android:textColor="@color/white" />
+
 
     </LinearLayout>
 

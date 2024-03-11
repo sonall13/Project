@@ -40,13 +40,13 @@ SliderAdapter(val context: Context,
         // on below line we are initializing our image view,
         // heading text view and description text view with their ids.
         var imageView: ImageView = view.findViewById(R.id.idIVSlider)
-        val sliderHeadingTV: TextView = view.findViewById(R.id.idTVSliderTitle)
+//        val sliderHeadingTV: TextView = view.findViewById(R.id.idTVSliderTitle)
         val sliderDescTV: TextView = view.findViewById(R.id.idTVSliderDescription)
 
         // on below line we are setting data to our text view
         // and image view on below line.
         val sliderData: SliderData = sliderList.get(position)
-        sliderHeadingTV.text = sliderData.slideTitle
+//        sliderHeadingTV.text = sliderData.slideTitle
         sliderDescTV.text = sliderData.slideDescription
         imageView.setImageResource(sliderData.slideImage)
 

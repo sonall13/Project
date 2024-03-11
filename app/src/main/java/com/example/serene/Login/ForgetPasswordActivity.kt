@@ -24,7 +24,6 @@ class ForgetPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forget_password)
 
-
         emailfield = findViewById(R.id.emailfield)
         verify = findViewById(R.id.verify)
         progressBar = findViewById(R.id.progressBar)

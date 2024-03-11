@@ -52,7 +52,7 @@ class SliderView : AppCompatActivity() {
                 "Improve Health",
                 "Learn to live more" +
                         "Mindfully",
-                R.drawable.applogo128, abc,"",""
+                R.drawable.slider1, abc,"",""
             )
         )
 
@@ -61,7 +61,7 @@ class SliderView : AppCompatActivity() {
                 "Reduce Stress",
                 "Calm your mind and " +
                         "Relex your mind",
-                R.drawable.headerback, abc,"",""
+                R.drawable.slider2, abc,"",""
             )
 
         )
@@ -71,7 +71,7 @@ class SliderView : AppCompatActivity() {
                 "Self care",
                 "Enhance your Mental" +
                         "physical energy levels",
-                R.drawable.applogo2, abc,"",""
+                R.drawable.sss, abc,"",""
             )
         )
 
