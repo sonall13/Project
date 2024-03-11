@@ -1,8 +1,11 @@
 package com.example.serene.JournalingActivity
 
 import android.widget.ImageView
+import com.google.gson.annotations.SerializedName
 
 data class Mymemories(
-    val category: String,
-    val image : ImageView
+
+    val caption: String,
+    val imageBase64: String
+
 )

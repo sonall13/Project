@@ -88,7 +88,7 @@ class SignUp_page : AppCompatActivity() {
 
             pb.visibility= View.VISIBLE
 
-            RetrofitInstance().method().myname("abcdefg",username.text.toString(),email.text.toString(),
+            RetrofitInstance().method().myname(username.text.toString(),email.text.toString(),
                 password.text.toString()).
             enqueue(object : Callback<RegisterDataClass> {
 

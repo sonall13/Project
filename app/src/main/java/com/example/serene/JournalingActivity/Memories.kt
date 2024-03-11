@@ -4,15 +4,16 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Base64
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
@@ -20,8 +21,14 @@ import com.example.serene.SplaseScreen
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.File
+import java.io.FileInputStream
+import java.io.IOException
+import kotlin.io.encoding.ExperimentalEncodingApi
 
 class Memories : AppCompatActivity() {
+
+    private var selectedImage: Uri? = null
 
     // One Preview Image
     lateinit var i1: ImageView
@@ -31,6 +38,7 @@ class Memories : AppCompatActivity() {
     private val PICK_IMAGE_REQUEST = 1
     private val READ_EXTERNAL_STORAGE_PERMISSION_CODE = 2
 
+    @OptIn(ExperimentalEncodingApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memories)
@@ -41,6 +49,8 @@ class Memories : AppCompatActivity() {
         textarea = findViewById(R.id.textarea)
         savememory = findViewById(R.id.savememory)
 
+
+
         i1.setOnClickListener {
 
             if (ContextCompat.checkSelfPermission(
@@ -50,17 +60,33 @@ class Memories : AppCompatActivity() {
             ) {
                 openGallery()
             }
+
+
         }
+
+
 
         savememory.setOnClickListener {
 
+            val imageBase64 = ImageUtils.imageToBase64(i2.drawable.toString())
+            Log.d("-=", "onCreate: ${imageBase64}")
+            val request =   Mymemories(textarea.text.toString() ,imageBase64 )
+
+//            val bitmap = (i2.getDrawable() as BitmapDrawable).bitmap
+//            val baos = ByteArrayOutputStream()
+//            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+//            val imageInByte = baos.toByteArray()
+//            var sImage= Base64.encode(imageInByte,0);
+//            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
+////            var img = P
+
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=memory-token", "onCreate: ${token}")
-4
-            var dataa = Mymemories(textarea.text.toString(),i1)
-            Log.d("===dataa===", "onCreate: ${dataa}")
 
-            RetrofitInstance().method().memory(token.toString(),dataa)
+//            var dataa = Mymemories(textarea.text.toString(),i2.drawable.toString())
+            Log.d("===dataa===", "onCreate: ${request}")
+
+            RetrofitInstance().method().memory(token!!,request)
                 .enqueue(object : Callback<MemoryDataClass> {
                     override fun onResponse(
                         call: Call<MemoryDataClass>,
@@ -92,7 +118,7 @@ class Memories : AppCompatActivity() {
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
-        grantResults: IntArray
+        grantResults: IntArray,
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == READ_EXTERNAL_STORAGE_PERMISSION_CODE) {
@@ -108,9 +134,10 @@ class Memories : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
-            val selectedImage: Uri? = data.data
+            selectedImage = data.data
             // Set the selected image URI in the ImageView
             i2.setImageURI(selectedImage)
+            Log.d("ppooopppppppp", "onActivityResult: ${selectedImage}")
             i1.visibility = View.INVISIBLE
             i2.setOnClickListener {
                 openGallery()
@@ -123,7 +150,25 @@ class Memories : AppCompatActivity() {
                 textarea.visibility = View.GONE
             }
         }
-
     }
 
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        // Now you have the URI of the selected image, you can proceed with uploading it via Retrofit
+//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null)
+//            selectedImageUri
+//    }
+
+    object ImageUtils {
+        @Throws(IOException::class)
+        fun imageToBase64(imagePath: String): String {
+            val file = File(imagePath)
+            val inputStream = FileInputStream(file)
+            val bytes = ByteArray(file.length().toInt())
+            inputStream.read(bytes)
+            inputStream.close()
+            return Base64.encodeToString(bytes, Base64.DEFAULT)
+        }
+
+    }
 }

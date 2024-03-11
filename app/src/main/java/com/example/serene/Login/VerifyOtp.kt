@@ -55,8 +55,6 @@ class VerifyOtp : AppCompatActivity() {
                             if(response.body()?.status == "success") {
 
                                 Log.d("+xcfdsf+_+_", "onResponse: ${response!!.body()!!.status}")
-
-
                                 var uid = response.body()!!.uid
 
                                 if (otp == otpfield.text.toString())

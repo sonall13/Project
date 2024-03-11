@@ -1,6 +1,7 @@
 package com.example.serene.Login
 
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +28,6 @@ class Login_pae : AppCompatActivity() {
      lateinit var pb : ProgressBar
      private lateinit var forgetbtn : Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_pae)
@@ -42,6 +42,21 @@ class Login_pae : AppCompatActivity() {
         loginbtn.setOnClickListener {
 
             pb.visibility= View.VISIBLE
+
+//            var ab = 0
+//            var select = RetrofitInstance()
+//           var   data = select.method().login(emailEt.text.toString(),passwordEt.text.toString())
+//
+//            while ()
+//            {
+////                ab = data.getInt(0)
+////                SplaseScreen.edit.putInt("id",ab)
+//                SplaseScreen.edit.putBoolean("status",true)
+//                SplaseScreen.edit.apply()
+//                Log.e("L====", "onCreate: ${SplaseScreen.sp.getBoolean("status",false)}" )
+//                startActivity(Intent(this@Login_pae ,Home_page::class.java))
+//                finish()
+//            }
 
             RetrofitInstance().method().login(emailEt.text.toString(),
                 passwordEt.text.toString()).
@@ -65,20 +80,24 @@ class Login_pae : AppCompatActivity() {
                             startActivity(Intent(this@Login_pae, Home_page::class.java).
                             putExtra("token" , dd.toString()))
                             finish()
-
-//                            dd = null
-
-                        } else {
-                            Log.d("-=-=", "onResponse: ${response.isSuccessful} ")
-                            Toast.makeText(this@Login_pae, "USER NOT FOUND", Toast.LENGTH_LONG)
-                                .show()
                         }
-                    } else{
-                        Toast.makeText(this@Login_pae, "CONNECTION NOT FOUND", Toast.LENGTH_SHORT).show()
+                        else{
+                            pb.visibility= View.GONE
+                            Toast.makeText(this@Login_pae, "create Account", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this@Login_pae,SignUp_page::class.java))
+
+                        }
+                        }
+                    else {
+                        pb.visibility= View.GONE
+                        Log.d("-=-=", "onResponse: ${response.isSuccessful} ")
+                        Toast.makeText(this@Login_pae, "wrong details", Toast.LENGTH_LONG)
+                            .show()
                     }
                 }
                 override fun onFailure(call: Call<LoginDataClass>?, t: Throwable?) {
                     Log.d("===----=", "onFailure: ${t!!.localizedMessage}")
+
                 }
             })
 
@@ -86,6 +105,7 @@ class Login_pae : AppCompatActivity() {
         signupbtn.setOnClickListener {
             startActivity(Intent(this@Login_pae, SignUp_page::class.java))
             finish()
+
         }
         forgetbtn.setOnClickListener {
             startActivity(Intent(this@Login_pae, ForgetPasswordActivity::class.java))

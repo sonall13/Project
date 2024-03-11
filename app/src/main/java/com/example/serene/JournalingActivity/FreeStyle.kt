@@ -29,21 +29,24 @@ class FreeStyle : AppCompatActivity() {
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=fs-token", "onCreate: ${token}")
 
-            RetrofitInstance().method().freestyle(token.toString(),freestyletext.text.toString())
+            var data = FreeStyleDatatext(freestyletext.text.toString())
+            Log.d("-data-", "onCreate: ${data}")
+
+            RetrofitInstance().method().freestyle(token!!,data)
                 .enqueue(object : Callback<FreeStyleDataClass> {
                     override fun onResponse(
                         call: Call<FreeStyleDataClass>,
                         response: Response<FreeStyleDataClass>,
                     ) {
-                        Log.d("=fs-response=", "onResponse: ${response.body()}")
+                        Log.d("fs_response", "onResponse: ${response.body()}")
                         if(response.body()?.status == "success"){
 
-                            Log.d("=fs-status=", "onResponse: data entered")
+                            Log.d("fs_status", "onResponse: data entered")
                             Toast.makeText(this@FreeStyle, "data entered", Toast.LENGTH_SHORT).show()
                         }
                     }
                     override fun onFailure(call: Call<FreeStyleDataClass>, t: Throwable) {
-                        Log.d("=freestyle-fail=", "onFailure: ${t.localizedMessage}")
+                        Log.d("freestyle-fail", "onFailure: ${t.localizedMessage}")
 
                     }
                 })
