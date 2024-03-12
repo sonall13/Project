@@ -46,7 +46,6 @@ class Memories : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memories)
 
-
         i1 = findViewById(R.id.i1)
         i2 = findViewById(R.id.i2)
         textarea = findViewById(R.id.textarea)
@@ -63,11 +62,7 @@ class Memories : AppCompatActivity() {
             ) {
                 openGallery()
             }
-
-
         }
-
-
 
         savememory.setOnClickListener {
 
@@ -75,19 +70,17 @@ class Memories : AppCompatActivity() {
             val baos = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
             val imageInByte = baos.toByteArray()
-            var sImage= Base64.encode(imageInByte,0);
+            var sImage= Base64.encodeToString(imageInByte,Base64.DEFAULT);
+
             Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
-//            var img = P
-
-
 
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=memory-token", "onCreate: ${token}")
 
             var dataa = Mymemories(textarea.text.toString(),i2.drawable.toString())
-            Log.d("===dataa===", "onCreate: ${dataa}")
+            Log.d("===dataa===", "onCreate: ${sImage}")
 
-            RetrofitInstance().method().memory(token!!,dataa)
+            RetrofitInstance().method().memory(token!!,textarea.text.toString(),sImage)
                 .enqueue(object : Callback<MemoryDataClass> {
                     override fun onResponse(
                         call: Call<MemoryDataClass>,
@@ -99,23 +92,18 @@ class Memories : AppCompatActivity() {
                             Log.d("=g-status=", "onResponse: data entered")
                             Toast.makeText(this@Memories, "data entered", Toast.LENGTH_SHORT).show()
                         }
-
                     }
                     override fun onFailure(call: Call<MemoryDataClass>, t: Throwable) {
                         Log.d("=memory-fail=", "onFailure: ${t.localizedMessage}")
                     }
                 })
-
         }
-
     }
-
     private fun openGallery() {
         val galleryIntent =
             Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST)
     }
-
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
@@ -131,7 +119,6 @@ class Memories : AppCompatActivity() {
             }
         }
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {

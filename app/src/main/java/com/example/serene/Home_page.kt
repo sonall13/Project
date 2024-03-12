@@ -44,11 +44,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         loadFragment(Home())
 
 
-//............................................
-
-
-
-
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         bottom_navigation = findViewById(R.id.bottom_navigation)
         toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -100,7 +95,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             R.string.close_drawer
         )
 
-
         drawer.addDrawerListener(toggle)
         toggle.syncState()
         if (savedInstanceState == null) {
@@ -109,7 +103,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             navigationView.setCheckedItem(R.id.home)
         }
     }
-
 
     private fun loadFragment(fragment: Fragment) {
 

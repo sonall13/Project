@@ -72,11 +72,15 @@ interface Myinterface {
     ):Call<JournalingCreateDataClass>
 
 
-    @POST("journaling/memory")
+
+   @FormUrlEncoded
+   @POST("journaling/memory")
     fun memory(
         @Header("token") token: String,
-        @Body request: Mymemories
+        @Field("caption") caption: String,
+        @Field("image") image: String
     ) : Call<MemoryDataClass>
+
 
 
     @POST("journaling/freestyle")

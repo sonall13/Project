@@ -46,6 +46,9 @@ class Home : Fragment() {
                     dateTV.setText(Date)
                 })
 
+
+
+
         return f
     }
 
