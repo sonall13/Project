@@ -85,25 +85,26 @@ interface Myinterface {
         @Body text : FreeStyleDatatext
     ) : Call<FreeStyleDataClass>
 
+
     //get data
 
-    @Headers("token")
-    @GET("journaling/get/freestyle")
-    fun fetchfreestyle(): Call<GetFreeStyleData>
-
-    @Headers("token")
-    @GET("journaling/get/memory")
-    fun fetchmemory(): Call<GetMemoryData>
-
-    @Headers("token")
-    @GET("journaling/get/morning")
-    fun fetchmornign(): Call<GetMorningData>
-
-    @Headers("token")
-    @GET("journaling/get/night")
-    fun fetchNight(): Call<GetNightDataClass>
-
-    @Headers("token")
-    @GET("journaling/get/gratitude")
-    fun fetchgratitude(): Call<GetGratitudeDataClass>
+//    @Headers("token")
+//    @GET("journaling/get/freestyle")
+//    fun fetchfreestyle(): Call<GetFreeStyleData>
+//
+//    @Headers("token")
+//    @GET("journaling/get/memory")
+//    fun fetchmemory(): Call<GetMemoryData>
+//
+//    @Headers("token")
+//    @GET("journaling/get/morning")
+//    fun fetchmornign(): Call<GetMorningData>
+//
+//    @Headers("token")
+//    @GET("journaling/get/night")
+//    fun fetchNight(): Call<GetNightDataClass>
+//
+//    @Headers("token")
+//    @GET("journaling/get/gratitude")
+//    fun fetchgratitude(): Call<GetGratitudeDataClass>
 }

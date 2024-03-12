@@ -130,12 +130,10 @@ class Login_pae : AppCompatActivity() {
         }
         signupbtn.setOnClickListener {
             startActivity(Intent(this@Login_pae, SignUp_page::class.java))
-            finish()
 
         }
         forgetbtn.setOnClickListener {
             startActivity(Intent(this@Login_pae, ForgetPasswordActivity::class.java))
-            finish()
         }
     }
 }

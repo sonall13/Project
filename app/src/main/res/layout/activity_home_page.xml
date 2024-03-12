@@ -30,29 +30,6 @@
             android:layout_height="640dp"
             android:id="@+id/fragment_container"
             android:background="@color/white">
-            <TextView
-                android:id="@+id/idTVDate"
-                android:layout_below="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="Current Date"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <!-- Add CalendarView to display the Calendar -->
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/idTVDate"
-                android:layout_marginTop="30dp" />
-
-
         </FrameLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

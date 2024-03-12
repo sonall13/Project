@@ -36,38 +36,18 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
     lateinit var drawer: DrawerLayout
     lateinit var toolbar: Toolbar
-    lateinit var dateTV: TextView
-    lateinit var calendarView: CalendarView
     lateinit var bottom_navigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
         loadFragment(Home())
-        //...calendar view............................
-        dateTV = findViewById(R.id.idTVDate)
-        calendarView = findViewById(R.id.calendarView)
 
-        // on below line we are adding set on
-        // date change listener for calendar view.
-        calendarView
-            .setOnDateChangeListener(
-                CalendarView.OnDateChangeListener { view, year, month, dayOfMonth ->
-                    // In this Listener we are getting values
-                    // such as year, month and day of month
-                    // on below line we are creating a variable
-                    // in which we are adding all the variables in it.
-                    val Date = (dayOfMonth.toString() + "-"
-                            + (month + 1) + "-" + year)
-
-                    // set this date in TextView for Display
-                    dateTV.setText(Date)
-                })
 
 //............................................
 
 
-//        checkApi()
+
 
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         bottom_navigation = findViewById(R.id.bottom_navigation)
@@ -130,29 +110,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         }
     }
 
-//    private fun checkApi() {
-//        RetrofitInstance().method().create()
-//            .enqueue(object : Callback<JournalingCreateDataClass> {
-//                override fun onResponse(
-//                    call: Call<JournalingCreateDataClass>?,
-//                    response: Response<JournalingCreateDataClass>?,
-//                ) {
-//                    Toast.makeText(this@Home_page, response?.body().toString(), Toast.LENGTH_LONG)
-//                        .show()
-//                    Log.d("=======", "onResponse: ${response!!.body()}")
-////                        if(response.body().status == "success"){
-////
-////                            val qq= response.body().data
-////                            Log.d("--=-==-", "onResponse: $qq")
-////                        }
-//                }
-//
-//                override fun onFailure(call: Call<JournalingCreateDataClass>?, t: Throwable?) {
-//                    Log.d("=======", "onFailure: ${t!!.localizedMessage}")
-//
-//                }
-//            })
-//    }
 
     private fun loadFragment(fragment: Fragment) {
 

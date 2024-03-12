@@ -3,6 +3,8 @@ package com.example.serene.JournalingActivity
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -21,6 +23,7 @@ import com.example.serene.SplaseScreen
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
@@ -68,25 +71,23 @@ class Memories : AppCompatActivity() {
 
         savememory.setOnClickListener {
 
-            val imageBase64 = ImageUtils.imageToBase64(i2.drawable.toString())
-            Log.d("-=", "onCreate: ${imageBase64}")
-            val request =   Mymemories(textarea.text.toString() ,imageBase64 )
+            val bitmap = (i2.getDrawable() as BitmapDrawable).bitmap
+            val baos = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+            val imageInByte = baos.toByteArray()
+            var sImage= Base64.encode(imageInByte,0);
+            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
+//            var img = P
 
-//            val bitmap = (i2.getDrawable() as BitmapDrawable).bitmap
-//            val baos = ByteArrayOutputStream()
-//            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-//            val imageInByte = baos.toByteArray()
-//            var sImage= Base64.encode(imageInByte,0);
-//            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
-////            var img = P
+
 
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=memory-token", "onCreate: ${token}")
 
-//            var dataa = Mymemories(textarea.text.toString(),i2.drawable.toString())
-            Log.d("===dataa===", "onCreate: ${request}")
+            var dataa = Mymemories(textarea.text.toString(),i2.drawable.toString())
+            Log.d("===dataa===", "onCreate: ${dataa}")
 
-            RetrofitInstance().method().memory(token!!,request)
+            RetrofitInstance().method().memory(token!!,dataa)
                 .enqueue(object : Callback<MemoryDataClass> {
                     override fun onResponse(
                         call: Call<MemoryDataClass>,
@@ -152,23 +153,4 @@ class Memories : AppCompatActivity() {
         }
     }
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        // Now you have the URI of the selected image, you can proceed with uploading it via Retrofit
-//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null)
-//            selectedImageUri
-//    }
-
-    object ImageUtils {
-        @Throws(IOException::class)
-        fun imageToBase64(imagePath: String): String {
-            val file = File(imagePath)
-            val inputStream = FileInputStream(file)
-            val bytes = ByteArray(file.length().toInt())
-            inputStream.read(bytes)
-            inputStream.close()
-            return Base64.encodeToString(bytes, Base64.DEFAULT)
-        }
-
-    }
 }
