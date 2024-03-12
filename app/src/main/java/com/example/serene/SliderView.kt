@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.viewpager.widget.ViewPager
 import com.example.serene.Adapters.SliderAdapter
 import com.example.serene.Login.Login_pae
+import com.example.serene.Login.VerifyOtp
 
 class SliderView : AppCompatActivity() {
     // on below line we are creating a variable

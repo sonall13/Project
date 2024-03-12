@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.CalendarView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.Bottumnavigation.Home
 import com.example.serene.Bottumnavigation.JournalingFregment
@@ -32,12 +36,36 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
     lateinit var drawer: DrawerLayout
     lateinit var toolbar: Toolbar
+    lateinit var dateTV: TextView
+    lateinit var calendarView: CalendarView
     lateinit var bottom_navigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
         loadFragment(Home())
+        //...calendar view............................
+        dateTV = findViewById(R.id.idTVDate)
+        calendarView = findViewById(R.id.calendarView)
+
+        // on below line we are adding set on
+        // date change listener for calendar view.
+        calendarView
+            .setOnDateChangeListener(
+                CalendarView.OnDateChangeListener { view, year, month, dayOfMonth ->
+                    // In this Listener we are getting values
+                    // such as year, month and day of month
+                    // on below line we are creating a variable
+                    // in which we are adding all the variables in it.
+                    val Date = (dayOfMonth.toString() + "-"
+                            + (month + 1) + "-" + year)
+
+                    // set this date in TextView for Display
+                    dateTV.setText(Date)
+                })
+
+//............................................
+
 
 //        checkApi()
 

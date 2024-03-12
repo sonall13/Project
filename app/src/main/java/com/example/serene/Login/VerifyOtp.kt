@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import com.chaos.view.PinView
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
 import com.google.android.material.textfield.TextInputEditText
@@ -18,13 +21,35 @@ import retrofit2.Response
 
 class VerifyOtp : AppCompatActivity() {
 
-    lateinit var otpfield : TextInputEditText
+    lateinit var otpfield : PinView
     lateinit var verifyotp : Button
     lateinit var loading : ProgressBar
     lateinit var getemail : TextView
+    lateinit var scrollView:ScrollView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify_otp)
+        scrollView=findViewById(R.id.scrollView)
+        //scroll.................................
+
+        scrollView .viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+            override fun onPreDraw(): Boolean {
+                // Check if the content size has changed
+                val hasContentChanged = scrollView.childCount > 0 && scrollView.getChildAt(0).height != scrollView.height
+
+                // Adjust the layout to avoid cutting off content when the keyboard is shown
+                if (hasContentChanged) {
+                    val heightDiff = scrollView.getChildAt(0).height - scrollView.height
+                    if (heightDiff > 20) { // Arbitrary threshold to detect significant changes
+                        scrollView.scrollTo(0, heightDiff)
+                    }
+                }
+
+                return true
+            }
+        })
+
+//            ......................................
 
         otpfield = findViewById(R.id.otpfield)
         verifyotp = findViewById(R.id.verifyotp)

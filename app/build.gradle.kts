@@ -75,7 +75,13 @@ dependencies {
     implementation("androidx.dynamicanimation:dynamicanimation:$dynamicanimation_version")
 
 
-    //sleep
+    //otpview
+    implementation ("io.github.chaosleung:pinview:1.4.4")
+    //horizontal calander view
+//    implementation ("com.github.applikeysolutions:horizontal-calendar:1.3.3")
+
+
+
 
 
 

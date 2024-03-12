@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scrollView"
     android:orientation="vertical"
     android:background="@color/white"
     tools:context=".Signup.SignUp_page">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,8 +27,8 @@
             android:layout_height="wrap_content"
             android:text="Sign up with email"
             android:gravity="center"
-            android:layout_below="@+id/title1"
             android:textColor="#1A2643"
+            android:layout_below="@+id/title1"
             android:id="@+id/title2"
             android:layout_marginTop="10dp"
             android:textSize="25sp"/>
@@ -37,6 +40,7 @@
             android:textSize="20sp"
             android:layout_below="@+id/title2"
             android:gravity="center"
+            android:textColor="#1A2643"
             android:id="@+id/title3"
             android:layout_marginTop="5dp"
             />
@@ -45,21 +49,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameTv"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="40dp"
             android:layout_below="@+id/title3"
-            app:boxStrokeColor="#8a8fa3"
             app:cursorColor="#8a8fa3"
-            android:textColorHint="#8a8fa3"
-            app:hintTextColor="#1A2643"
+            app:boxStrokeColor="#8a8fa3"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
             android:layout_marginEnd="32dp"
             android:hint="Enter name*">
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/username"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>
@@ -69,17 +75,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailtv"
+            app:boxStrokeColor="#8a8fa3"
+            app:boxCornerRadiusBottomEnd="13dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_below="@id/nameTv"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="30dp"
+            app:hintTextColor="@color/black"
+            app:boxCornerRadiusTopStart="13dp"
+            android:textColorHint="@color/black"
             android:hint="Enter email*">
 
             <!--this is the actual edit text which takes the input-->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>
@@ -92,13 +104,15 @@
             android:layout_marginStart="32dp"
             app:cursorColor="#8a8fa3"
             android:id="@+id/passwordtv"
-            android:layout_below="@+id/emailtv"
-            android:textColorHint="#8a8fa3"
-            android:layout_marginTop="30dp"
             app:boxStrokeColor="#8a8fa3"
+            android:layout_below="@+id/emailtv"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
             app:endIconMode="password_toggle"
-            app:hintTextColor="#1A2643"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp"
+            app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/baseline_lock_24"
             android:hint="Enter password*">
             <com.google.android.material.textfield.TextInputEditText
@@ -153,5 +167,6 @@
             android:layout_toRightOf="@+id/text"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             />
-
     </RelativeLayout>
+
+    </ScrollView>

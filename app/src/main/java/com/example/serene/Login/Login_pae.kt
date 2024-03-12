@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.ScrollView
 import android.widget.Toast
 import com.example.serene.Home_page
 import com.example.serene.R
@@ -22,6 +24,7 @@ import retrofit2.Response
 class Login_pae : AppCompatActivity() {
 
      lateinit var emailEt : TextInputEditText
+     lateinit var scrollView : ScrollView
      private lateinit var passwordEt : TextInputEditText
      private lateinit var loginbtn : Button
      private lateinit var signupbtn : Button
@@ -38,6 +41,29 @@ class Login_pae : AppCompatActivity() {
         signupbtn = findViewById(R.id.signupbtn)
         pb = findViewById(R.id.progressBar)
         forgetbtn = findViewById(R.id.forgetbtn)
+        scrollView=findViewById(R.id.scrollView)
+
+        //scroll.................................
+
+        scrollView .viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+            override fun onPreDraw(): Boolean {
+                // Check if the content size has changed
+                val hasContentChanged = scrollView.childCount > 0 && scrollView.getChildAt(0).height != scrollView.height
+
+                // Adjust the layout to avoid cutting off content when the keyboard is shown
+                if (hasContentChanged) {
+                    val heightDiff = scrollView.getChildAt(0).height - scrollView.height
+                    if (heightDiff > 20) { // Arbitrary threshold to detect significant changes
+                        scrollView.scrollTo(0, heightDiff)
+                    }
+                }
+
+                return true
+            }
+        })
+
+//            ......................................
+
 
         loginbtn.setOnClickListener {
 

@@ -4,13 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.ScrollView
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.Home_page
 import com.example.serene.R
-import com.example.serene.SplaseScreen
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,6 +21,7 @@ class ResetPassword : AppCompatActivity() {
     lateinit var confirmpassword : TextInputEditText
     lateinit var ResetPassword : TextInputEditText
     lateinit var resetbtn : Button
+    lateinit var scrollView : ScrollView
     lateinit var process : ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +32,28 @@ class ResetPassword : AppCompatActivity() {
         ResetPassword =findViewById(R.id.resetpassword)
         resetbtn =findViewById(R.id.resetbtn)
         process =findViewById(R.id.Process)
+        scrollView=findViewById(R.id.scrollView)
+
+        //scroll.................................
+
+        scrollView .viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+            override fun onPreDraw(): Boolean {
+                // Check if the content size has changed
+                val hasContentChanged = scrollView.childCount > 0 && scrollView.getChildAt(0).height != scrollView.height
+
+                // Adjust the layout to avoid cutting off content when the keyboard is shown
+                if (hasContentChanged) {
+                    val heightDiff = scrollView.getChildAt(0).height - scrollView.height
+                    if (heightDiff > 20) { // Arbitrary threshold to detect significant changes
+                        scrollView.scrollTo(0, heightDiff)
+                    }
+                }
+
+                return true
+            }
+        })
 
         var uidd = intent.getStringExtra("uid")
-        var token = SplaseScreen.sp.getString("token"," ")
 
         resetbtn.setOnClickListener {
 
@@ -48,8 +68,8 @@ class ResetPassword : AppCompatActivity() {
                             Log.d("-=---=", "onResponse: ${response!!.body()}")
                             if(response.body()?.status == "success"){
 
-                                    token = uidd
-                                    startActivity(Intent(this@ResetPassword, Home_page::class.java))
+                                startActivity(Intent(this@ResetPassword,Home_page::class.java))
+
                             }
                         }
                         override fun onFailure(call: Call<ResetPassworddataClass>?, t: Throwable?) {

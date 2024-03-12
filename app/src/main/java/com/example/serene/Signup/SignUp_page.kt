@@ -9,8 +9,10 @@ import android.text.TextWatcher
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.ScrollView
 import android.widget.Toast
 import com.example.serene.Login.Login_pae
 import com.example.serene.Home_page
@@ -29,6 +31,7 @@ class SignUp_page : AppCompatActivity() {
     lateinit var login : Button
     lateinit var signup : Button
     lateinit var pb : ProgressBar
+    lateinit var scrollView : ScrollView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +44,27 @@ class SignUp_page : AppCompatActivity() {
         login = findViewById(R.id.login)
         signup = findViewById(R.id.signup)
         pb = findViewById(R.id.pb)
+        scrollView=findViewById(R.id.scrollView)
+        //scroll.................................
+
+        scrollView .viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+            override fun onPreDraw(): Boolean {
+                // Check if the content size has changed
+                val hasContentChanged = scrollView.childCount > 0 && scrollView.getChildAt(0).height != scrollView.height
+
+                // Adjust the layout to avoid cutting off content when the keyboard is shown
+                if (hasContentChanged) {
+                    val heightDiff = scrollView.getChildAt(0).height - scrollView.height
+                    if (heightDiff > 50) { // Arbitrary threshold to detect significant changes
+                        scrollView.scrollTo(0, heightDiff)
+                    }
+                }
+
+                return true
+            }
+        })
+
+//            ......................................
 
 //
 //        // Perform validation using a TextWatcher
