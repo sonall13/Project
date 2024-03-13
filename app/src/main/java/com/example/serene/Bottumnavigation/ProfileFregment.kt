@@ -21,10 +21,12 @@ class ProfileFregment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        var w= inflater.inflate(R.layout.fragment_profile_fregment, container, false)
 
-        return w
+        return  inflater.inflate(R.layout.fragment_profile_fregment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
     }
 
 }

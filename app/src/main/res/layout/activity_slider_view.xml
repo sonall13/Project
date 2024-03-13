@@ -11,7 +11,8 @@
         android:id="@+id/idViewPager"
         android:background="#1A2643"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 
     <!--on below line we are creating
          a simple linear layout-->

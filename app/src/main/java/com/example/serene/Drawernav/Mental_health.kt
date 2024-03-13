@@ -18,18 +18,18 @@ class Mental_health : Fragment() {
 
     lateinit var   mrecyclerview : RecyclerView
     var Mentalhealthcat = ArrayList<String>()
-//    var categorys = arrayOf("Breathing" , "Anxiety" ,"Affirmation" , "Meditation" , "Self Care" , "Stress Reduce")
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        return inflater.inflate(R.layout.fragment_mental_health, container, false)
+    }
 
-        // Inflate the layout for this fragment
-        var av = inflater.inflate(R.layout.fragment_mental_health, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        var  activityy = Home_page()
+
 
         Mentalhealthcat.add("Breathing")
         Mentalhealthcat.add("Meditation")
@@ -38,28 +38,19 @@ class Mental_health : Fragment() {
         Mentalhealthcat.add("Self Care")
         Mentalhealthcat.add("Stress Reduce")
 
-        // getting the recyclerview by its id
-            mrecyclerview = av.findViewById(mrecyclerView)
+        mrecyclerview = view.findViewById(mrecyclerView)
 
-        // this creates a vertical layout Manager
-        mrecyclerview.layoutManager = LinearLayoutManager(activityy)
+        mrecyclerview.layoutManager = LinearLayoutManager(context)
 
-        // ArrayList of class ItemsViewModel
         val data = ArrayList<SliderData>()
 
-        // This loop will create 20 Views containing
-        // the image with the count of view
         for (i in 0..5) {
             data.add(SliderData("", "", 0, Mentalhealthcat, "", ""))
         }
 
-        // This will pass the ArrayList to our Adapter
         val adapter = M_HealthAdapter(data,this)
 
-        // Setting the Adapter with the recyclerview
         mrecyclerview.adapter = adapter
-
-        return av
     }
 
 

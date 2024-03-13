@@ -51,8 +51,6 @@ class Memories : AppCompatActivity() {
         textarea = findViewById(R.id.textarea)
         savememory = findViewById(R.id.savememory)
 
-
-
         i1.setOnClickListener {
 
             if (ContextCompat.checkSelfPermission(
@@ -63,7 +61,6 @@ class Memories : AppCompatActivity() {
                 openGallery()
             }
         }
-
         savememory.setOnClickListener {
 
             val bitmap = (i2.getDrawable() as BitmapDrawable).bitmap

@@ -29,6 +29,8 @@ class SliderView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_slider_view)
 
+        var get = SplaseScreen.sp.getBoolean("firstTime", true)
+
         // on below line we are initializing all
         // our variables with their ids.
         viewPager = findViewById(R.id.idViewPager)
@@ -40,8 +42,13 @@ class SliderView : AppCompatActivity() {
         // on below line we are adding click listener for our skip button
         skipBtn.setOnClickListener {
             // on below line we are opening a new activity
+
+
             val i = Intent(this@SliderView, Login_pae::class.java)
+
             startActivity(i)
+            finish()
+
         }
 
         // on below line we are initializing our slider list.
@@ -51,18 +58,22 @@ class SliderView : AppCompatActivity() {
         sliderList.add(
             SliderData(
                 "Improve Health",
-                "Learn to live more" +
-                        "Mindfully",
-                R.drawable.slider1, abc,"",""
+                "Learn to live more" + "Mindfully",
+                R.drawable.demoslider,
+                abc,
+                "",
+                ""
             )
         )
 
         sliderList.add(
             SliderData(
                 "Reduce Stress",
-                "Calm your mind and " +
-                        "Relex your mind",
-                R.drawable.slider2, abc,"",""
+                "Calm your mind and " + "Relex your mind",
+                R.drawable.slider2,
+                abc,
+                "",
+                ""
             )
 
         )
@@ -70,9 +81,11 @@ class SliderView : AppCompatActivity() {
         sliderList.add(
             SliderData(
                 "Self care",
-                "Enhance your Mental" +
-                        "physical energy levels",
-                R.drawable.sss, abc,"",""
+                "Enhance your Mental" + "physical energy levels",
+                R.drawable.sss,
+                abc,
+                "",
+                ""
             )
         )
 
@@ -95,7 +108,7 @@ class SliderView : AppCompatActivity() {
         override fun onPageScrolled(
             position: Int,
             positionOffset: Float,
-            positionOffsetPixels: Int
+            positionOffsetPixels: Int,
         ) {
         }
 

@@ -61,28 +61,12 @@ class Login_pae : AppCompatActivity() {
                 return true
             }
         })
-
 //            ......................................
 
 
         loginbtn.setOnClickListener {
 
             pb.visibility= View.VISIBLE
-
-//            var ab = 0
-//            var select = RetrofitInstance()
-//           var   data = select.method().login(emailEt.text.toString(),passwordEt.text.toString())
-//
-//            while ()
-//            {
-////                ab = data.getInt(0)
-////                SplaseScreen.edit.putInt("id",ab)
-//                SplaseScreen.edit.putBoolean("status",true)
-//                SplaseScreen.edit.apply()
-//                Log.e("L====", "onCreate: ${SplaseScreen.sp.getBoolean("status",false)}" )
-//                startActivity(Intent(this@Login_pae ,Home_page::class.java))
-//                finish()
-//            }
 
             RetrofitInstance().method().login(emailEt.text.toString(),
                 passwordEt.text.toString()).
@@ -109,6 +93,8 @@ class Login_pae : AppCompatActivity() {
                         }
                         else{
                             pb.visibility= View.GONE
+                            SplaseScreen.edit.putBoolean("status", true)
+                            SplaseScreen.edit.apply()
                             Toast.makeText(this@Login_pae, "create Account", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@Login_pae,SignUp_page::class.java))
 

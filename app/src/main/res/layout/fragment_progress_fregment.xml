@@ -15,26 +15,10 @@
         android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/idTVDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="Current Date"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <!-- Add CalendarView to display the Calendar -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/precycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/idTVDate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

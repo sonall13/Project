@@ -17,15 +17,17 @@ import com.example.serene.SliderData
 
 class ProgressFregment : Fragment() {
 
-    lateinit var dateTV: TextView
 
     var Progresscat = ArrayList<String>()
-//    var progressarray = arrayOf("Journal" , "Moods" , "Yoga" , "Sleep" , "Stretching")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        return   inflater.inflate(R.layout.fragment_progress_fregment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         Progresscat.add("Journal")
         Progresscat.add("Moods")
@@ -34,35 +36,16 @@ class ProgressFregment : Fragment() {
         Progresscat.add("Stretching")
         Progresscat.add("Memories")
 
-        // Inflate the layout for this fragment
-        var a= inflater.inflate(R.layout.fragment_progress_fregment, container, false)
+        val progresschart = view.findViewById<RecyclerView>(R.id.precycle)
 
-        dateTV = a.findViewById(R.id.idTVDate)
-        val progresschart = a.findViewById<RecyclerView>(R.id.precycle)
+        progresschart.layoutManager = LinearLayoutManager(context)
 
-
-        var z = Home_page()
-
-        // this creates a vertical layout Manager
-        progresschart.layoutManager = LinearLayoutManager(z)
-
-        // ArrayList of class ItemsViewModel
         val psdata = ArrayList<SliderData>()
-
-        // This loop will create 20 Views containing
-        // the image with the count of view
         for (i in 0..5) {
             psdata.add(SliderData( "","",0,Progresscat,"",""))
         }
-
-        // This will pass the ArrayList to our Adapter
         val psadapter = Progressadp(psdata)
-
-        // Setting the Adapter with the recyclerview
         progresschart.adapter = psadapter
-
-    return a
     }
-
 
 }
