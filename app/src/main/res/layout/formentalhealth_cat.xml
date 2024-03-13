@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             card_view:cardUseCompatPadding="true"
             card_view:cardElevation="5dp"
-    android:layout_marginTop="30dp"
+            android:layout_marginTop="30dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -20,13 +20,12 @@
                 android:layout_height="60dp"
                 android:padding="16dp"
                 android:gravity="center"
-                android:backgroundTint="#B7D0E1"
                 android:orientation="vertical">
 
                 <ImageView android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:id="@+id/img"
-                    android:src="@drawable/outlineback"
+                    android:src="@drawable/butterfly"
                     android:contentDescription="@string/app_name"/>
 
                 <TextView
@@ -36,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_toRightOf="@+id/img"
                     android:layout_marginStart="20dp"/>
 

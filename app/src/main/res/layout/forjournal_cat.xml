@@ -7,11 +7,15 @@
     <TextView
         android:id="@+id/jtexts"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:text="xc"
-        android:background="#E2B493"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borderr2"
+        android:textColor="@color/black"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="20sp"
+
 
         />
 

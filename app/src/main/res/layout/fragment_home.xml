@@ -1,40 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hb2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Bottumnavigation.Home">
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height=""-->
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/idTVDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:gravity="center"
-        android:padding="8dp"
-        android:text="Current Date"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <!-- Add CalendarView to display the Calendar -->
-    <CalendarView
+    <devs.mulham.horizontalcalendar.HorizontalCalendarView
         android:id="@+id/calendarView"
+        app:selectorColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTVDate"
-        android:layout_marginTop="30dp" />
+       android:layerType="software"
+        app:textColorSelected="#FFFF"/>
 
-
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+</FrameLayout>

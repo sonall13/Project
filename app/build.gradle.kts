@@ -78,7 +78,8 @@ dependencies {
     //otpview
     implementation ("io.github.chaosleung:pinview:1.4.4")
     //horizontal calander view
-//    implementation ("com.github.applikeysolutions:horizontal-calendar:1.3.3")
+    implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7")
+
 
 
 
