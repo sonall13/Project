@@ -26,10 +26,7 @@ class Mental_health : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_mental_health, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-
 
         Mentalhealthcat.add("Breathing")
         Mentalhealthcat.add("Meditation")
@@ -47,7 +44,6 @@ class Mental_health : Fragment() {
         for (i in 0..5) {
             data.add(SliderData("", "", 0, Mentalhealthcat, "", ""))
         }
-
         val adapter = M_HealthAdapter(data,this)
 
         mrecyclerview.adapter = adapter

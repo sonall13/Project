@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GetData.NightFragment">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="save"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="#0C3150"
+        android:textColor="#5690C3"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:id="@+id/savenightjournal"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's achievements"
+        android:textColor="@color/black"
+        android:id="@+id/tt1"
+        android:layout_below="@+id/savenightjournal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:id="@+id/tff11"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:layout_below="@+id/tt1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/firstanswer"
+            android:alpha="0.7"
+            android:textColor="@color/black"
+            android:hint="write here......"
+            android:backgroundTint="#0C3150"
+            android:layout_below="@+id/tt1"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tommorow's Goals"
+        android:textColor="@color/black"
+        android:id="@+id/t1"
+        android:layout_below="@+id/tt1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/textb1"
+        android:text="1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1"
+        android:textSize="18sp"
+        android:clickable="false"
+        android:filterTouchesWhenObscured="true"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:padding="7dp"/>
+    <TextView
+
+        android:id="@+id/multianswer1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:backgroundTint="#5690C3"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/textb1"
+        android:layout_below="@+id/t1" />
+
+    <TextView
+        android:id="@+id/textb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="2"
+        android:textColor="@color/black"
+        android:clickable="false"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/textb1"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/multianswer2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/textb2"
+        android:backgroundTint="#5690C3"
+        android:layout_below="@+id/textb1" />
+
+    <TextView
+        android:id="@+id/textb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="3"
+        android:textColor="@color/black"
+        android:clickable="false"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/textb2"
+        android:padding="7dp"/>
+    <TextView
+        android:id="@+id/multianswer3"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/textb3"
+        android:backgroundTint="#5690C3"
+        android:layout_below="@+id/textb2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Happy thought of the day"
+        android:textColor="@color/black"
+        android:id="@+id/t4"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textb3"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:id="@+id/c1"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="7dp"
+        android:layout_below="@+id/t4">
+        <TextView
+            android:id="@+id/thirdanswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:hint="write here......"
+            android:backgroundTint="#0C3150"
+            android:alpha="0.7"
+            android:background="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

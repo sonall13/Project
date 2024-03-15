@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +19,14 @@
         android:theme="@style/Theme.Serene"
         tools:targetApi="31">
         <activity
-            android:name=".GetData.MyDiary"
-            android:exported="false" />
+            android:name=".GetData.JournalingDataActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity
             android:name=".SplaseScreen"
             android:exported="true">
@@ -50,7 +57,14 @@
             android:exported="false" />
         <activity
             android:name=".JournalingActivity.Memories"
-            android:exported="false" />
+            android:exported="false" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+        </activity>
         <activity
             android:name=".JournalingActivity.FreeStyle"
             android:exported="false" />
@@ -332,17 +346,19 @@
             android:exported="true" />
         <activity
             android:name=".Home_page"
-            android:exported="false" /> <!-- <intent-filter> -->
+            android:exported="false"
+            android:theme="@style/AppTheme"
+            /> <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
         <activity
             android:name=".SliderView"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Signup.SignUp_page"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Login.Login_pae"
             android:exported="false">

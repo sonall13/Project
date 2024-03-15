@@ -53,7 +53,7 @@ class Breathingadpter(
         holder.drawableimg.setOnClickListener {
 
             when(position){
-                0 -> context.startActivity(Intent(context,Anxiety::class.java))
+                0 -> context.startActivity(Intent(context,Deepdiaphragm::class.java))
                 1 -> context.startActivity(Intent(context,AumChant::class.java))
                 2 -> context.startActivity(Intent(context,DeStress::class.java))
                 3 -> context.startActivity(Intent(context,Focused::class.java))

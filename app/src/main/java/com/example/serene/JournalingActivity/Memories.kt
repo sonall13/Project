@@ -19,15 +19,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
-import com.example.serene.SplaseScreen
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
 import kotlin.io.encoding.ExperimentalEncodingApi
+
 
 class Memories : AppCompatActivity() {
 
@@ -54,8 +54,7 @@ class Memories : AppCompatActivity() {
         i1.setOnClickListener {
 
             if (ContextCompat.checkSelfPermission(
-                    this,
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE
+                    this, android.Manifest.permission.READ_EXTERNAL_STORAGE
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
                 openGallery()
@@ -67,40 +66,60 @@ class Memories : AppCompatActivity() {
             val baos = ByteArrayOutputStream()
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
             val imageInByte = baos.toByteArray()
-            var sImage= Base64.encodeToString(imageInByte,Base64.DEFAULT);
+            var sImage = Base64.encodeToString(imageInByte, Base64.DEFAULT);
 
-            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
+//            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
 
-            var token = SplaseScreen.sp.getString("token"," ")
-            Log.d("=memory-token", "onCreate: ${token}")
+            /* var token = SplaseScreen.sp.getString("token", " ")
+             Log.d("=memory-token", "onCreate: ${token}")*/
 
-            var dataa = Mymemories(textarea.text.toString(),i2.drawable.toString())
-            Log.d("===dataa===", "onCreate: ${sImage}")
+            var dataa = Mymemories(textarea.text.toString(), i2.drawable.toString())
+            //Log.d("===dataa===", "onCreate: ${sImage}")
 
-            RetrofitInstance().method().memory(token!!,textarea.text.toString(),sImage)
+            //pass it like this
+            //pass it like this
+            val file = File("/storage/emulated/0/Download/5.png")
+            val requestFile = RequestBody.create(MultipartBody.FORM, imageInByte)
+
+// MultipartBody.Part is used to send also the actual file name
+            val body = MultipartBody.Part.createFormData("image", file.name, requestFile)
+
+// add another part within the multipart request
+            val fullName = RequestBody.create(MultipartBody.FORM, "Your Name")
+
+            val map: MutableMap<String, RequestBody> = HashMap()
+            map["caption"] = fullName
+            map["image"] = requestFile
+
+            var tokenInt =
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjE0Y2E5Y2RhMmYwNDZhMDI2YjAwYiIsImlhdCI6MTcxMDQ3OTE5N30.5qzjI92IPIZm8ChaUeb_aVaPYU-MhfODKy8UB3vTqlk"
+
+            RetrofitInstance().method().memory(tokenInt, map)
                 .enqueue(object : Callback<MemoryDataClass> {
                     override fun onResponse(
                         call: Call<MemoryDataClass>,
                         response: Response<MemoryDataClass>,
                     ) {
-                        Log.d("memory-response=", "onResponse: ${response.body()}")
-                        if(response.body()?.status == "success"){
+                        Log.d("=======R", "onResponse: ${response.body()}")
+                        if (response.body()?.status == "success") {
 
                             Log.d("=g-status=", "onResponse: data entered")
                             Toast.makeText(this@Memories, "data entered", Toast.LENGTH_SHORT).show()
                         }
                     }
+
                     override fun onFailure(call: Call<MemoryDataClass>, t: Throwable) {
-                        Log.d("=memory-fail=", "onFailure: ${t.localizedMessage}")
+                        Log.d("=======E", "onFailure: ${t.localizedMessage}")
                     }
                 })
         }
     }
+
     private fun openGallery() {
-        val galleryIntent =
-            Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST)
     }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
@@ -116,6 +135,7 @@ class Memories : AppCompatActivity() {
             }
         }
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {

@@ -58,6 +58,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     api("com.theartofdev.edmodo:android-image-cropper:2.8.+")
+//    implementation("'com.squareup.okhttp:okhttp:3.0.0'")
 
 
     implementation("com.android.support:multidex:1.0.3")
@@ -79,11 +80,5 @@ dependencies {
     implementation ("io.github.chaosleung:pinview:1.4.4")
     //horizontal calander view
     implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7")
-
-
-
-
-
-
 
 }

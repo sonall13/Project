@@ -1,9 +1,12 @@
 package com.example.serene
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.Window
+import android.view.WindowManager
 import android.widget.CalendarView
 import android.widget.TextView
 import android.widget.Toast
@@ -40,10 +43,18 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Make the activity fullscreen
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = getColor(R.color.statusbarcolor)
+        }
         setContentView(R.layout.activity_home_page)
+
         loadFragment(Home())
-
-
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         bottom_navigation = findViewById(R.id.bottom_navigation)
         toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -55,6 +66,7 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             when (it.itemId) {
                 R.id.home -> {
                     loadFragment(Home())
+                    toolbar.title = "Serene"
                     true
                 }
 
@@ -80,8 +92,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
                 else -> {
                     loadFragment(Home())
-                    bottom_navigation.menu.findItem(R.id.home).setChecked(true)
-                    bottom_navigation.menu.findItem(R.id.home).actionView?.isActivated
                     true
 
                 }
@@ -101,6 +111,7 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, Home()).commit()
             navigationView.setCheckedItem(R.id.home)
+            bottom_navigation.selectedItemId = R.id.home
         }
     }
 
@@ -127,13 +138,14 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                     .replace(R.id.fragment_container, Physical_health()).commit()
                 toolbar.title = "Physical Health"
             }
-//            R.id. -> Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show()
         }
+
         drawer.closeDrawer(GravityCompat.START)
         return true
 
 
     }
+
 
     override fun onBackPressed() {
         super.onBackPressed()
@@ -143,5 +155,7 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             onBackPressedDispatcher.onBackPressed()
         }
     }
+
+
 
 }

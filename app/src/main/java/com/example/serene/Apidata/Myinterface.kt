@@ -10,13 +10,13 @@ import com.example.serene.JournalingActivity.FreeStyleDatatext
 import com.example.serene.JournalingActivity.JournalingCreateDataClass
 import com.example.serene.JournalingActivity.MemoryDataClass
 import com.example.serene.JournalingActivity.MyData
-import com.example.serene.JournalingActivity.Mymemories
 import com.example.serene.Login.ForgetpasswordData
 import com.example.serene.Login.LoginDataClass
 import com.example.serene.Login.ResetPassworddataClass
 import com.example.serene.Login.VerifyotpdataClass
 import com.example.serene.Signup.RegisterDataClass
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -27,6 +27,7 @@ import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
+import retrofit2.http.PartMap
 
 interface Myinterface {
 
@@ -67,48 +68,57 @@ interface Myinterface {
 
 
     @POST("journaling/create")
-    fun create(@Header("token") token: String,
-               @Body answers: MyData
-    ):Call<JournalingCreateDataClass>
+    fun create(
+        @Header("token") token: String,
+        @Body answers: MyData,
+    ): Call<JournalingCreateDataClass>
 
 
-
-   @FormUrlEncoded
-   @POST("journaling/memory")
+    @Multipart
+    @POST("journaling/memory")
     fun memory(
         @Header("token") token: String,
-        @Field("caption") caption: String,
-        @Field("image") image: String
-    ) : Call<MemoryDataClass>
+        @Part("caption") caption: RequestBody,
+        @Part("image") image: MultipartBody.Part,
+    ): Call<MemoryDataClass>
 
+    @Multipart
+    @JvmSuppressWildcards
+    @POST("journaling/memory")
+    fun memory(
+        @Header("token") token: String,
+        @PartMap params: Map<String, RequestBody>,
+    ): Call<MemoryDataClass>
 
 
     @POST("journaling/freestyle")
     fun freestyle(
         @Header("token") token: String,
-        @Body text : FreeStyleDatatext
-    ) : Call<FreeStyleDataClass>
+        @Body text: FreeStyleDatatext,
+    ): Call<FreeStyleDataClass>
 
 
     //get data
 
-//    @Headers("token")
-//    @GET("journaling/get/freestyle")
-//    fun fetchfreestyle(): Call<GetFreeStyleData>
-//
-//    @Headers("token")
-//    @GET("journaling/get/memory")
-//    fun fetchmemory(): Call<GetMemoryData>
-//
-//    @Headers("token")
-//    @GET("journaling/get/morning")
-//    fun fetchmornign(): Call<GetMorningData>
-//
-//    @Headers("token")
-//    @GET("journaling/get/night")
-//    fun fetchNight(): Call<GetNightDataClass>
-//
-//    @Headers("token")
-//    @GET("journaling/get/gratitude")
-//    fun fetchgratitude(): Call<GetGratitudeDataClass>
+    @Headers("token")
+    @GET("journaling/get/freestyle")
+    fun fetchfreestyle(): Call<GetFreeStyleData>
+
+    @Headers("token")
+    @GET("journaling/get/memory")
+    fun fetchmemory(): Call<GetMemoryData>
+
+    @FormUrlEncoded
+    @GET("journaling/get/morning")
+    fun fetchmornign(
+//        @Headers("token") token: String
+    ): Call<GetMorningData>
+
+    @Headers("token")
+    @GET("journaling/get/night")
+    fun fetchNight(): Call<GetNightDataClass>
+
+    @Headers("token")
+    @GET("journaling/get/gratitude")
+    fun fetchgratitude(): Call<GetGratitudeDataClass>
 }

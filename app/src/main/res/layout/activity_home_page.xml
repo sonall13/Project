@@ -17,7 +17,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="40dp"
         android:id="@+id/toolbar"
         android:elevation="4dp"
         android:background="#FF0C1125"
@@ -28,7 +28,6 @@
         <FrameLayout
             android:layout_below="@+id/toolbar"
             android:layout_width="match_parent"
-            android:background="@drawable/hb2"
             android:layout_above="@+id/bottom_navigation"
             android:layout_height="match_parent"
             android:id="@+id/fragment_container"/>
@@ -58,7 +57,4 @@
         app:menu="@menu/menu_item"
         android:background="#D2FAF6F6"
         />
-
-
-
 </androidx.drawerlayout.widget.DrawerLayout>
