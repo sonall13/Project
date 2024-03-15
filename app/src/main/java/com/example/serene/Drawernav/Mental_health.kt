@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Adapters.M_HealthAdapter
-import com.example.serene.Home_page
 import com.example.serene.R
 import com.example.serene.R.id.mrecyclerView
 import com.example.serene.SliderData
@@ -18,6 +17,7 @@ class Mental_health : Fragment() {
 
     lateinit var   mrecyclerview : RecyclerView
     var Mentalhealthcat = ArrayList<String>()
+    var drawarr= arrayOf(R.drawable.butterfly,R.drawable.cat2,R.drawable.cat3,R.drawable.butterfly,R.drawable.cat2,R.drawable.cat3)
 
 
     override fun onCreateView(
@@ -26,7 +26,10 @@ class Mental_health : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_mental_health, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
 
         Mentalhealthcat.add("Breathing")
         Mentalhealthcat.add("Meditation")
@@ -39,12 +42,16 @@ class Mental_health : Fragment() {
 
         mrecyclerview.layoutManager = LinearLayoutManager(context)
 
+
         val data = ArrayList<SliderData>()
 
+
         for (i in 0..5) {
-            data.add(SliderData("", "", 0, Mentalhealthcat, "", ""))
+            data.add(SliderData("", "", 0, Mentalhealthcat,
+                "", ""))
         }
-        val adapter = M_HealthAdapter(data,this)
+
+        val adapter = M_HealthAdapter(data,drawarr,this)
 
         mrecyclerview.adapter = adapter
     }

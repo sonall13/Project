@@ -21,6 +21,7 @@ class Gratitude : AppCompatActivity() {
     lateinit var multianswer3 : EditText
     lateinit var firstanswer : EditText
     lateinit var thirdanswer : EditText
+    lateinit var save:Button
 
     var multianswerarray = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {

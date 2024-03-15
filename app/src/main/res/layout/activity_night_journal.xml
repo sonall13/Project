@@ -4,32 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C3150"
-    tools:context=".JournalingActivity.NightJournalActivity">
+   android:background="@drawable/nightj"
 
+    tools:context=".JournalingActivity.NightJournalActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="night   journal"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/title"
+        android:layout_marginHorizontal="20dp"
+        android:textAlignment="center"/>
     <Button
         android:layout_width="wrap_content"
         android:text="save"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:background="#0C3150"
+        android:layout_marginTop="30dp"
         android:textColor="#5690C3"
-        android:textSize="17dp"
+        android:textSize="21dp"
         android:textStyle="bold"
+        android:backgroundTint="@color/black"
         android:layout_height="wrap_content"
         android:id="@+id/savenightjournal"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginVertical="100dp"
+        android:layout_marginHorizontal="15dp"
+        android:alpha="0.2"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Today's achievements"
         android:textColor="@color/white"
         android:id="@+id/tt1"
-        android:layout_below="@+id/savenightjournal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="110dp"
         android:textSize="20dp"
         />
-    <androidx.cardview.widget.CardView
+
+            <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_height="wrap_content"
@@ -43,11 +66,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:textColor="#B9FFFFFF"
             android:id="@+id/firstanswer"
             android:alpha="0.7"
+            android:textColorHint="@color/white"
             android:hint="write here......"
             android:backgroundTint="#0C3150"
-            android:layout_below="@+id/tt1"
+            android:layout_below="@+id/tff11"
             android:background="@color/white"/>
     </androidx.cardview.widget.CardView>
     <TextView
@@ -56,7 +81,7 @@
         android:text="Tommorow's Goals"
         android:textColor="@color/white"
         android:id="@+id/t1"
-        android:layout_below="@+id/tt1"
+        android:layout_below="@+id/tff11"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:textSize="20dp"
@@ -71,14 +96,14 @@
         android:textSize="18sp"
         android:clickable="false"
         android:filterTouchesWhenObscured="true"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:padding="7dp"/>
     <EditText
 
         android:id="@+id/multianswer1"
         android:layout_width="320dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text=""
         android:backgroundTint="#5690C3"
         android:textColor="@color/white"
@@ -91,7 +116,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="2"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:clickable="false"
         android:layout_marginStart="20dp"
         android:layout_below="@+id/textb1"
@@ -99,7 +124,7 @@
     <EditText
         android:id="@+id/multianswer2"
         android:layout_width="320dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text=""
         android:textColor="@color/white"
         android:layout_toRightOf="@+id/textb2"
@@ -112,7 +137,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="3"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:clickable="false"
         android:layout_marginStart="20dp"
         android:layout_below="@+id/textb2"
@@ -120,9 +145,9 @@
     <EditText
         android:id="@+id/multianswer3"
         android:layout_width="320dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text=""
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_toRightOf="@+id/textb3"
         android:backgroundTint="#5690C3"
         android:layout_below="@+id/textb2" />
@@ -152,14 +177,23 @@
         android:layout_below="@+id/t4">
         <EditText
             android:id="@+id/thirdanswer"
+            android:textColorHint="#CEFFFFFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:textColor="@color/white"
             android:hint="write here......"
             android:backgroundTint="#0C3150"
             android:alpha="0.7"
             android:background="@color/white"/>
+
     </androidx.cardview.widget.CardView>
+        </RelativeLayout>
 
 
-</RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>

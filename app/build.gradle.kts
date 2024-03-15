@@ -80,5 +80,10 @@ dependencies {
     implementation ("io.github.chaosleung:pinview:1.4.4")
     //horizontal calander view
     implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7")
+    //lottie animation
+
+        implementation ("com.airbnb.android:lottie:4.0.0")
+
+
 
 }

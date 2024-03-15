@@ -17,6 +17,8 @@ class Physical_health : Fragment()  {
 
     lateinit var physicalrecv : RecyclerView
     var Physicalhealthcat = ArrayList<String>()
+
+    var array= arrayOf(R.drawable.m1,R.drawable.b1,R.drawable.b3,R.drawable.b3,R.drawable.b3)
 //    var category1 = arrayOf("Stretching" , "Healthy Eating" , "Yoga")
 
 
@@ -34,12 +36,14 @@ class Physical_health : Fragment()  {
         Physicalhealthcat.add("VitalVibe")
         Physicalhealthcat.add("StaminaSculpt")
 
+
         physicalrecv = view.findViewById(R.id.physicalrecv)
 
         physicalrecv.layoutManager = LinearLayoutManager(context)
         val pdata = ArrayList<SliderData>()
         for (i in 0..5) {
-            pdata.add(SliderData(" ", "", 0, Physicalhealthcat, " ", ""))
+            pdata.add(SliderData(" ", "", 0,
+                Physicalhealthcat, " ",""))
         }
         val adapter = P_HealthAdapter(pdata,this)
         physicalrecv.adapter = adapter
