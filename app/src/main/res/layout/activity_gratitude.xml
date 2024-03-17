@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C3150"
     tools:context=".JournalingActivity.Gratitude">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FF0F1D44"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/gratitude"
+        android:alpha="0.7"
+        android:layout_height="match_parent"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,20 +30,20 @@
         android:text="save"
         android:layout_toRightOf="@+id/title"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#0C3150"
+        android:backgroundTint="#122040"
         android:textColor="#5690C3"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:layout_alignParentRight="true"
         android:layout_height="wrap_content"
         android:id="@+id/savegratitude"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="520dp"
         app:cardCornerRadius="30dp"
-        android:layout_marginVertical="100dp"
+        android:layout_marginTop="150dp"
         android:layout_marginHorizontal="15dp"
-        android:alpha="0.2"/>
+        android:alpha="0.1"/>
 
 
     <TextView
@@ -45,28 +53,29 @@
         android:textColor="@color/white"
         android:id="@+id/tt1"
         android:layout_below="@+id/savegratitude"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="90dp"
         android:textSize="20dp"
         />
     <androidx.cardview.widget.CardView
-        android:layout_width="360dp"
+        android:layout_width="350dp"
         android:layout_marginLeft="20dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:elevation="20dp"
         android:id="@+id/tff11"
-        android:layout_marginTop="10dp"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginHorizontal="27dp"
         android:layout_below="@+id/tt1">
         <EditText
 
             android:layout_width="360dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:text=""
             android:id="@+id/firstanswer"
             android:hint="write here......"
             android:backgroundTint="#5690C3"
             android:layout_below="@+id/tt1"
+            android:gravity="start"
             android:background="@color/white"/>
     </androidx.cardview.widget.CardView>
     <TextView
@@ -77,7 +86,7 @@
         android:id="@+id/t1"
         android:layout_below="@+id/tff11"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"
         />
     <TextView
@@ -164,16 +173,18 @@
     <androidx.cardview.widget.CardView
         android:layout_width="360dp"
         android:layout_marginLeft="20dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:elevation="20dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="17dp"
         android:layout_below="@+id/t3">
         <EditText
             android:id="@+id/thirdanswer"
             android:layout_width="360dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:text=""
+            android:gravity="start"
             android:hint="write here......"
             android:backgroundTint="#5690C3"
             android:layout_below="@+id/t1"

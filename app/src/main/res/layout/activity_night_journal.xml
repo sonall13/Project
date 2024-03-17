@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:background="@drawable/nightj"
-
     tools:context=".JournalingActivity.NightJournalActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="night   journal"
+        android:text="night journal"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -31,9 +30,9 @@
         android:id="@+id/savenightjournal"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         app:cardCornerRadius="30dp"
-        android:layout_marginVertical="100dp"
+        android:layout_marginTop="120dp"
         android:layout_marginHorizontal="15dp"
         android:alpha="0.2"/>
 
@@ -48,23 +47,23 @@
         android:textColor="@color/white"
         android:id="@+id/tt1"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="150dp"
         android:textSize="20dp"
         />
 
             <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        android:layout_height="100dp"
         android:elevation="30dp"
         android:id="@+id/tff11"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="17dp"
         android:layout_below="@+id/tt1">
         <EditText
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:text=""
             android:textColor="#B9FFFFFF"
             android:id="@+id/firstanswer"
@@ -72,6 +71,7 @@
             android:textColorHint="@color/white"
             android:hint="write here......"
             android:backgroundTint="#0C3150"
+            android:gravity="start"
             android:layout_below="@+id/tff11"
             android:background="@color/white"/>
     </androidx.cardview.widget.CardView>
@@ -168,19 +168,20 @@
         />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        android:layout_height="100dp"
         android:elevation="30dp"
         android:id="@+id/c1"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="17dp"
         android:layout_below="@+id/t4">
         <EditText
             android:id="@+id/thirdanswer"
             android:textColorHint="#CEFFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:text=""
+            android:gravity="start"
             android:textColor="@color/white"
             android:hint="write here......"
             android:backgroundTint="#0C3150"

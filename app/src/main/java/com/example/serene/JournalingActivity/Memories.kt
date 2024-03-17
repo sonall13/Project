@@ -16,6 +16,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
@@ -50,6 +51,7 @@ class Memories : AppCompatActivity() {
         i2 = findViewById(R.id.i2)
         textarea = findViewById(R.id.textarea)
         savememory = findViewById(R.id.savememory)
+        Toast.makeText(this, "helloww..   What's your beautiful memory of the day :)  ", Toast.LENGTH_SHORT).show()
 
         i1.setOnClickListener {
 
@@ -147,13 +149,14 @@ class Memories : AppCompatActivity() {
             i2.setOnClickListener {
                 openGallery()
             }
-            if (i2.visibility == View.VISIBLE) {
-                // If the EditText is visible, hide it
-                textarea.visibility = View.VISIBLE
-            } else {
-                // If the EditText is hidden, show it
-                textarea.visibility = View.GONE
-            }
+//            if (i2.visibility == View.VISIBLE) {
+//                // If the EditText is visible, hide it
+//                textarea.visibility = View.VISIBLE
+//
+//            } else {
+//                // If the EditText is hidden, show it
+//                textarea.visibility = View.GONE
+//            }
         }
     }
 

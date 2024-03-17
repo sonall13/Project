@@ -7,7 +7,16 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Bottumnavigation.JournalingFregment">
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FF0F1D44"
+        android:alpha="0.9"
+        android:layout_height="match_parent"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:alpha="0.6"
+    android:background="@drawable/backgroundjournaling"
+    android:layout_height="match_parent"/>
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,22 +27,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:id="@+id/img"
-                android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="60dp">
 
-            </ImageView>
+
+
 
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/jrecycle"
-
-                android:layout_below="@id/img"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginBottom="10dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"

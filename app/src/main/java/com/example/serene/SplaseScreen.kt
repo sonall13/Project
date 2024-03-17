@@ -29,6 +29,7 @@ class SplaseScreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
+
         setContentView(R.layout.activity_splase_screen)
 
         sp = getSharedPreferences("name", MODE_PRIVATE)

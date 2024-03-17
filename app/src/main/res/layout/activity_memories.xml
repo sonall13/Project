@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#6D7DD5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FF0F1D44"
     android:layout_height="match_parent"
     tools:context=".JournalingActivity.Memories">
 
@@ -21,46 +22,67 @@
         android:id="@+id/savememory"
         android:layout_width="wrap_content"
         android:text="save"
-        android:textColor="@color/black"
-        android:background="#E6DACC"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0F1D44"
+        android:alpha="0.7"
         android:layout_alignParentRight="true"
         android:layout_height="50dp"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:elevation="20dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_below="@+id/memory"
-        android:layout_centerInParent="true"
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginVertical="60dp"
+        android:layout_marginStart="90dp"
+        app:lottie_rawRes="@raw/anim1"
         android:id="@+id/i1"
-        android:alpha="0.7"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/sleep"
-        android:layout_height="400dp"/>
+        android:layout_marginTop="70dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"/>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:elevation="20dp"-->
+<!--       -->
+<!--        android:layout_below="@+id/memory"-->
+<!--        android:layout_centerInParent="true"-->
+<!--     -->
+<!--        android:alpha="0.7"-->
+<!--     -->
+<!--        android:background="@drawable/sleep"-->
+<!--        android:layout_height="400dp"/>-->
 
     <ImageView
         android:id="@+id/i2"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_below="@+id/memory"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="20dp"
         android:elevation="20dp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/cardview"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="30dp"
+        android:layout_below="@+id/i2"
+        android:alpha="0.2"/>
 
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
+        android:layout_height="300dp"
+        android:textColor="@color/white"
         android:textSize="20dp"
+        android:backgroundTint="#FF0F1D44"
         android:hint="write your caption......."
-        android:textColorHint="#191818"
+        android:textColorHint="@color/white"
         android:gravity="start"
         android:id="@+id/textarea"
-        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="20dp"
         android:layout_below="@+id/i1"
         />
+
 </RelativeLayout>

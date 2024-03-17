@@ -58,31 +58,25 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     api("com.theartofdev.edmodo:android-image-cropper:2.8.+")
-//    implementation("'com.squareup.okhttp:okhttp:3.0.0'")
+    //implementation("'com.squareup.okhttp:okhttp:3.0.0'")
 
 
     implementation("com.android.support:multidex:1.0.3")
 // for adding cardview
     implementation("androidx.cardview:cardview:1.0.0")
-
     implementation("androidx.recyclerview:recyclerview:1.3.2")
-//cardview
-
-    //noinspection GradleCompatible
+//noinspection GradleCompatible
     compile("com.android.support:cardview-v7:21.0.0-rc1")
     implementation("com.makeramen:roundedimageview:2.3.0")
 
     val dynamicanimation_version = "1.0.0"
     implementation("androidx.dynamicanimation:dynamicanimation:$dynamicanimation_version")
-
-
-    //otpview
+// otpview
     implementation ("io.github.chaosleung:pinview:1.4.4")
-    //horizontal calander view
+//horizontal calander view
     implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7")
-    //lottie animation
-
-        implementation ("com.airbnb.android:lottie:4.0.0")
+//lottie animation
+    implementation ("com.airbnb.android:lottie:6.4.0")
 
 
 

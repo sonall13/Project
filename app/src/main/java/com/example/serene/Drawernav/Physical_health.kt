@@ -18,7 +18,7 @@ class Physical_health : Fragment()  {
     lateinit var physicalrecv : RecyclerView
     var Physicalhealthcat = ArrayList<String>()
 
-    var array= arrayOf(R.drawable.m1,R.drawable.b1,R.drawable.b3,R.drawable.b3,R.drawable.b3)
+    var array= arrayOf(R.drawable.b1,R.drawable.b3,R.drawable.b3,R.drawable.b3)
 //    var category1 = arrayOf("Stretching" , "Healthy Eating" , "Yoga")
 
 

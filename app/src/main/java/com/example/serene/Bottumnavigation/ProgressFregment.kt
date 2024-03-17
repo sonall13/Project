@@ -25,6 +25,7 @@ class ProgressFregment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return   inflater.inflate(R.layout.fragment_progress_fregment, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
