@@ -1,6 +1,7 @@
 package com.example.serene.Signup
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -34,6 +35,15 @@ class SignUp_page : AppCompatActivity() {
     lateinit var scrollView : ScrollView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Make the activity fullscreen
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = getColor(R.color.statusbarcolor)
+        }
         setContentView(R.layout.activity_sign_up_page)
 
         email = findViewById(R.id.email)

@@ -2,6 +2,7 @@ package com.example.serene.Login
 
 import android.content.Intent
 import android.database.Cursor
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -33,6 +34,15 @@ class Login_pae : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Make the activity fullscreen
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = getColor(R.color.statusbarcolor)
+        }
         setContentView(R.layout.activity_login_pae)
 
         emailEt = findViewById(R.id.emailEt)
@@ -63,7 +73,6 @@ class Login_pae : AppCompatActivity() {
         })
 //            ......................................
 
-
         loginbtn.setOnClickListener {
 
             pb.visibility= View.VISIBLE
@@ -77,6 +86,8 @@ class Login_pae : AppCompatActivity() {
                     if(response.body()?.status == "success") {
 
                         var dd = response.body()!!.token
+                        Log.d("===", "onResponse: $dd ===")
+
 
                         SplaseScreen.edit.putString("token",dd.toString())
                         SplaseScreen.edit.apply()
@@ -86,18 +97,16 @@ class Login_pae : AppCompatActivity() {
                             response.body()!!.token == dd) {
 
                             pb.visibility= View.GONE
-
+                            SplaseScreen.edit.putBoolean("status", true)
+                            SplaseScreen.edit.apply()
                             startActivity(Intent(this@Login_pae, Home_page::class.java).
                             putExtra("token" , dd.toString()))
                             finish()
                         }
                         else{
                             pb.visibility= View.GONE
-                            SplaseScreen.edit.putBoolean("status", true)
-                            SplaseScreen.edit.apply()
                             Toast.makeText(this@Login_pae, "create Account", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@Login_pae,SignUp_page::class.java))
-
                         }
                         }
                     else {
@@ -109,10 +118,8 @@ class Login_pae : AppCompatActivity() {
                 }
                 override fun onFailure(call: Call<LoginDataClass>?, t: Throwable?) {
                     Log.d("===----=", "onFailure: ${t!!.localizedMessage}")
-
                 }
             })
-
         }
         signupbtn.setOnClickListener {
             startActivity(Intent(this@Login_pae, SignUp_page::class.java))

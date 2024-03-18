@@ -1,6 +1,7 @@
 package com.example.serene
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +19,6 @@ class SliderView : AppCompatActivity() {
     lateinit var sliderList: ArrayList<SliderData>
 
     var abc = ArrayList<String>()
-
     // on below line we are creating a variable for our
     // skip button, slider indicator text view for 3 dots
     lateinit var skipBtn: Button
@@ -27,10 +27,16 @@ class SliderView : AppCompatActivity() {
     lateinit var indicatorSlideThreeTV: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Make the activity fullscreen
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = getColor(R.color.statusbarcolor)
+        }
         setContentView(R.layout.activity_slider_view)
-
-        var get = SplaseScreen.sp.getBoolean("firstTime", true)
-
         // on below line we are initializing all
         // our variables with their ids.
         viewPager = findViewById(R.id.idViewPager)
@@ -42,13 +48,9 @@ class SliderView : AppCompatActivity() {
         // on below line we are adding click listener for our skip button
         skipBtn.setOnClickListener {
             // on below line we are opening a new activity
-
-
             val i = Intent(this@SliderView, Login_pae::class.java)
-
             startActivity(i)
             finish()
-
         }
 
         // on below line we are initializing our slider list.
@@ -65,7 +67,6 @@ class SliderView : AppCompatActivity() {
                 ""
             )
         )
-
         sliderList.add(
             SliderData(
                 "Reduce Stress",
@@ -75,9 +76,7 @@ class SliderView : AppCompatActivity() {
                 "",
                 ""
             )
-
         )
-
         sliderList.add(
             SliderData(
                 "Self care",
@@ -132,7 +131,6 @@ class SliderView : AppCompatActivity() {
                 indicatorSlideOneTV.setTextColor(resources.getColor(R.color.grey))
             }
         }
-
         // below method is use to check scroll state.
         override fun onPageScrollStateChanged(state: Int) {}
     }

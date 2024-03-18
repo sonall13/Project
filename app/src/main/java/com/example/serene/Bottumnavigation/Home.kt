@@ -1,5 +1,6 @@
 package com.example.serene.Bottumnavigation
 
+import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.serene.GetData.JournalingDataActivity
 import com.example.serene.R
 import devs.mulham.horizontalcalendar.HorizontalCalendar
 import devs.mulham.horizontalcalendar.HorizontalCalendarListener
@@ -32,14 +34,16 @@ class Home : Fragment() {
                 .datesNumberOnScreen(5)
                 .build()
 
+        startActivity(Intent(context,JournalingDataActivity::class.java))
 
-        horizontalCalendar.setCalendarListener(object : HorizontalCalendarListener() {
+        horizontalCalendar.
+        calendarListener = object : HorizontalCalendarListener() {
             override fun onDateSelected(date: Date?, position: Int) {
                 if (context != null) {
 
                 }
             }
-        })
+        }
 
     }
     override fun onCreateView(

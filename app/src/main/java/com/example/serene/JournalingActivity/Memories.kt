@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
@@ -18,15 +19,21 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
+import com.example.serene.SplaseScreen
+import kotlinx.coroutines.launch
+import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okio.BufferedSink
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.InputStream
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 
@@ -45,6 +52,15 @@ class Memories : AppCompatActivity() {
     @OptIn(ExperimentalEncodingApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Make the activity fullscreen
+//        window.requestFeature(Window.FEATURE_NO_TITLE)
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = getColor(R.color.statusbarcolor)
+        }
         setContentView(R.layout.activity_memories)
 
         i1 = findViewById(R.id.i1)
@@ -63,57 +79,8 @@ class Memories : AppCompatActivity() {
             }
         }
         savememory.setOnClickListener {
+            uploadImage()
 
-            val bitmap = (i2.getDrawable() as BitmapDrawable).bitmap
-            val baos = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-            val imageInByte = baos.toByteArray()
-            var sImage = Base64.encodeToString(imageInByte, Base64.DEFAULT);
-
-//            Log.d("imgeeee", "onCreate: ${imageInByte.toString()}")
-
-            /* var token = SplaseScreen.sp.getString("token", " ")
-             Log.d("=memory-token", "onCreate: ${token}")*/
-
-            var dataa = Mymemories(textarea.text.toString(), i2.drawable.toString())
-            //Log.d("===dataa===", "onCreate: ${sImage}")
-
-            //pass it like this
-            //pass it like this
-            val file = File("/storage/emulated/0/Download/5.png")
-            val requestFile = RequestBody.create(MultipartBody.FORM, imageInByte)
-
-// MultipartBody.Part is used to send also the actual file name
-            val body = MultipartBody.Part.createFormData("image", file.name, requestFile)
-
-// add another part within the multipart request
-            val fullName = RequestBody.create(MultipartBody.FORM, "Your Name")
-
-            val map: MutableMap<String, RequestBody> = HashMap()
-            map["caption"] = fullName
-            map["image"] = requestFile
-
-            var tokenInt =
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjE0Y2E5Y2RhMmYwNDZhMDI2YjAwYiIsImlhdCI6MTcxMDQ3OTE5N30.5qzjI92IPIZm8ChaUeb_aVaPYU-MhfODKy8UB3vTqlk"
-
-            RetrofitInstance().method().memory(tokenInt, map)
-                .enqueue(object : Callback<MemoryDataClass> {
-                    override fun onResponse(
-                        call: Call<MemoryDataClass>,
-                        response: Response<MemoryDataClass>,
-                    ) {
-                        Log.d("=======R", "onResponse: ${response.body()}")
-                        if (response.body()?.status == "success") {
-
-                            Log.d("=g-status=", "onResponse: data entered")
-                            Toast.makeText(this@Memories, "data entered", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-
-                    override fun onFailure(call: Call<MemoryDataClass>, t: Throwable) {
-                        Log.d("=======E", "onFailure: ${t.localizedMessage}")
-                    }
-                })
         }
     }
 
@@ -149,15 +116,90 @@ class Memories : AppCompatActivity() {
             i2.setOnClickListener {
                 openGallery()
             }
-//            if (i2.visibility == View.VISIBLE) {
-//                // If the EditText is visible, hide it
-//                textarea.visibility = View.VISIBLE
-//
-//            } else {
-//                // If the EditText is hidden, show it
-//                textarea.visibility = View.GONE
-//            }
+            if (i2.visibility == View.VISIBLE) {
+                // If the EditText is visible, hide it
+                textarea.visibility = View.VISIBLE
+
+            } else {
+                // If the EditText is hidden, show it
+                textarea.visibility = View.GONE
+            }
         }
+    }
+
+    fun uploadImage() {
+
+        Toast.makeText(this@Memories, "please wait", Toast.LENGTH_LONG).show()
+
+        class UploadStreamRequestBody(
+            private val mediaType: String,
+            private val inputStream: InputStream,
+            private val onUploadProgress: (Int) -> Unit,
+        ) : RequestBody() {
+
+            override fun contentLength(): Long = inputStream.available().toLong()
+
+            override fun contentType(): MediaType? = MediaType.parse(mediaType)
+
+            override fun writeTo(sink: BufferedSink) {
+                val contentLength = inputStream.available().toFloat()
+                val buffer =
+                    ByteArray(DEFAULT_BUFFER_SIZE) // DEFAULT_BUFFER_SIZE constant from kotlin.io.ConstantsKt
+                inputStream.use { inputStream ->
+                    var uploaded = 0
+                    var read: Int
+                    while (inputStream.read(buffer)
+                            .also { read = it } != -1
+                    ) { // Reads the stream until the content ends
+                        sink.write(buffer, 0, read)
+                        uploaded += read
+                        onUploadProgress((100 * uploaded / contentLength).toInt())
+                    }
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+
+            val stream = contentResolver.openInputStream(selectedImage!!) ?: return@launch
+            val request = UploadStreamRequestBody("image/*", stream, onUploadProgress = {
+                Log.d("+++++++++P", "On upload progress $it")
+            })
+            val filePart = MultipartBody.Part.createFormData(
+                "image",
+                "test.jpg",
+                request
+            )
+
+            var token = SplaseScreen.sp.getString("token" , "")
+
+            var tokenInt =
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjE0Y2E5Y2RhMmYwNDZhMDI2YjAwYiIsImlhdCI6MTcxMDQ3OTE5N30.5qzjI92IPIZm8ChaUeb_aVaPYU-MhfODKy8UB3vTqlk"
+
+            var caption = RequestBody.create(MediaType.parse("multipart/form-data"), textarea.text.toString())
+
+            RetrofitInstance().method().memory(token!!, caption, filePart)
+                .enqueue(object : Callback<MemoryDataClass> {
+                    override fun onResponse(
+                        call: Call<MemoryDataClass>,
+                        response: Response<MemoryDataClass>,
+                    ) {
+
+                        Log.d("++++++++++R", "onResponse: ${response}")
+                        Log.d("++++++++++R", "onResponse: ${response.body()}")
+                        if (response.body()?.status == "success") {
+                            Toast.makeText(this@Memories, "Data entered", Toast.LENGTH_SHORT).show()
+                            Log.d("=g-status=", "onResponse: data entered")
+                        } else {
+
+                        }
+                    }
+                    override fun onFailure(call: Call<MemoryDataClass>, t: Throwable) {
+                        Log.d("+++++++E", "onFailure: ${t.localizedMessage}")
+                    }
+                })
+        }
+
     }
 
 }

@@ -1,9 +1,9 @@
 package com.example.serene.Apidata
 
+import com.example.example.First
 import com.example.serene.GetData.GetFreeStyleData
 import com.example.serene.GetData.GetGratitudeDataClass
 import com.example.serene.GetData.GetMemoryData
-import com.example.serene.GetData.GetMorningData
 import com.example.serene.GetData.GetNightDataClass
 import com.example.serene.JournalingActivity.FreeStyleDataClass
 import com.example.serene.JournalingActivity.FreeStyleDatatext
@@ -12,9 +12,11 @@ import com.example.serene.JournalingActivity.MemoryDataClass
 import com.example.serene.JournalingActivity.MyData
 import com.example.serene.Login.ForgetpasswordData
 import com.example.serene.Login.LoginDataClass
+import com.example.serene.Login.Login_pae
 import com.example.serene.Login.ResetPassworddataClass
 import com.example.serene.Login.VerifyotpdataClass
 import com.example.serene.Signup.RegisterDataClass
+import com.example.serene.SplaseScreen
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -73,23 +75,13 @@ interface Myinterface {
         @Body answers: MyData,
     ): Call<JournalingCreateDataClass>
 
-
     @Multipart
     @POST("journaling/memory")
     fun memory(
         @Header("token") token: String,
         @Part("caption") caption: RequestBody,
-        @Part("image") image: MultipartBody.Part,
+        @Part data: MultipartBody.Part,
     ): Call<MemoryDataClass>
-
-    @Multipart
-    @JvmSuppressWildcards
-    @POST("journaling/memory")
-    fun memory(
-        @Header("token") token: String,
-        @PartMap params: Map<String, RequestBody>,
-    ): Call<MemoryDataClass>
-
 
     @POST("journaling/freestyle")
     fun freestyle(
@@ -97,9 +89,7 @@ interface Myinterface {
         @Body text: FreeStyleDatatext,
     ): Call<FreeStyleDataClass>
 
-
     //get data
-
     @Headers("token")
     @GET("journaling/get/freestyle")
     fun fetchfreestyle(): Call<GetFreeStyleData>
@@ -108,11 +98,9 @@ interface Myinterface {
     @GET("journaling/get/memory")
     fun fetchmemory(): Call<GetMemoryData>
 
-    @FormUrlEncoded
     @GET("journaling/get/morning")
-    fun fetchmornign(
-//        @Headers("token") token: String
-    ): Call<GetMorningData>
+    fun fetchmornign(@Header("token") token: String
+    ): Call<First>
 
     @Headers("token")
     @GET("journaling/get/night")

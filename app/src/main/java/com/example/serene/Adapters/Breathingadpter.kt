@@ -16,7 +16,6 @@ import com.example.serene.BreathingActivity.SootheSphere
 import com.example.serene.BreathingActivity.Wakeup
 import com.example.serene.BreathingActivity.ZenBreath
 import com.example.serene.MeditationActivity.Focused
-import com.example.serene.MentalHealthCategorys.Anxiety
 import com.example.serene.MentalHealthCategorys.M_CtegoryFragmentActivity
 import com.example.serene.R
 

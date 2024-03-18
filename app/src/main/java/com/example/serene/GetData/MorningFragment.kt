@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.example.First
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
 import com.example.serene.SplaseScreen
@@ -26,46 +27,44 @@ class MorningFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.morningfragment, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         multianswer1 = view.findViewById(R.id.multianswer1)
         multianswer2 = view.findViewById(R.id.multianswer2)
         multianswer3 =  view.findViewById(R.id.multianswer3)
         seconanswer =  view.findViewById(R.id.secondanswer)
         thirdanswer =  view.findViewById(R.id.thirdanswer)
 
-//        var token = SplaseScreen.sp.getString("token"," ")
+        var token = SplaseScreen.sp.getString("token"," ")
 //        Log.d("=m-token", "onCreate: ${token}")
 //
-//        RetrofitInstance().method().fetchmornign().enqueue(object : Callback<GetMorningData> {
-//            override fun onResponse(
-//                call: Call<GetMorningData>,
-//                response: Response<GetMorningData>,
-//            ) {
-//                Log.d("==", "onResponse: ${response.body()}")
-//                if (response.body()?.status == "status"){
-//
-//                    if (response.body()!!.data?.category == "morning" && response.body()!!.data?.createdAt == "2024-03-14T21:20:01.749+00:00" ) {
-//                      seconanswer.text = response.body()!!.data?.answers?.q1.toString()
-//                      thirdanswer.text = response.body()!!.data?.answers?.q3.toString()
-//
-////                        multianswerarray.addAll(listOf(response.body()!!.data?.answers?.q2.toString()))
-//
-//                        multianswer1.text = response.body()!!.data?.answers?.q2?.get(0).toString()
-//                        multianswer2.text = response.body()!!.data?.answers?.q2?.get(1).toString()
-//                        multianswer3.text = response.body()!!.data?.answers?.q2?.get(2).toString()
-//                    }
-//                }
-//            }
-//            override fun onFailure(call: Call<GetMorningData>, t: Throwable) {
-//                Log.d("=+=", "onResponse: ${t.localizedMessage}")
-//            }
-//        })
+        RetrofitInstance().method().fetchmornign(token!!).enqueue(object : Callback<First> {
+            override fun onResponse(
+                call: Call<First>,
+                response: Response<First>,
+            ) {
+                Log.d("==-----", "onResponse: ${response.body()}")
+                if (response.body()?.status == "success"){
 
+                    Log.d("==+---", "onResponse: ${response.body()?.status}")
+
+                    if (response.body()!!.data.get(2).category == "morning" &&
+                        response.body()!!.data.get(4).createdAt!!.get(1).toString() == "2024-03-18T04:54:10.388+00:00" ) {
+                        Log.d("==-=--", "onResponse: fgcg")
+
+                        seconanswer.text = response.body()!!.data.get(3).answers!!.q1.toString()
+                      thirdanswer.text = response.body()!!.data.get(3).answers?.q3.toString()
+
+//                        multianswerarray.addAll(listOf(response.body()!!.data?.answers?.q2.toString()))
+
+                        multianswer1.text = response.body()!!.data.get(3).answers?.q2?.get(0).toString()
+                        multianswer2.text = response.body()!!.data.get(3).answers?.q2?.get(1).toString()
+                        multianswer3.text = response.body()!!.data.get(3).answers?.q2?.get(2).toString()
+                    }
+                }
+            }
+            override fun onFailure(call: Call<First>, t: Throwable) {
+                Log.d("=+=", "onResponse: ${t.localizedMessage}")
+            }
+        })
     }
-
-
-
-
 }
