@@ -14,28 +14,25 @@
         android:background="@drawable/gratitude"
         android:alpha="0.7"
         android:layout_height="match_parent"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="grattitude journal"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:layout_marginTop="40dp"
-        android:id="@+id/title"
-        android:layout_marginHorizontal="20dp"
-        android:textAlignment="center"/>
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/back"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/pre"/>
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:text="save"
-        android:layout_toRightOf="@+id/title"
         android:layout_marginTop="20dp"
         android:backgroundTint="#122040"
         android:textColor="#5690C3"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textStyle="bold"
         android:layout_alignParentRight="true"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:id="@+id/savegratitude"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -105,7 +102,7 @@
     <EditText
 
         android:id="@+id/multianswer1"
-        android:layout_width="320dp"
+        android:layout_width="270dp"
         android:layout_height="50dp"
         android:text=""
         android:backgroundTint="#5690C3"
@@ -127,7 +124,7 @@
     <EditText
 
         android:id="@+id/multianswer2"
-        android:layout_width="320dp"
+        android:layout_width="270dp"
         android:layout_height="50dp"
         android:text=""
         android:textColor="@color/white"
@@ -149,7 +146,7 @@
     <EditText
 
         android:id="@+id/multianswer3"
-        android:layout_width="320dp"
+        android:layout_width="270dp"
         android:layout_height="50dp"
         android:text=""
         android:textColor="@color/white"

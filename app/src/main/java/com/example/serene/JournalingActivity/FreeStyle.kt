@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
@@ -18,6 +19,7 @@ class FreeStyle : AppCompatActivity() {
 
     lateinit var savefreestyle : Button
     lateinit var freestyletext : EditText
+    lateinit var back : ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -33,6 +35,7 @@ class FreeStyle : AppCompatActivity() {
 
         savefreestyle=findViewById(R.id.savefreestyle)
         freestyletext=findViewById(R.id.freestyletext)
+        back=findViewById(R.id.back)
 
         savefreestyle.setOnClickListener {
 
@@ -61,6 +64,10 @@ class FreeStyle : AppCompatActivity() {
                     }
                 })
         }
+        back.setOnClickListener {
+            onBackPressed()
+        }
+
 
     }
 }

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="15dp"
+    tools:context=".Termsandconditions">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Terms and Conditions"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/t1"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Welcome to SERENE, a mobile application designed to provide health-related information and services. By accessing or using this application, you agree to comply with and be bound by the following terms and conditions of use. If you disagree with any part of these terms, please do not use our application."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/t1"
+            android:id="@+id/t2"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Use of the Application:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/t3"
+            android:layout_below="@+id/t2"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="
+The SERENE application is intended for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions you may have regarding medical conditions."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/t4"
+            android:layout_below="@+id/t3"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Privacy Policy:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/t5"
+            android:layout_below="@+id/t4"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Your use of  SERENE is governed by our Privacy Policy, which outlines how we collect, use, and disclose your personal information."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/t6"
+            android:layout_below="@+id/t5"
+
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="User Registration:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+
+            android:id="@+id/t7"
+            android:layout_below="@+id/t6"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="In order to access certain features of the application, you may be required to register and create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/t9"
+            android:layout_below="@+id/t7"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="User Conduct"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/t10"
+            android:layout_below="@+id/t9"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="You agree to use SERENE only for lawful purposes and in compliance with all applicable laws and regulations. You may not use the application to engage in any illegal or unauthorized activities.
+You agree not to upload or transmit any content that is unlawful, harmful, threatening, abusive, defamatory, or otherwise objectionable.
+"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/t11"
+            android:layout_below="@+id/t10"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Governing Law"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/t12"
+            android:layout_below="@+id/t11"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="These Terms and Conditions shall be governed by and construed in accordance with the laws of India , without regard to its conflict of law provisions."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/t13"
+            android:layout_below="@+id/t12"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="Changes to Terms:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/t14"
+            android:layout_below="@+id/t13"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="
+We reserves the right to update or modify these Terms and Conditions at any time without prior notice. Your continued use of Our SERENE after any changes indicates your acceptance of the revised Terms."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/t15"
+            android:layout_below="@+id/t14"
+
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Contact Information"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/t16"
+            android:layout_below="@+id/t15"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="
+If you have any questions or concerns about these Terms and Conditions, please contact us at
+Serene@gmail.com."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:id="@+id/t17"
+            android:layout_below="@+id/t16"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

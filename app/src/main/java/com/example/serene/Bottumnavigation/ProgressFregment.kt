@@ -35,14 +35,13 @@ class ProgressFregment : Fragment() {
         Progresscat.add("Yoga")
         Progresscat.add("Sleep")
         Progresscat.add("Stretching")
-        Progresscat.add("Memories")
 
         val progresschart = view.findViewById<RecyclerView>(R.id.precycle)
 
         progresschart.layoutManager = LinearLayoutManager(context)
 
         val psdata = ArrayList<SliderData>()
-        for (i in 0..5) {
+        for (i in 0..4) {
             psdata.add(SliderData( "","",0,Progresscat,"",""))
         }
         val psadapter = Progressadp(psdata)

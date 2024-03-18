@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
@@ -22,6 +23,7 @@ class NightJournalActivity : AppCompatActivity() {
     lateinit var multianswer3 : EditText
     lateinit var firstanswer : EditText
     lateinit var thirdanswer : EditText
+    lateinit var back : ImageButton
 
     var multianswerarray = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +41,7 @@ class NightJournalActivity : AppCompatActivity() {
 
 
         savenightjournal=findViewById(R.id.savenightjournal)
+        back=findViewById(R.id.back)
         multianswer1=findViewById(R.id.multianswer1)
         multianswer2=findViewById(R.id.multianswer2)
         multianswer3=findViewById(R.id.multianswer3)
@@ -80,7 +83,11 @@ class NightJournalActivity : AppCompatActivity() {
 
 
         }
+        back.setOnClickListener {
+            onBackPressed()
+        }
 
 
     }
+
 }

@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#0C1125"
     tools:context=".Bottumnavigation.ProfileFregment">
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="700dp"
-           >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,12 +18,19 @@
 
     <ImageView
         android:id="@+id/profileImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-      android:layout_marginTop="40dp"
-        android:src="@drawable/profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+      android:layout_marginTop="20dp"
+        android:src="@drawable/prof"
         android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/setprofile"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"/>
 
     <!-- Username -->
     <TextView
@@ -34,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="user name"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_below="@id/profileImageView"
@@ -49,60 +54,166 @@
             <!--        android:textAlignment="center"-->
             <!--        android:background="#FEAA00"-->
             <!--        />-->
-
-
-            <EditText
-                android:id="@+id/textemail"
+            <TextView
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:id="@+id/card1"
+                android:alpha="0.3"
+                android:layout_below="@+id/usernameTextView"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/textemail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="your email"
+                android:textColor="@color/white"
                 android:layout_below="@+id/usernameTextView"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="17dp"
                 android:textSize="15sp"
-                android:layout_marginHorizontal="30dp" />
-
-            <Button
-                android:id="@+id/changepass"
-                android:layout_width="match_parent"
+                android:layout_marginHorizontal="40dp" />
+            <TextView
+                android:id="@+id/setemail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="change password"
-                android:layout_below="@+id/textemail"
-                android:layout_marginTop="20dp"
+                android:text=""
+                android:layout_toRightOf="@id/textemail"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/usernameTextView"
+                android:layout_marginTop="17dp"
                 android:textSize="15sp"
                 android:layout_marginHorizontal="30dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card1"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:id="@+id/card2"
+                android:alpha="0.4"
+                android:layout_marginHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/changepass"
+                android:layout_width="330dp"
+                android:textAlignment="viewStart"
+                android:layout_height="30dp"
+                android:text="change password"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card1"
+                android:layout_marginTop="27dp"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="30dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card2"
+                android:layout_marginTop="20dp"
+                android:id="@+id/card3"
+                android:alpha="0.4"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp" />
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="theame"
-                android:layout_below="@+id/changepass"
-                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card2"
+                android:layout_marginTop="27dp"
                 android:textSize="15sp"
-                android:layout_marginHorizontal="30dp" />
-
-            <Button
-                android:id="@+id/shareButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Share with Friends"
-                android:layout_below="@+id/text2"
-                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="34dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card3"
+                android:layout_marginTop="15dp"
                 android:textSize="15sp"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"
-                android:layout_marginHorizontal="6dp" />
-
-
+                android:alpha="0.4"
+                android:id="@+id/card4"
+                android:layout_marginHorizontal="20dp" />
 
             <TextView
-                android:id="@+id/text5"
+                android:id="@+id/shareButton"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:text="Share with Friends"
+                android:layout_below="@+id/card3"
+                android:layout_marginTop="22dp"
+                android:textSize="15sp"
+                android:textAlignment="viewStart"
+                android:backgroundTint="#0C1125"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="32dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:layout_below="@+id/card4"
+                android:layout_marginTop="20dp"
+                android:id="@+id/card5"
+                android:alpha="0.4"
+                android:textColorHint="@color/white"
+                android:layout_marginHorizontal="20dp" />
+
+            <EditText
+                android:id="@+id/editTextFeedback"
+                android:layout_below="@+id/card4"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:text=""
+                android:textColorHint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="40dp"
+                android:hint="Enter your feedback"/>
+            <Button
+                android:id="@+id/fb"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/editTextFeedback"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0C1125"
+               android:layout_marginLeft="200dp"
+                android:text="Submit Feedback"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borderr"
+                android:textColor="@color/white"
+                android:layout_below="@+id/fb"
+                android:layout_marginTop="20dp"
+                android:id="@+id/card6"
+                android:alpha="0.4"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="20dp" />
+
+            <TextView
+                android:id="@+id/terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Turms and Conditions"
                 android:layout_below="@+id/fb"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:textSize="15sp"
+                android:textColor="@color/white"
                 android:layout_marginHorizontal="30dp"
                 />
 
@@ -122,32 +233,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Logout"
-                android:layout_marginHorizontal="150dp"
+                android:layout_marginHorizontal="130dp"
                 android:backgroundTint="#8C9EFF"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
-                android:layout_below="@+id/text5"
+                android:layout_below="@+id/card6"
                 android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/editTextFeedback"
-                android:layout_below="@+id/shareButton"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="30dp"
-                android:layout_height="wrap_content"
-                android:hint="Enter your feedback"/>
 
-            <Button
-                android:id="@+id/fb"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_below="@+id/editTextFeedback"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:text="Submit Feedback"/>
+
+
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
 </ScrollView>
 

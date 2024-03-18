@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.R
@@ -22,6 +23,7 @@ class Gratitude : AppCompatActivity() {
     lateinit var multianswer3 : EditText
     lateinit var firstanswer : EditText
     lateinit var thirdanswer : EditText
+    lateinit var back : ImageButton
     lateinit var save:Button
 
     var multianswerarray = ArrayList<String>()
@@ -40,6 +42,7 @@ class Gratitude : AppCompatActivity() {
 
 
         savegratitude=findViewById(R.id.savegratitude)
+        back=findViewById(R.id.back)
         multianswer1=findViewById(R.id.multianswer1)
         multianswer2=findViewById(R.id.multianswer2)
         multianswer3=findViewById(R.id.multianswer3)
@@ -79,6 +82,9 @@ class Gratitude : AppCompatActivity() {
                 })
 
 
+        }
+        back.setOnClickListener {
+            onBackPressed()
         }
 
 
