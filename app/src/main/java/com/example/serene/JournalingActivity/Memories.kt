@@ -14,6 +14,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -43,6 +44,7 @@ class Memories : AppCompatActivity() {
 
     // One Preview Image
     lateinit var i1: ImageView
+    lateinit var back:ImageButton
     lateinit var i2: ImageView
     lateinit var textarea: EditText
     lateinit var savememory: Button
@@ -199,7 +201,9 @@ class Memories : AppCompatActivity() {
                     }
                 })
         }
-
+        back.setOnClickListener {
+            onBackPressed()
+        }
     }
 
 }
