@@ -77,6 +77,13 @@ dependencies {
     implementation ("devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7")
 //lottie animation
     implementation ("com.airbnb.android:lottie:6.4.0")
+//media player
+    implementation ("com.google.android.exoplayer:exoplayer:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer:2.X.X")
+
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.X.X")
+    implementation ("com.google.android.exoplayer:exoplayer-dash:2.X.X")
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.X.X")
 
 
 

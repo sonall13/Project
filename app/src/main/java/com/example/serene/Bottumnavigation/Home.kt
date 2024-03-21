@@ -34,7 +34,6 @@ class Home : Fragment() {
                 .datesNumberOnScreen(5)
                 .build()
 
-        startActivity(Intent(context,JournalingDataActivity::class.java))
 
         horizontalCalendar.
         calendarListener = object : HorizontalCalendarListener() {

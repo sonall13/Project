@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Adapters.P_HealthAdapter
-import com.example.serene.Home_page
 import com.example.serene.R
 import com.example.serene.SliderData
 
@@ -18,7 +17,7 @@ class Physical_health : Fragment()  {
     lateinit var physicalrecv : RecyclerView
     var Physicalhealthcat = ArrayList<String>()
 
-    var array= arrayOf(R.drawable.b1,R.drawable.b3,R.drawable.b3,R.drawable.b3)
+    var array= arrayOf(R.drawable.str,R.drawable.healthyeat,R.drawable.yogaaa,R.drawable.vital,R.drawable.yoga,R.drawable.activeaura,R.drawable.activeaura)
 //    var category1 = arrayOf("Stretching" , "Healthy Eating" , "Yoga")
 
 
@@ -32,9 +31,10 @@ class Physical_health : Fragment()  {
         Physicalhealthcat.add("Stretching")
         Physicalhealthcat.add("Healthy Eating")
         Physicalhealthcat.add("Yoga")
-        Physicalhealthcat.add("ActiveAura")
+
         Physicalhealthcat.add("VitalVibe")
         Physicalhealthcat.add("StaminaSculpt")
+        Physicalhealthcat.add("ActiveAura")
 
 
         physicalrecv = view.findViewById(R.id.physicalrecv)
@@ -45,7 +45,7 @@ class Physical_health : Fragment()  {
             pdata.add(SliderData(" ", "", 0,
                 Physicalhealthcat, " ",""))
         }
-        val adapter = P_HealthAdapter(pdata,this)
+        val adapter = P_HealthAdapter(pdata,array,this)
         physicalrecv.adapter = adapter
     }
 

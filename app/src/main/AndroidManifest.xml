@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,22 +26,15 @@
         <activity
             android:name=".GetData.JournalingDataActivity"
             android:exported="false">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".SplaseScreen"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
         </activity>
         <activity
             android:name=".sleepHome.Alarm"
@@ -66,8 +61,6 @@
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
 
@@ -243,9 +236,9 @@
         <activity
             android:name=".AffirmationActivity.AffirmativeAura"
             android:exported="false" />
-        <activity
-            android:name=".AffirmationActivity.ZenAffirm"
-            android:exported="false" />
+<!--        <activitly-->
+<!--            android:name=".AffirmationActivity.ZenAffirm"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".AffirmationActivity.InspireInfinity"
             android:exported="false" />
@@ -348,23 +341,24 @@
         <activity
             android:name=".MentalHealthCategorys.M_CtegoryFragmentActivity"
             android:exported="false" />
-        <activity
-            android:name=".MentalHealthCategorys.Anxiety"
-            android:exported="true" />
+
         <activity
             android:name=".Home_page"
             android:exported="false"
-            android:theme="@style/AppTheme" /> <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
+            android:theme="@style/AppTheme" >
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN" />-->
+
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--        </intent-filter>-->
+        </activity>
+
         <activity
             android:name=".SliderView"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Signup.SignUp_page"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Login.Login_pae"
             android:exported="false">

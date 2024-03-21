@@ -1,13 +1,19 @@
 package com.example.serene.BreathingActivity
 
+import android.media.MediaPlayer
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import com.airbnb.lottie.LottieAnimationView
 import com.example.serene.R
 
 class Deepdiaphragm : AppCompatActivity() {
+    lateinit var play: Button
+    lateinit var i1:LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Make the activity fullscreen
 //        window.requestFeature(Window.FEATURE_NO_TITLE)
 //        window.setFlags(
@@ -18,5 +24,12 @@ class Deepdiaphragm : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_deepdiaphragm)
+        play=findViewById(R.id.play)
+        i1=findViewById(R.id.i1)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.deep)
+        play.setOnClickListener {
+
+            mp.start()
+        }
     }
 }

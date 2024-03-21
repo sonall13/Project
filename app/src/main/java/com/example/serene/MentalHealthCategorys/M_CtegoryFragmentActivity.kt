@@ -20,7 +20,11 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
     var SelfCare = ArrayList<String>()
     var StressReduce = ArrayList<String>()
 
-    var drawablearray = ArrayList<Int>()
+    var bdraw = ArrayList<Int>()
+    var mdraw = ArrayList<Int>()
+    var adraw = ArrayList<Int>()
+    var afdraw = ArrayList<Int>()
+    var sdraw = ArrayList<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,16 +41,51 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
 
         fragmentrecycler =findViewById(R.id.fragmentrecycler)
 
-        drawablearray.add(R.drawable.staggered6)
-        drawablearray.add(R.drawable.staggered7)
-        drawablearray.add(R.drawable.staggered2)
-        drawablearray.add(R.drawable.staggered4)
-        drawablearray.add(R.drawable.staggered7)
-        drawablearray.add(R.drawable.staggered4)
-        drawablearray.add(R.drawable.staggered6)
-        drawablearray.add(R.drawable.staggered2)
-        drawablearray.add(R.drawable.staggered4)
-        drawablearray.add(R.drawable.staggered6)
+        bdraw.add(R.drawable.bcat1)
+        bdraw.add(R.drawable.vv2)
+        bdraw.add(R.drawable.vv1)
+        bdraw.add(R.drawable.bb2)
+        bdraw.add(R.drawable.v6)
+        bdraw.add(R.drawable.v7)
+        bdraw.add(R.drawable.v13)
+        bdraw.add(R.drawable.v14)
+
+
+        mdraw.add(R.drawable.md1)
+        mdraw.add(R.drawable.md8)
+        mdraw.add(R.drawable.md3)
+        mdraw.add(R.drawable.md4)
+        mdraw.add(R.drawable.md5)
+        mdraw.add(R.drawable.md6)
+        mdraw.add(R.drawable.md7)
+        mdraw.add(R.drawable.md2)
+
+
+        adraw.add(R.drawable.ad1)
+        adraw.add(R.drawable.ad2)
+        adraw.add(R.drawable.ad3)
+        adraw.add(R.drawable.ad4)
+        adraw.add(R.drawable.ad5)
+        adraw.add(R.drawable.ad6)
+        adraw.add(R.drawable.ad7)
+        adraw.add(R.drawable.ad7)
+
+        afdraw.add(R.drawable.afd1)
+        afdraw.add(R.drawable.afd2)
+        afdraw.add(R.drawable.afd4)
+        afdraw.add(R.drawable.afd3)
+        afdraw.add(R.drawable.afd5)
+        afdraw.add(R.drawable.afd7)
+        afdraw.add(R.drawable.afd6)
+
+
+        sdraw.add(R.drawable.sr1)
+        sdraw.add(R.drawable.sr2)
+        sdraw.add(R.drawable.sr3)
+        sdraw.add(R.drawable.sr7)
+        sdraw.add(R.drawable.sr5)
+        sdraw.add(R.drawable.sr6)
+
 
 
         var breathing = intent.getIntExtra("breathing",0)
@@ -58,21 +97,17 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
             BreathingArray.add("focus")
             BreathingArray.add("Wakeup")
             BreathingArray.add("Serene pulse")
-            BreathingArray.add("SootheSphere")
             BreathingArray.add("ZenBreath")
             BreathingArray.add("Calmcycles")
-
 
         //Meditation
         Meditation.add("Mindfulness")
         Meditation.add("Spiritual")
         Meditation.add("Focused")
         Meditation.add("Mantra")
-        Meditation.add("Kindness")
         Meditation.add("Chakra")
         Meditation.add("Concentrate")
         Meditation.add("SereneSoul")
-        Meditation.add("serenitySphere")
         Meditation.add("SereneSoulSpace")
 
         //Anxiety
@@ -81,7 +116,6 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         Anxiety.add("Harmonyheal")
         Anxiety.add("Calmcare")
         Anxiety.add("RelaxationRefuge")
-        Anxiety.add("ComfortCove")
         Anxiety.add("CalmWave")
         Anxiety.add("EaseAnx")
 
@@ -92,7 +126,6 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         Affirmation.add("AffirmArcade")
         Affirmation.add("InspireInfinity")
         Affirmation.add("ZenAffirm")
-        Affirmation.add("AffirmativeAura")
         Affirmation.add("EncourageU")
 
         //SelfCare
@@ -103,7 +136,7 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         SelfCare.add("StressEase")
         SelfCare.add("SereneSanctuary")
         SelfCare.add("StressFreeZone")
-        SelfCare.add("PeacefulPause")
+
 
         //StressReduce
         StressReduce.add("SerenitySelf")
@@ -116,27 +149,27 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         when(breathing){
 
             0 ->{
-                var breathingArrayadp = Breathingadpter(this,BreathingArray,drawablearray)
+                var breathingArrayadp = Breathingadpter(this,BreathingArray,bdraw)
                 fragmentrecycler.adapter = breathingArrayadp
             }
             1 ->{
-                var meditationadp = Meditationadp(this,Meditation,drawablearray)
+                var meditationadp = Meditationadp(this,Meditation,mdraw)
                 fragmentrecycler.adapter = meditationadp
             }
             2->{
-                var anxietyadp = Anxietyadp(this,Anxiety,drawablearray)
+                var anxietyadp = Anxietyadp(this,Anxiety,adraw)
                 fragmentrecycler.adapter = anxietyadp
             }
             3 ->{
-                var affirmationadp = Affirmationadp(this,Affirmation,drawablearray)
+                var affirmationadp = Affirmationadp(this,Affirmation,afdraw)
                 fragmentrecycler.adapter = affirmationadp
             }
             4 ->{
-                var selfCareadp = SelfCareadp(this,SelfCare,drawablearray)
+                var selfCareadp = SelfCareadp(this,SelfCare,bdraw)
                 fragmentrecycler.adapter = selfCareadp
             }
             5 ->{
-                var stressReduceadp = StressReduceadp(this,StressReduce,drawablearray)
+                var stressReduceadp = StressReduceadp(this,StressReduce,sdraw)
                 fragmentrecycler.adapter = stressReduceadp
             }
 

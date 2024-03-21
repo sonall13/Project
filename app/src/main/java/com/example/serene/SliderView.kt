@@ -130,6 +130,7 @@ class SliderView : AppCompatActivity() {
                 indicatorSlideThreeTV.setTextColor(resources.getColor(R.color.white))
                 indicatorSlideOneTV.setTextColor(resources.getColor(R.color.grey))
             }
+
         }
         // below method is use to check scroll state.
         override fun onPageScrollStateChanged(state: Int) {}

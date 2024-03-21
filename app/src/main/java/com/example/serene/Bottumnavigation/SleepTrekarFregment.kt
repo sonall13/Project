@@ -45,7 +45,7 @@ class SleepTrekarFregment : Fragment() {
         b2 = view.findViewById(R.id.b2)
         b3 = view.findViewById(R.id.b3)
 
-        sleepdata.add("dlsm")
+//       sleepdata.add(R.drawable.sl1)
         sleepdata.add("dlsm")
         sleepdata.add("dlsm")
         sleepdata.add("dlsm")
@@ -57,6 +57,7 @@ class SleepTrekarFregment : Fragment() {
             startActivity(inte)
         }
         b2.setOnClickListener {
+
             var inte = Intent(context, BedtimeGoal::class.java)
             startActivity(inte)
         }

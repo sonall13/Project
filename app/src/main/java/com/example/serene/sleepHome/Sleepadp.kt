@@ -8,16 +8,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.R
 
 class Sleepadp(var sleepdata: ArrayList<String>) : RecyclerView.Adapter<Sleepadp.Viewholder>() {
-    class Viewholder(sleepdata : View) : RecyclerView.ViewHolder(sleepdata){
+    class Viewholder(sleepdata: View) : RecyclerView.ViewHolder(sleepdata) {
 
-        val sleept: TextView = itemView.findViewById(R.id.sleept)
+//        val sleept: TextView = itemView.findViewById(R.id.sleept)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.sleepcardview, parent, false)
 
-        return Viewholder(view)    }
+        return Viewholder(view)
+    }
 
     override fun getItemCount(): Int {
         return sleepdata.size
@@ -30,7 +31,8 @@ class Sleepadp(var sleepdata: ArrayList<String>) : RecyclerView.Adapter<Sleepadp
         // sets the image to the imageview from our itemHolder class
         // sets the text to the textview from our itemHolder class
 
-        holder.sleept.text = "hello"     }
+//        holder.sleept.text = "hello"     }
 
 
+    }
 }

@@ -5,12 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BreathingActivity.Serenepulse">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_marginVertical="60dp"
+        android:layout_marginHorizontal="70dp"
+        app:lottie_rawRes="@raw/slowbreathing"
+        android:id="@+id/i1"
+        android:layout_marginTop="70dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Serenepulse"
+        android:layout_below="@+id/i1"
         android:textSize="20sp"
+        android:id="@+id/play"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

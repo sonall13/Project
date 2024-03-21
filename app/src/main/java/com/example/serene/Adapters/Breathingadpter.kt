@@ -11,8 +11,8 @@ import com.example.serene.BreathingActivity.AumChant
 import com.example.serene.BreathingActivity.Calmcycles
 import com.example.serene.BreathingActivity.DeStress
 import com.example.serene.BreathingActivity.Deepdiaphragm
+import com.example.serene.BreathingActivity.Focus
 import com.example.serene.BreathingActivity.Serenepulse
-import com.example.serene.BreathingActivity.SootheSphere
 import com.example.serene.BreathingActivity.Wakeup
 import com.example.serene.BreathingActivity.ZenBreath
 import com.example.serene.MeditationActivity.Focused
@@ -55,12 +55,11 @@ class Breathingadpter(
                 0 -> context.startActivity(Intent(context,Deepdiaphragm::class.java))
                 1 -> context.startActivity(Intent(context,AumChant::class.java))
                 2 -> context.startActivity(Intent(context,DeStress::class.java))
-                3 -> context.startActivity(Intent(context,Focused::class.java))
+                3 -> context.startActivity(Intent(context,Focus::class.java))
                 4 -> context.startActivity(Intent(context,Wakeup::class.java))
                 5 -> context.startActivity(Intent(context,Serenepulse::class.java))
-                6 -> context.startActivity(Intent(context, SootheSphere::class.java))
-                7 -> context.startActivity(Intent(context, ZenBreath::class.java))
-                8 -> context.startActivity(Intent(context, Calmcycles::class.java))
+                6 -> context.startActivity(Intent(context, ZenBreath::class.java))
+                7 -> context.startActivity(Intent(context, Calmcycles::class.java))
             }
 
         }

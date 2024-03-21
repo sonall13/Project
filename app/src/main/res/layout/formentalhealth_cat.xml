@@ -6,36 +6,39 @@
             android:clickable="true"
             android:focusable="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
             card_view:cardUseCompatPadding="true"
             card_view:cardElevation="5dp"
             android:layout_marginTop="30dp"
             card_view:contentPadding="10dp">
+
+
 
             <RelativeLayout
               android:background="@drawable/borderr"
                 android:layout_marginHorizontal="30dp"
                 android:id="@+id/cat_layout"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView android:layout_width="80dp"
-                    android:layout_height="80dp"
+                <ImageView android:layout_width="65dp"
+                    android:layout_height="65dp"
                     android:id="@+id/img"
+                    android:layout_marginRight="240dp"
                     android:contentDescription="@string/app_name"/>
 
                 <TextView
                     android:id="@+id/txt"
                     android:textSize="20sp"
                     android:text="Title"
+                   android:layout_marginVertical="13dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:layout_toRightOf="@+id/img"
-                    android:layout_marginStart="20dp"/>
+                    android:layout_marginStart="90dp"/>
 
 
             </RelativeLayout>

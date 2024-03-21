@@ -17,7 +17,7 @@ class Mental_health : Fragment() {
 
     lateinit var   mrecyclerview : RecyclerView
     var Mentalhealthcat = ArrayList<String>()
-    var drawarr= arrayOf(R.drawable.butterfly,R.drawable.cat2,R.drawable.cat3,R.drawable.butterfly,R.drawable.cat2,R.drawable.cat3)
+    var drawarr= arrayOf(R.drawable.butterflyy,R.drawable.meditationn,R.drawable.bird,R.drawable.f1,R.drawable.selfcare,R.drawable.anxiety)
 
 
     override fun onCreateView(

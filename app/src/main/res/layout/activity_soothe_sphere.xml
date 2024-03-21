@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".BreathingActivity.SootheSphere">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SootheSphere"
         android:textSize="20sp"
+        android:id="@+id/play"
         android:layout_centerInParent="true"/>
 </RelativeLayout>
