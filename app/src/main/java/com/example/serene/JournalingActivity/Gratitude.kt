@@ -58,7 +58,7 @@ class Gratitude : AppCompatActivity() {
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=g-token", "onCreate: ${token}")
 
-            var modelclass = Answers(firstanswer.text.toString(),multianswerarray,thirdanswer.text.toString())
+            var modelclass = Answers(multianswerarray,firstanswer.text.toString(),thirdanswer.text.toString())
             var dataa = MyData("gratitude",modelclass)
             Log.d("===dataa===", "onCreate: ${dataa}")
 

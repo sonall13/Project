@@ -58,7 +58,7 @@ class NightJournalActivity : AppCompatActivity() {
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=n-token", "onCreate: ${token}")
 
-            var modelclass = Answers(firstanswer.text.toString(),multianswerarray,thirdanswer.text.toString())
+            var modelclass = Answers(multianswerarray,firstanswer.text.toString(),thirdanswer.text.toString())
             var dataaa = MyData("night",modelclass)
             Log.d("=n-dataa=", "onCreate: ${dataaa}")
 

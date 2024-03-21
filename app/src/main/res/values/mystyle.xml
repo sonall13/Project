@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="textfireld" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
-        <item name="backgroundColor">#000000</item>
-        <item name="android:textColor">#ffffff</item>
-
-    </style>
-
 </resources>

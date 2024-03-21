@@ -4,12 +4,15 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.R
 
 class JournalingDataActivity : AppCompatActivity() {
 
+    lateinit var date : TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -25,6 +28,9 @@ class JournalingDataActivity : AppCompatActivity() {
         val selectedDate = intent.getStringExtra("selectedDate")
 
         val cat_frame = findViewById<FrameLayout>(R.id.cat_frame)
+        date = findViewById(R.id.date)
+
+        date.text=intent.getStringExtra("formattedDate")
         val sliderRecyclerView = findViewById<RecyclerView>(R.id.sliderRecyclerView)
 
 //
@@ -40,15 +46,15 @@ class JournalingDataActivity : AppCompatActivity() {
                 0 -> MorningFragment()
                 1 -> NightFragment()
                 2 -> GratitudeFragment()
-//                3 -> FreestyleFragment()
-//                4 -> MemoriesFragment()
+                3 -> FreestyleFragment()
+                4 -> MemoriesFragment()
 
                 else -> MorningFragment()
             }
 
             fragment?.let {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.cat_frame, it)
+                    .replace(R.id.cat_frame, it as Fragment)
                     .commit()
             }
         }

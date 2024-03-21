@@ -69,8 +69,12 @@ class Memories : AppCompatActivity() {
         i2 = findViewById(R.id.i2)
         textarea = findViewById(R.id.textarea)
         savememory = findViewById(R.id.savememory)
+        back = findViewById(R.id.back)
         Toast.makeText(this, "helloww..   What's your beautiful memory of the day :)  ", Toast.LENGTH_SHORT).show()
 
+        back.setOnClickListener {
+            onBackPressed()
+        }
         i1.setOnClickListener {
 
             if (ContextCompat.checkSelfPermission(
@@ -128,7 +132,6 @@ class Memories : AppCompatActivity() {
             }
         }
     }
-
     fun uploadImage() {
 
         Toast.makeText(this@Memories, "please wait", Toast.LENGTH_LONG).show()
@@ -144,6 +147,7 @@ class Memories : AppCompatActivity() {
             override fun contentType(): MediaType? = MediaType.parse(mediaType)
 
             override fun writeTo(sink: BufferedSink) {
+
                 val contentLength = inputStream.available().toFloat()
                 val buffer =
                     ByteArray(DEFAULT_BUFFER_SIZE) // DEFAULT_BUFFER_SIZE constant from kotlin.io.ConstantsKt
@@ -200,9 +204,6 @@ class Memories : AppCompatActivity() {
                         Log.d("+++++++E", "onFailure: ${t.localizedMessage}")
                     }
                 })
-        }
-        back.setOnClickListener {
-            onBackPressed()
         }
     }
 

@@ -27,7 +27,6 @@ class MorningJournal : AppCompatActivity() {
 
         private var multianswerarray = arrayListOf<String>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -58,7 +57,7 @@ class MorningJournal : AppCompatActivity() {
             var token = SplaseScreen.sp.getString("token"," ")
             Log.d("=m-token", "onCreate: ${token}")
 
-            var modelclass = Answers(seconanswer.text.toString(),multianswerarray,thirdanswer.text.toString())
+            var modelclass = Answers(multianswerarray,seconanswer.text.toString(),thirdanswer.text.toString())
             var dataaa = MyData("morning",modelclass)
             Log.d("=m-dataa=", "onCreate: ${dataaa}")
 
@@ -72,9 +71,12 @@ class MorningJournal : AppCompatActivity() {
 
                         if(response.body()?.status == "success"){
 
+                            var q= response.body()?.data?.Id.toString()
+                            SplaseScreen.edit.putString("getid" , q)
+                            SplaseScreen.edit.apply()
+                            Log.d("=m-status=", "onResponse: $q")
                             Log.d("=m-status=", "onResponse: data entered")
                             Toast.makeText(this@MorningJournal, "data entered", Toast.LENGTH_SHORT).show()
-
                         }
                     }
                     override fun onFailure(call: Call<JournalingCreateDataClass>, t: Throwable) {
@@ -82,12 +84,9 @@ class MorningJournal : AppCompatActivity() {
                     }
                 })
 
-
         }
         back.setOnClickListener {
             onBackPressed()
         }
-
-
     }
 }

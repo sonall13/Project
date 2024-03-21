@@ -85,7 +85,8 @@ dependencies {
     implementation ("com.google.android.exoplayer:exoplayer-dash:2.X.X")
     implementation ("com.google.android.exoplayer:exoplayer-ui:2.X.X")
 
-
+//glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
 
 }

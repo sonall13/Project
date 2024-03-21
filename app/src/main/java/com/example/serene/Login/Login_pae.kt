@@ -100,7 +100,8 @@ class Login_pae : AppCompatActivity() {
                             SplaseScreen.edit.putBoolean("status", true)
                             SplaseScreen.edit.apply()
                             startActivity(Intent(this@Login_pae, Home_page::class.java).
-                            putExtra("token" , dd.toString()))
+                            putExtra("token" , dd.toString())
+                                .putExtra("setemail" ,emailEt.text.toString()))
                             finish()
                         }
                         else{

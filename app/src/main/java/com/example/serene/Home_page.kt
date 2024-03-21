@@ -1,5 +1,6 @@
 package com.example.serene
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.MenuItem
 import android.view.Window
 import android.view.WindowManager
 import android.widget.CalendarView
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -25,6 +27,8 @@ import com.example.serene.Bottumnavigation.ProgressFregment
 import com.example.serene.Bottumnavigation.SleepTrekarFregment
 import com.example.serene.Drawernav.Mental_health
 import com.example.serene.Drawernav.Physical_health
+import com.example.serene.GetData.JournalingDataActivity
+import com.example.serene.GetData.VerticalCalendar
 import com.example.serene.JournalingActivity.JournalingCreateDataClass
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -39,6 +43,7 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
     lateinit var drawer: DrawerLayout
     lateinit var toolbar: Toolbar
+    lateinit var data1: ImageView
     lateinit var bottom_navigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +63,13 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
         bottom_navigation = findViewById(R.id.bottom_navigation)
         toolbar = findViewById<Toolbar>(R.id.toolbar)
+        data1 = findViewById(R.id.data)
+
+        data1.setOnClickListener {
+
+            startActivity(Intent(this,VerticalCalendar::class.java))
+        }
+
         setSupportActionBar(toolbar)
 
         bottom_navigation = findViewById(R.id.bottom_navigation) as BottomNavigationView

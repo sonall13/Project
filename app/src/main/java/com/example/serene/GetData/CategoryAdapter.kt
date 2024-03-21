@@ -46,30 +46,3 @@ class CategoryAdapter(private val categories: List<String>, private val onItemCl
     }
 
 }
-
-
-
-//class CategoryAdapter(private val categories: List<String>) :
-//    RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-//        val view = LayoutInflater.from(parent.context)
-//            .inflate(R.layout.item_category, parent, false)
-//        return CategoryViewHolder(view)
-//    }
-//
-//    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-//        val category = categories[position]
-//        holder.bind(category)
-//    }
-//
-//    override fun getItemCount(): Int {
-//        return categories.size
-//    }
-//
-//    inner class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        fun bind(category: String) {
-//            itemView.findViewById<TextView>(R.id.categoryName).text = category
-//        }
-//    }
-//}

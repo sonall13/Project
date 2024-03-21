@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.example.First
 import com.example.serene.Apidata.RetrofitInstance
@@ -35,30 +36,37 @@ class MorningFragment : Fragment() {
         thirdanswer =  view.findViewById(R.id.thirdanswer)
 
         var token = SplaseScreen.sp.getString("token"," ")
-//        Log.d("=m-token", "onCreate: ${token}")
+        var getid = SplaseScreen.sp.getString("getid"," ")
+        var s = SplaseScreen.sp.getString("formattedDate","gh")
+
+        Log.d("==+-+--", "onCreate: ${getid.toString()}")
+        Log.d("==+-+--", "onCreate: ${s.toString()}")
+        Toast.makeText(context, "please wait", Toast.LENGTH_SHORT).show()
+
 //
         RetrofitInstance().method().fetchmornign(token!!).enqueue(object : Callback<First> {
             override fun onResponse(
                 call: Call<First>,
                 response: Response<First>,
             ) {
-                Log.d("==-----", "onResponse: ${response.body()}")
+                Log.d("==-++----", "onResponse: ${response.body()}")
                 if (response.body()?.status == "success"){
 
-                    Log.d("==+---", "onResponse: ${response.body()?.status}")
+                    Log.d("==+-+--", "onResponse: ${response.body()?.status}")
+                    Log.d("==+-+--", "onResponse: ${response.body()?.data?.get(0)?.updatedAt.toString()}")
 
-                    if (response.body()!!.data.get(2).category == "morning" &&
-                        response.body()!!.data.get(4).createdAt!!.get(1).toString() == "2024-03-18T04:54:10.388+00:00" ) {
-                        Log.d("==-=--", "onResponse: fgcg")
+                    if (response.body()!!.data.get(0).category.toString() == "morning" ) {
 
-                        seconanswer.text = response.body()!!.data.get(3).answers!!.q1.toString()
-                      thirdanswer.text = response.body()!!.data.get(3).answers?.q3.toString()
+                        Log.d("==+-+--", "onResponse: ${response.body()?.data?.get(0)?.Id.toString()}")
+
+                        multianswer1.text = response.body()!!.data.get(0).answers?.q1?.get(0).toString()
+                        multianswer2.text = response.body()!!.data.get(0).answers?.q1?.get(1).toString()
+                        multianswer3.text = response.body()!!.data.get(0).answers?.q1?.get(2).toString()
+
+                        seconanswer.text = response.body()!!.data.get(0).answers?.q2.toString()
+                        thirdanswer.text = response.body()!!.data.get(0).answers?.q3.toString()
 
 //                        multianswerarray.addAll(listOf(response.body()!!.data?.answers?.q2.toString()))
-
-                        multianswer1.text = response.body()!!.data.get(3).answers?.q2?.get(0).toString()
-                        multianswer2.text = response.body()!!.data.get(3).answers?.q2?.get(1).toString()
-                        multianswer3.text = response.body()!!.data.get(3).answers?.q2?.get(2).toString()
                     }
                 }
             }

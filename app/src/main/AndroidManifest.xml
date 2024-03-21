@@ -21,6 +21,9 @@
         android:theme="@style/Theme.Serene"
         tools:targetApi="31">
         <activity
+            android:name=".GetData.VerticalCalendar"
+            android:exported="false" />
+        <activity
             android:name=".Termsandconditions"
             android:exported="false" />
         <activity

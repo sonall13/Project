@@ -19,10 +19,9 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Login.ForgetPasswordActivity
+import com.example.serene.Login.Login_pae
 import com.example.serene.R
 import com.example.serene.Termsandconditions
-
-// TODO: Rename parameter arguments, choose names that match
 
 class
 ProfileFregment : Fragment() {
@@ -35,16 +34,15 @@ ProfileFregment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_profile_fregment, container, false)
+        var a=inflater.inflate(R.layout.fragment_profile_fregment, container, false)
+
+        return a
 
     }
 
@@ -54,8 +52,14 @@ ProfileFregment : Fragment() {
         val buttonSubmitFeedback: Button = view.findViewById(R.id.fb)
         val Terms: TextView = view.findViewById(R.id.terms)
          setprofile = view.findViewById(R.id.setprofile)
+       var setemail : TextView = view.findViewById(R.id.setemail)
         val shareButton: TextView = view.findViewById(R.id.shareButton)
         val changepass: TextView = view.findViewById(R.id.changepass)
+
+
+//
+//        var value = Login_pae().intent.getStringExtra("setemail")
+//        setemail.text = value.toString()
 
         profileImageView.setOnClickListener {
 
@@ -108,8 +112,6 @@ ProfileFregment : Fragment() {
             }
 
         }
-
-
     }
     private fun openGallery() {
         val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -142,5 +144,6 @@ ProfileFregment : Fragment() {
                     openGallery()
                 }
             }
-        } }
+        }
+}
 

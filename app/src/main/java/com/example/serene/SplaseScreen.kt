@@ -1,25 +1,21 @@
 package com.example.serene
 
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.Window
 import android.view.WindowManager
-import com.example.serene.Login.Login_pae
+import com.example.serene.GetData.JournalingDataActivity
+import com.example.serene.GetData.VerticalCalendar
 
 class SplaseScreen : AppCompatActivity() {
-
     companion object {
         lateinit var sp: SharedPreferences
         lateinit var edit: SharedPreferences.Editor
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.requestFeature(Window.FEATURE_NO_TITLE)
@@ -35,7 +31,9 @@ class SplaseScreen : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             if(sp.getBoolean("status",false))
             {
-                startActivity(Intent(this, Home_page::class.java))
+//                startActivity(Intent(this,Home_page::class.java))
+//                finish()
+                startActivity(Intent(this,Home_page::class.java))
                 finish()
             }
             else {
@@ -43,7 +41,5 @@ class SplaseScreen : AppCompatActivity() {
                 finish()
             }
         }, 2000)
-
     }
-
 }
