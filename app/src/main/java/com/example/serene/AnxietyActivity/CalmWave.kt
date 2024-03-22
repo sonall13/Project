@@ -9,6 +9,7 @@ import com.example.serene.R
 
 class CalmWave : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -27,5 +28,11 @@ class CalmWave : AppCompatActivity() {
 
             mp.start()
         }
+        pause=findViewById(R.id.pause)
+        pause.setOnClickListener {
+
+            mp.stop()
+        }
+
     }
 }

@@ -8,8 +8,6 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +19,24 @@
         android:theme="@style/Theme.Serene"
         tools:targetApi="31">
         <activity
+            android:name=".sleepHome.Sleep_audio6"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.Sleep_audio5"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.Sleep_audio4"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.Sleep_audio3"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.Sleep_audio2"
+            android:exported="false" />
+        <activity
+            android:name=".sleepHome.Sleep_audio1"
+            android:exported="false" />
+        <activity
             android:name=".GetData.VerticalCalendar"
             android:exported="false" />
         <activity
@@ -28,16 +44,15 @@
             android:exported="false" />
         <activity
             android:name=".GetData.JournalingDataActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".SplaseScreen"
             android:exported="true">
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                        <category android:name="android.intent.category.LAUNCHER" />
-                    </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".sleepHome.Alarm"
@@ -239,9 +254,9 @@
         <activity
             android:name=".AffirmationActivity.AffirmativeAura"
             android:exported="false" />
-<!--        <activitly-->
-<!--            android:name=".AffirmationActivity.ZenAffirm"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".AffirmationActivity.ZenAffirm"
+            android:exported="false" />
         <activity
             android:name=".AffirmationActivity.InspireInfinity"
             android:exported="false" />
@@ -285,9 +300,6 @@
             android:name=".MeditationActivity.SereneSoulSpace"
             android:exported="false" />
         <activity
-            android:name=".MeditationActivity.serenitySphere"
-            android:exported="false" />
-        <activity
             android:name=".MeditationActivity.SereneSoul"
             android:exported="false" />
         <activity
@@ -303,16 +315,10 @@
             android:name=".BreathingActivity.ZenBreath"
             android:exported="false" />
         <activity
-            android:name=".BreathingActivity.SootheSphere"
-            android:exported="false" />
-        <activity
             android:name=".BreathingActivity.Serenepulse"
             android:exported="false" />
         <activity
             android:name=".PhysicalGealthcategory.PhysicalHealthCatRecycler"
-            android:exported="false" />
-        <activity
-            android:name=".MeditationActivity.Kindness"
             android:exported="false" />
         <activity
             android:name=".MeditationActivity.Mantra"
@@ -344,18 +350,18 @@
         <activity
             android:name=".MentalHealthCategorys.M_CtegoryFragmentActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home_page"
             android:exported="false"
-            android:theme="@style/AppTheme" >
-<!--        <intent-filter>-->
-<!--            <action android:name="android.intent.action.MAIN" />-->
+            android:theme="@style/AppTheme">
 
-<!--            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--        </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
-
         <activity
             android:name=".SliderView"
             android:exported="false" />

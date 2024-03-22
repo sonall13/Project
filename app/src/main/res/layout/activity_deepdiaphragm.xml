@@ -18,11 +18,24 @@
         app:lottie_loop="true"/>
 
     <Button
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-      android:background="@drawable/play"
+         android:text="Strat"
+        android:backgroundTint="@color/black"
         android:id="@+id/play"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="10dp"
+       android:layout_below="@id/i1"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/black"
+        android:id="@+id/pause"
+      android:layout_marginLeft="240dp"
+        android:layout_below="@id/i1"
+        android:textSize="20sp" />
 
 </RelativeLayout>

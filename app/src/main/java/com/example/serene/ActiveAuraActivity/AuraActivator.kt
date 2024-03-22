@@ -3,9 +3,13 @@ package com.example.serene.ActiveAuraActivity
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import com.example.serene.R
-
+import com.bumptech.glide.Glide;
 class AuraActivator : AppCompatActivity() {
+
+    lateinit var imagge : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -18,5 +22,9 @@ class AuraActivator : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_aura_activator)
+        imagge = findViewById(R.id.imagge)
+
+        Glide.with(this).asGif().load(R.raw.test123).into(imagge);
+
     }
 }

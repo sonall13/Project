@@ -10,6 +10,7 @@ import com.example.serene.R
 
 class Deepdiaphragm : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
     lateinit var i1:LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +26,15 @@ class Deepdiaphragm : AppCompatActivity() {
         }
         setContentView(R.layout.activity_deepdiaphragm)
         play=findViewById(R.id.play)
-        i1=findViewById(R.id.i1)
+        pause=findViewById(R.id.pause)
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.deep)
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }

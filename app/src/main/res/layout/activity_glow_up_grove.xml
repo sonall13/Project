@@ -3,15 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/aa2"
+    android:alpha="0.9"
     android:layout_height="match_parent"
     tools:context=".AffirmationActivity.GlowUpGrove">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:id="@+id/i1"
+        android:background="#0C1125"/>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GlowUpGrove"
-        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:text="Start"
+        android:backgroundTint="@color/black"
         android:id="@+id/play"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Finish"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/black"
+        android:id="@+id/pause"
+        android:layout_marginLeft="240dp"
+        android:textSize="20sp" />
 
 </RelativeLayout>

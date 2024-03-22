@@ -16,16 +16,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <devs.mulham.horizontalcalendar.HorizontalCalendarView
-        android:id="@+id/calendarView"
-        app:selectorColor="@color/white"
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layerType="software"
+            app:selectorColor="@color/white"
+            app:textColorSelected="#FFFFFF" />
+
+        <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:layerType="software"
-        app:textColorSelected="#FFFFFF"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="150dp"
         android:layout_marginHorizontal="20dp"
         android:layout_below="@+id/calendarView"
         app:cardCornerRadius="35dp"
@@ -45,7 +46,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="27dp"/>
+            android:textSize="23dp"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -66,8 +67,7 @@
             android:alpha="0.3"
             android:layout_marginVertical="10dp"
             app:cardCornerRadius="12dp"
-            android:layout_height="600dp"
-            >
+            android:layout_height="500dp">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -77,6 +77,152 @@
                 />
 
         </androidx.cardview.widget.CardView>
+
+
+
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/q1"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="70dp"
+                android:id="@+id/happy"
+                android:background="@drawable/happy"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="happy"
+            android:id="@+id/ht"
+            android:layout_marginLeft="85dp"
+            android:layout_below="@+id/happy"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/q1"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="70dp"
+            android:layout_toRightOf="@id/happy"
+            android:id="@+id/angry"
+            android:background="@drawable/sad"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="angry"
+            android:layout_toRightOf="@+id/happy"
+            android:layout_marginLeft="70dp"
+            android:layout_below="@+id/happy"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/angry"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/happy"
+            android:id="@+id/crying"
+            android:background="@drawable/crying"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crying"
+            android:layout_toRightOf="@+id/ht"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/crying"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/happy"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="60dp"
+            android:id="@+id/sick"
+            android:background="@drawable/sick"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sick"
+            android:id="@+id/st"
+            android:layout_marginLeft="90dp"
+            android:layout_below="@+id/sick"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/sick"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="60dp"
+            android:id="@+id/grateful"
+            android:background="@drawable/grateful"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="grateful"
+            android:id="@+id/gt"
+            android:layout_marginLeft="90dp"
+            android:layout_below="@+id/grateful"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/sick"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="60dp"
+            android:id="@+id/stress"
+            android:layout_toRightOf="@id/grateful"
+            android:background="@drawable/stressed"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stressed"
+            android:layout_toRightOf="@+id/gt"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/stress"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/grateful"
+            android:layout_marginTop="60dp"
+            android:id="@+id/good"
+          android:layout_marginLeft="95dp"
+            android:background="@drawable/good"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="good"
+            android:id="@+id/goodt"
+            android:layout_marginLeft="90dp"
+            android:layout_below="@+id/good"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/grateful"
+            android:layout_marginTop="60dp"
+            android:id="@+id/notgreat"
+            android:layout_toRightOf="@+id/good"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/notgreat"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not great"
+            android:layout_toRightOf="@+id/goodt"
+            android:layout_marginLeft="60dp"
+            android:layout_below="@+id/good"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
     </RelativeLayout>
     </ScrollView>
 

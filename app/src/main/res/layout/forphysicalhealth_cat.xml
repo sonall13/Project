@@ -26,7 +26,7 @@
         <ImageView android:layout_width="65dp"
             android:layout_height="65dp"
             android:id="@+id/imgg"
-            android:layout_marginRight="240dp"
+            android:layout_marginRight="190dp"
             android:contentDescription="@string/app_name"/>
 
         <TextView

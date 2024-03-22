@@ -10,6 +10,8 @@ import com.example.serene.R
 class
 InspireInfinity : AppCompatActivity() {
     lateinit var play: Button
+
+    lateinit var pause: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -27,6 +29,11 @@ InspireInfinity : AppCompatActivity() {
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause=findViewById(R.id.pause)
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }

@@ -24,10 +24,10 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView android:layout_width="65dp"
-                    android:layout_height="65dp"
+                <ImageView android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:id="@+id/img"
-                    android:layout_marginRight="240dp"
+                    android:layout_marginRight="190dp"
                     android:contentDescription="@string/app_name"/>
 
                 <TextView

@@ -14,4 +14,8 @@
         android:id="@+id/play"
         android:layout_centerInParent="true"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagge"/>
 </RelativeLayout>

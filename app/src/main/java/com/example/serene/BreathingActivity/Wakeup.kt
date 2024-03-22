@@ -9,6 +9,7 @@ import com.example.serene.R
 
 class Wakeup : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,10 +24,15 @@ class Wakeup : AppCompatActivity() {
         }
         setContentView(R.layout.activity_wakeup)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
+        pause=findViewById(R.id.pause)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a2)
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }

@@ -4,13 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0C1125"
     tools:context=".AnxietyActivity.SereneSupport">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="70dp"
+        app:lottie_rawRes="@raw/star"
+        android:id="@+id/i1"
+        android:layout_marginTop="70dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="170dp"
+        app:lottie_rawRes="@raw/star"
+        android:layout_marginTop="310dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/star"
+        android:id="@+id/i2"
+        android:layout_marginTop="120dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SereneSupport"
-        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:text="Start"
+        android:backgroundTint="@color/black"
         android:id="@+id/play"
-        android:layout_centerInParent="true"/>
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/black"
+        android:id="@+id/pause"
+        android:layout_marginLeft="240dp"
+        android:textSize="20sp" />
+
 </RelativeLayout>

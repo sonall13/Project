@@ -11,6 +11,8 @@ import com.example.serene.R
 class AumChant : AppCompatActivity() {
     lateinit var play: Button
 
+    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -26,10 +28,16 @@ class AumChant : AppCompatActivity() {
         }
         setContentView(R.layout.activity_aum_chant)
         play=findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause=findViewById(R.id.pause)
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }

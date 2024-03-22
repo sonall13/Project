@@ -39,7 +39,7 @@ class SleepTrekarFregment : Fragment() {
         val sleeprec = view.findViewById<RecyclerView>(R.id.sleeprec)
         val sleepdata = ArrayList<String>()
         val sleepdraw = ArrayList<Int>()
-        val adapter = Sleepadp(sleepdata,sleepdraw)
+        val adapter = Sleepadp(sleepdata,sleepdraw,context)
         sleeprec.adapter = adapter
 
         sleepdraw.add(R.drawable.sleep6)

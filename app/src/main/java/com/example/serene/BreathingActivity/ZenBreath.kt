@@ -9,6 +9,7 @@ import com.example.serene.R
 
 class ZenBreath : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,10 +24,15 @@ class ZenBreath : AppCompatActivity() {
         }
         setContentView(R.layout.activity_zen_breath)
         play=findViewById(R.id.play)
+        pause=findViewById(R.id.pause)
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }
