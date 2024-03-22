@@ -42,6 +42,8 @@ class Sleepadp(var sleepdata: ArrayList<String>, var sleepdraw: ArrayList<Int>, 
                 1 -> context?.startActivity(Intent(context, Sleep_audio2::class.java))
                 2-> context?.startActivity(Intent(context, Sleep_audio3::class.java))
                 3 -> context?.startActivity(Intent(context, Sleep_audio4::class.java))
+                4 -> context?.startActivity(Intent(context, Sleep_audio5::class.java))
+                5 -> context?.startActivity(Intent(context, Sleep_audio6::class.java))
 
             }
 

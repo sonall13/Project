@@ -24,7 +24,7 @@ class Harmonyheal : AppCompatActivity() {
         }
         setContentView(R.layout.activity_harmonyheal)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.s1)
         play.setOnClickListener {
 
             mp.start()

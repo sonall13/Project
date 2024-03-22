@@ -14,6 +14,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
     lateinit var recycler :RecyclerView
 
     var stretching = ArrayList<String>()
+    var strdrw = ArrayList<String>()
     var healthyEating = ArrayList<String>()
     var yoga = ArrayList<String>()
     var ActiveAura = ArrayList<String>()
@@ -50,6 +51,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         drawablearray.add(R.drawable.staggered2)
         drawablearray.add(R.drawable.staggered4)
         drawablearray.add(R.drawable.staggered6)
+//        strdrw.add(R.drawable.stretching)
 
 
         stretching.add("FlexFlow")

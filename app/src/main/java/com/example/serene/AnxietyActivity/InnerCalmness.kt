@@ -26,7 +26,7 @@ class InnerCalmness : AppCompatActivity() {
         }
         setContentView(R.layout.activity_inner_calmness)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.s1)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
         play.setOnClickListener {
 
             mp.start()

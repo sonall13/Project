@@ -23,7 +23,7 @@ class EaseAnx : AppCompatActivity() {
         }
         setContentView(R.layout.activity_ease_anx)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a4)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
         play.setOnClickListener {
 
             mp.start()

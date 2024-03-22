@@ -23,7 +23,7 @@ class CalmWave : AppCompatActivity() {
         }
         setContentView(R.layout.activity_calm_wave)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a2)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
         play.setOnClickListener {
 
             mp.start()

@@ -23,7 +23,7 @@ class RelaxationRefuge : AppCompatActivity() {
         }
         setContentView(R.layout.activity_relaxation_refuge)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.s1)
         play.setOnClickListener {
 
             mp.start()

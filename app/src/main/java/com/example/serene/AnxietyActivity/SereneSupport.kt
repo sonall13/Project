@@ -23,7 +23,7 @@ class SereneSupport : AppCompatActivity() {
         }
         setContentView(R.layout.activity_serene_support)
         play=findViewById(R.id.play)
-        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a3)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
         play.setOnClickListener {
 
             mp.start()
