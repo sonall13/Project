@@ -25,6 +25,7 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
     var adraw = ArrayList<Int>()
     var afdraw = ArrayList<Int>()
     var sdraw = ArrayList<Int>()
+    var sedraw = ArrayList<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,6 +86,14 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         sdraw.add(R.drawable.sr7)
         sdraw.add(R.drawable.sr5)
         sdraw.add(R.drawable.sr6)
+
+        sedraw.add(R.drawable.selfcare1)
+        sedraw.add(R.drawable.selfcare5)
+        sedraw.add(R.drawable.selfcare2)
+        sedraw.add(R.drawable.selfcare3)
+        sedraw.add(R.drawable.selfcare4)
+        sedraw.add(R.drawable.selfcare6)
+        sedraw.add(R.drawable.selfcare7)
 
 
 
@@ -166,7 +175,7 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
                 fragmentrecycler.adapter = affirmationadp
             }
             4 ->{
-                var selfCareadp = SelfCareadp(this,SelfCare,bdraw)
+                var selfCareadp = SelfCareadp(this,SelfCare,sedraw)
                 fragmentrecycler.adapter = selfCareadp
             }
             5 ->{

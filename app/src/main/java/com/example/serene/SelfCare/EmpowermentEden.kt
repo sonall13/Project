@@ -10,6 +10,7 @@ import com.example.serene.R
 
 class EmpowermentEden : AppCompatActivity() {
     lateinit var  selfcareartical : TextView
+    lateinit var  selfcareartical2 : TextView
     lateinit var  back : ImageButton
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,15 +27,16 @@ class EmpowermentEden : AppCompatActivity() {
         setContentView(R.layout.activity_empowerment_eden)
 
         selfcareartical =findViewById(R.id.selfcareartical)
+        selfcareartical2 =findViewById(R.id.selfcareartical2)
         back =findViewById(R.id.back)
 
         back.setOnClickListener {
             onBackPressed()
         }
 
-        selfcareartical.text = " SereneSolution: Zen and the Art of Self-Care\n" +
-                "\n" +
-                "In the fast-paced world we live in, it's easy to get caught up in the chaos and forget to take care of ourselves. That's where SereneSolution comes in—a holistic approach to self-care that emphasizes the importance of nurturing our physical, emotional, and spiritual well-being.\n" +
+        selfcareartical.text = " SereneSolution: Zen and the Art of Self-Care\n"
+
+          selfcareartical2.text= "In the fast-paced world we live in, it's easy to get caught up in the chaos and forget to take care of ourselves. That's where SereneSolution comes in—a holistic approach to self-care that emphasizes the importance of nurturing our physical, emotional, and spiritual well-being.\n" +
                 "\n" +
                 "At the heart of SereneSolution is the belief that self-care is not selfish, but rather essential for our overall health and happiness. By taking time to prioritize our own needs, we can recharge our batteries and show up as our best selves in all areas of our lives.\n" +
                 "\n" +

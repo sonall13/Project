@@ -10,6 +10,7 @@ import com.example.serene.R
 
 class BlissfulBreak : AppCompatActivity() {
     lateinit var  selfcareartical : TextView
+    lateinit var  selfcareartical2 : TextView
     lateinit var  back : ImageButton
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,15 +27,16 @@ class BlissfulBreak : AppCompatActivity() {
         setContentView(R.layout.activity_blissful_break)
 
         selfcareartical =findViewById(R.id.selfcareartical)
+        selfcareartical2 =findViewById(R.id.selfcareartical2)
         back =findViewById(R.id.back)
 
         back.setOnClickListener {
             onBackPressed()
         }
 
-        selfcareartical.text = " StressBusterHub: How to Adult Without Losing Your Mind\n" +
-                "\n" +
-                "Life can be overwhelming at times, with work, relationships, and responsibilities piling up faster than we can keep track. That's where StressBusterHub comes in—a one-stop destination for effective strategies to manage stress and maintain our sanity in the face of life's challenges.\n" +
+        selfcareartical.text = " StressBusterHub: How to Adult Without Losing Your Mind\n"
+
+          selfcareartical2.text= "Life can be overwhelming at times, with work, relationships, and responsibilities piling up faster than we can keep track. That's where StressBusterHub comes in—a one-stop destination for effective strategies to manage stress and maintain our sanity in the face of life's challenges.\n" +
                 "\n" +
                 "At the core of StressBusterHub is the belief that stress is a natural part of life, but it doesn't have to control us. By learning how to effectively manage stress and build resilience, we can navigate life's ups and downs with grace and ease.\n" +
                 "\n" +

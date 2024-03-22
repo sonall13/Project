@@ -1,3 +1,5 @@
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
@@ -23,7 +25,7 @@
 <!--        android:layout_centerHorizontal="true"-->
 <!--        app:cardCornerRadius="4dp"-->
 <!--        app:cardElevation="2dp">-->
-\
+
 
             <ImageView
                 android:id="@+id/drawableimg"
@@ -45,3 +47,4 @@
         android:textColor="@color/white" />
 <!--    </com.google.android.material.card.MaterialCardView>-->
 </RelativeLayout>
+

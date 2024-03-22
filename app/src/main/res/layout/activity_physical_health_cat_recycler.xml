@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0C3150"
     tools:context=".PhysicalGealthcategory.PhysicalHealthCatRecycler">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-
+        app:spanCount="2"
         />
 
 </RelativeLayout>

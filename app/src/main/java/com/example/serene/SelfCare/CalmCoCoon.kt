@@ -1,5 +1,6 @@
 package com.example.serene.SelfCare
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +11,10 @@ import com.example.serene.Home_page
 import com.example.serene.R
 
 class CalmCoCoon : AppCompatActivity() {
-  lateinit var  selfcareartical : TextView
+  lateinit var  selfcareartical1 : TextView
+  lateinit var  selfcareartical2 : TextView
   lateinit var  back : ImageButton
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -25,16 +28,17 @@ class CalmCoCoon : AppCompatActivity() {
         }
         setContentView(R.layout.activity_calm_co_coon)
 
-        selfcareartical =findViewById(R.id.selfcareartical)
+        selfcareartical1 =findViewById(R.id.selfcareartical1)
+        selfcareartical2 =findViewById(R.id.selfcareartical2)
         back =findViewById(R.id.back)
 
         back.setOnClickListener {
           onBackPressed()
         }
 
-        selfcareartical.text= " ChilloutCove: Finding Tranquility in Self-Care\n" +
-                "\n" +
-                "In the hustle and bustle of modern life, finding moments of tranquility and relaxation can seem like a distant dream. However, amidst the chaos, there exists a sanctuary known as ChilloutCove—a haven where individuals can escape the stresses of daily life and immerse themselves in the soothing embrace of self-care.\n" +
+        selfcareartical1.text= " ChilloutCove: Finding Tranquility in Self-Care\n"
+
+         selfcareartical2.text=" In the hustle and bustle of modern life, finding moments of tranquility and relaxation can seem like a distant dream. However, amidst the chaos, there exists a sanctuary known as ChilloutCove—a haven where individuals can escape the stresses of daily life and immerse themselves in the soothing embrace of self-care.\n" +
                 "\n" +
                 "ChilloutCove is not just a physical location; it is a state of mind—a space where individuals can prioritize their well-being and recharge their batteries. Whether it's sinking into a luxurious bubble bath infused with essential oils, curling up with a good book and a cup of herbal tea, or simply basking in the warm glow of candlelight, ChilloutCove offers endless opportunities for relaxation and rejuvenation.\n" +
                 "\n" +

@@ -1,5 +1,6 @@
 package com.example.serene.SelfCare
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.example.serene.R
 class SerenitySelf : AppCompatActivity() {
     lateinit var  selfcareartical : TextView
     lateinit var  back : ImageButton
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen

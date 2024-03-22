@@ -3,42 +3,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1F3060"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HealthyEatingActivity.WholesomeWell">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/back"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/pre"/>
+
+
+        <TextView
+            android:id="@+id/categorytext"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?actionBarSize"
+            android:text="WholesomeWell"
+            android:background="#D5181E40"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            style="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/articaltext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="20dp"
+            android:textColor="#DBDDDF"
+            style="bold"
+            android:layout_below="@+id/categorytext"/>
+
+        <TextView
+            android:id="@+id/subtextintro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="what is WholesomeWell"
+            android:textColor="#6A7DEA"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@id/articaltext"/>
+        <TextView
+            android:id="@+id/subtextt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#BCF2F5F6"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/subtextintro"/>
+
+        <TextView
+            android:id="@+id/subtext1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Tips :"
+            android:textColor="#BCF2F5F6"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/subtextt"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@+id/subtext1"
+            app:cardCornerRadius="35dp"
+            android:id="@+id/crd"
+            android:background="@color/white"
+            android:alpha="0.3"
+            android:elevation="50dp"
+            android:layout_marginVertical="40dp">
 
             <TextView
-                android:id="@+id/categorytext"
+                android:id="@+id/subtext2"
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:textAlignment="center"
-                android:text="WholesomeWell"
-                android:layout_marginHorizontal="30dp"
-                android:textSize="25sp"
-                />
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"/>
 
-            <ImageView
-                android:id="@+id/imgeviewcat"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_below="@+id/categorytext"
-                android:src="@drawable/h3"/>
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/articaltext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_below="@+id/imgeviewcat"/>
+        <TextView
+            android:id="@+id/subtextbenifit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Benifits"
+            android:textColor="#6A7DEA"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@id/crd"/>
 
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/subtext3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@id/subtextbenifit"/>
 
+        <TextView
+            android:id="@+id/subtext4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="30dp"
+            android:layout_below="@+id/subtext3"
+            />
+    </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>
