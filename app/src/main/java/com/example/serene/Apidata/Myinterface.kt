@@ -1,8 +1,7 @@
 package com.example.serene.Apidata
 
-import com.example.example.First
-import com.example.example.GetMemoryData
-import com.example.serene.GetData.GetFreeStyleData
+
+import com.example.serene.GetData.Getapidata.GetDataClass
 import com.example.serene.JournalingActivity.FreeStyleDataClass
 import com.example.serene.JournalingActivity.FreeStyleDatatext
 import com.example.serene.JournalingActivity.JournalingCreateDataClass
@@ -24,6 +23,7 @@ import retrofit2.http.Header
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
+import retrofit2.http.Query
 
 interface Myinterface {
 
@@ -85,24 +85,28 @@ interface Myinterface {
     ): Call<FreeStyleDataClass>
 
     //get data
-    @GET("journaling/get/freestyle")
-    fun fetchfreestyle(@Header("token") token: String)
-    : Call<GetFreeStyleData>
+    @GET("generalget")
+    fun fetchfreestyle(
+        @Header("token") token: String,
+        @Query("date") date: String)
+    : Call<GetDataClass>
 
-
-    @GET("journaling/get/memory")
-    fun fetchmemory(@Header("token") token: String)
-    : Call<GetMemoryData>
-
-    @GET("journaling/get/morning")
-    fun fetchmornign(@Header("token") token: String
-    ): Call<First>
-
-    @GET("journaling/get/night")
-    fun fetchNight(@Header("token") token: String)
-    : Call<First>
-
-    @GET("journaling/get/gratitude")
-    fun fetchgratitude(@Header("token") token: String)
-    : Call<First>
+    @GET("generalget")
+    fun fetchmemory(
+        @Header("token") token: String,
+        @Query("date") date: String
+    ): Call<GetDataClass>
+    @GET("generalget")
+    fun fetchmornign(
+        @Header("token") token: String,
+        @Query("date") date: String): Call<GetDataClass>
+    @GET("generalget")
+    fun fetchNight(
+        @Header("token") token: String,
+        @Query("date") date: String)
+    : Call<GetDataClass>
+    @GET("generalget")
+    fun fetchgratitude(@Header("token") token: String,
+                       @Query("date") date: String)
+    : Call<GetDataClass>
 }

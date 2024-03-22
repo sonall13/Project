@@ -9,10 +9,8 @@ import com.example.serene.R
 
 class CleanCuisine : AppCompatActivity() {
 
-    lateinit var a1 : TextView
-    lateinit var a2 : TextView
-    lateinit var a3 : TextView
-    lateinit var a4 : TextView
+    lateinit var  articaltext :TextView
+
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,47 +26,51 @@ class CleanCuisine : AppCompatActivity() {
         }
         setContentView(R.layout.activity_clean_cuisine)
 
-        a1=findViewById(R.id.a1)
-        a2=findViewById(R.id.a2)
-        a3=findViewById(R.id.a3)
-        a4=findViewById(R.id.a4)
+        articaltext =findViewById(R.id.articaltext)
 
-        a1.text = "Salt\n" +
-                "Too much salt is bad for you. It can\n" +
-                "increase your risk of high blood\n" +
-                "pressure, heart disease and stroke.\n" +
-                "You should have no more than 6 grams of\n" +
-                "salt a day. That’s about 1 level teaspoon."
+        articaltext.text = "6. CleanCuisine: Embracing a Wholesome Approach to Eating\n" +
+                "\n" +
+                "CleanCuisine goes beyond just what you eat—it's a holistic approach to nourishing your body and supporting your overall well-being. By embracing clean eating principles, you can fuel your body with wholesome, nutrient-rich foods that promote optimal health and vitality.\n" +
+                "\n" +
+                "At the core of CleanCuisine is the idea of prioritizing whole, minimally processed foods that are free from artificial additives, preservatives, and chemicals. This means choosing foods that are as close to their natural state as possible, such as fruits, vegetables, whole grains, lean proteins, and healthy fats.\n" +
+                "\n" +
+                "CleanCuisine also emphasizes the importance of balance and moderation in your eating habits. While it's important to nourish your body with nutritious foods, it's also essential to enjoy the foods you love in moderation. By finding a balance between nutritious foods and occasional indulgences, you can maintain a healthy relationship with food while still enjoying the pleasures of eating.\n" +
+                "\n" +
+                "Another key aspect of CleanCuisine is cooking meals at home using fresh, whole ingredients. By preparing your own meals, you can have more control over the ingredients and cooking methods used, allowing you to make healthier choices and avoid hidden sources of unhealthy additives."+
+        "\n" +
+                " CleanCuisine:\n" +
+                "\n" +
+                "Emphasize clean eating principles by choosing foods that are minimally processed, free from artificial additives, and close to their natural state. Prioritize whole, nutrient-rich foods such as fruits, vegetables, whole grains, lean proteins, and healthy fats.\n" +
+                "\n" +
+                "Incorporate a variety of colorful fruits and vegetables into your meals to maximize your intake of vitamins, minerals, and antioxidants. Aim to fill half of your plate with vegetables at each meal to ensure you're getting plenty of fiber and essential nutrients.\n" +
+                "\n" +
+                "Choose lean sources of protein such as poultry, fish, tofu, tempeh, legumes, and nuts to support muscle growth and repair. Limit your intake of processed meats and fatty cuts of meat, which can be high in unhealthy fats and sodium.\n" +
+                "\n" +
+                "Include healthy fats in your diet such as avocados, nuts, seeds, and olive oil. These fats are essential for brain health, hormone production, and the absorption of fat-soluble vitamins.\n" +
+                "\n" +
+                "Minimize your intake of refined sugars, unhealthy fats, and processed foods, which can contribute to inflammation, weight gain, and chronic disease. Opt for natural sweeteners like honey, maple syrup, and dates when sweetening foods.\n" +
+                "\n" +
+                "Cook meals at home whenever possible using fresh, whole ingredients. Homemade meals give you more control over the ingredients and cooking methods used, allowing you to make healthier choices.\n" +
+                "\n" +
+                "Be mindful of portion sizes and avoid overeating, even with clean, healthy foods. Pay attention to your body's hunger and fullness cues and eat until you're satisfied, rather than stuffed.\n" +
+                "\n" +
+                "Stay hydrated by drinking plenty of water throughout the day. Water is essential for digestion, nutrient absorption, temperature regulation, and overall well-being.\n" +
+                "\n" +
+                "Practice moderation and balance in your eating habits, enjoying a wide variety of foods in appropriate portions. Allow yourself to indulge in your favorite treats occasionally while prioritizing nutrient-dense foods the majority of the time.\n" +
+                "\n" +
+                "Listen to your body and honor its signals of hunger and fullness. Eat when you're hungry and stop when you're satisfied, aiming for a balanced approach to eating that supports overall health and well-being.\n" +
+                "\n" +
+                "\n" +
+                "Emphasize clean eating principles by choosing foods that are minimally processed, free from artificial additives, and close to their natural state.\n" +
+                "\n" +
+                "Prioritize whole, nutrient-rich foods like fruits, vegetables, whole grains, lean proteins, and healthy fats.\n" +
+                "\n" +
+                "Limit your intake of refined sugars, unhealthy fats, and processed foods to support optimal health and well-being."+
+        "\n" +
+                "In addition to prioritizing whole, minimally processed foods, CleanCuisine also emphasizes the importance of mindful eating. This means paying attention to your body's hunger and fullness cues, as well as the taste, texture, and enjoyment of your food. By slowing down and savoring each bite, you can better appreciate the flavors and nourishment that whole foods provide.\n" +
+                "\n" +
+                "Ultimately, CleanCuisine is about nourishing your body with wholesome, nutrient-rich foods while minimizing your exposure to artificial additives and processed ingredients. By embracing the principles of clean eating and prioritizing whole, minimally processed foods, you can fuel your body with the nutrients it needs to thrive and support your overall health and well-being."
 
-        a2.text = "\n" +
-                "Sugar\n" +
-                "Sugar is high in ‘empty calories’.\n" +
-                "These provide you with energy but\n" +
-                "none of the vitamins, nutrients or\n" +
-                "minerals you need.\n" +
-                "Sugar can lead to weight gain and increase\n" +
-                "your risk of Type 2 diabetes, heart disease,\n" +
-                "stroke and tooth decay. "
-
-        a3.text = "Starchy foods\n" +
-                "Choose wholegrain or high\n" +
-                "fibre varieties of starchy foods\n" +
-                "whenever possible, for example,\n" +
-                "wholemeal bread and brown rice.\n" +
-                "Starchy foods should make\n" +
-                "up about one third of the\n" +
-                "food you eat each day."
-
-        a4.text = "Aim to eat something\n" +
-                "starchy at each mealtime.\n" +
-                "Starchy foods (or\n" +
-                "carbohydrates) are foods\n" +
-                "like potatoes, bread, rice,\n" +
-                "pasta and cereals.\n" +
-                " always including vegetables in meals;\n" +
-                " eating fresh fruit and raw vegetables as snacks;\n" +
-                " eating fresh fruit and vegetables that are in season; and\n" +
-                " eating a variety of fruit and vegetables."
 
     }
 }

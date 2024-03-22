@@ -5,12 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HealthyEatingActivity.BalancedBite">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BalancedBite"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/categorytext"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:textAlignment="center"
+                android:text="CleanEatsCorner"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="25sp"
+                />
+
+            <ImageView
+                android:id="@+id/imgeviewcat"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/categorytext"
+                android:src="@drawable/cleanccuisine"/>
+
+            <TextView
+                android:id="@+id/articaltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@+id/imgeviewcat"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>

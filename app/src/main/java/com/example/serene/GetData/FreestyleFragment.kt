@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.serene.Apidata.RetrofitInstance
+import com.example.serene.GetData.Getapidata.GetDataClass
 import com.example.serene.R
 import com.example.serene.SplaseScreen
 import retrofit2.Call
@@ -31,26 +32,40 @@ class FreestyleFragment : Fragment() {
         var token = SplaseScreen.sp.getString("token"," ")
         var  formattedDate= SplaseScreen.sp.getString("formattedDate"," ")
 
-        RetrofitInstance().method().fetchfreestyle(token!!).enqueue(object : Callback<GetFreeStyleData> {
+        RetrofitInstance().method().fetchfreestyle(token!!,formattedDate.toString()).enqueue(object : Callback<GetDataClass> {
             override fun onResponse(
-                call: Call<GetFreeStyleData>,
-                response: Response<GetFreeStyleData>,
+                call: Call<GetDataClass>,
+                response: Response<GetDataClass>,
             ) {
                 Log.d("==-----", "onResponse: ${response.body()}")
                 if (response.body()?.status == "success") {
 
-                    Log.d("==+---", "onResponse: ${response.body()?.data?.get(0)?.createdAt.toString()}")
+                    Log.d("==+---", "onResponse: ${response.body()?.data?.freestyle?.createdAt.toString()}")
 
 
-                    if (response.body()!!.data.get(0).createdAt.toString() == "2024-03-17") {
-                        freestyletext.text = response.body()!!.data.get(0).text.toString()
+                    if (response.body()!!.data?.freestyle?.createdAt.toString() == formattedDate) {
+                        freestyletext.text = response.body()!!.data?.freestyle?.text.toString()
+                    }
+                    else {
+                        fragmentmanager()
                     }
                 }
                 }
-            override fun onFailure(call: Call<GetFreeStyleData>, t: Throwable) {
+            override fun onFailure(call: Call<GetDataClass>, t: Throwable) {
                 Log.d("=+=", "onResponse: ${t.localizedMessage}")
             }
         })
+    }
+    fun fragmentmanager(){
+        val fragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        // Replace current fragment with the new fragment
+        fragmentTransaction.replace(R.id.cat_frame, NullDataFragment())
+        // If you want to add the new fragment to the back stack, allowing the user to navigate back to the previous fragment
+        fragmentTransaction.addToBackStack(null)
+        // Commit the transaction
+        fragmentTransaction.commit()
     }
 
 }

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.example.GetMemoryData
 import com.example.serene.Apidata.RetrofitInstance
+import com.example.serene.GetData.Getapidata.GetDataClass
 import com.example.serene.R
 import com.example.serene.SplaseScreen
 import com.theartofdev.edmodo.cropper.CropImage
@@ -30,21 +31,46 @@ class MemoriesFragment : Fragment(){
     override fun onViewCreated(view:  View, savedInstanceState: Bundle?) {
         getimg =view.findViewById(R.id.getimg)
         var token = SplaseScreen.sp.getString("token"," ")
+        var  formattedDate= SplaseScreen.sp.getString("formattedDate"," ")
         Toast.makeText(context, "please wait", Toast.LENGTH_LONG).show()
 
-        RetrofitInstance().method().fetchmemory(token!!).enqueue(object : Callback<GetMemoryData> {
-            override fun onResponse(call: Call<GetMemoryData>, response: Response<GetMemoryData>) {
+        RetrofitInstance().method().fetchmemory(token!!,formattedDate.toString()).enqueue(object : Callback<GetDataClass> {
+            override fun onResponse(call: Call<GetDataClass>, response: Response<GetDataClass>) {
                 Log.d("==---+--", "onResponse: ${response.body()}")
                 if (response.body()?.status == "success") {
-                    Log.d("==+-==--", "onResponse: ${response.body()!!.data.get(0).image}")
+                    Log.d("==+-==--", "onResponse: ${response.body()!!.data?.memory?.image}")
 
-                    Glide.with(this@MemoriesFragment).load("https://6gn1hp4c-3000.inc1.devtunnels.ms/image/" +
-                            response.body()!!.data.get(0).image).into(getimg)
+                        if(response.body()?.data?.memory != null) {
+                            Log.d(
+                                "==+-==--",
+                                "onResponse: ${response.body()!!.data?.memory?.image}"
+                            )
+
+                            Glide.with(this@MemoriesFragment).load(
+                                "https://6gn1hp4c-3000.inc1.devtunnels.ms/image/" +
+                                        response.body()!!.data?.memory?.image
+                            ).into(getimg)
+                        }
+                    else {
+                        fragmentmanager()
+                    }
                 }
-            }
-            override fun onFailure(call: Call<GetMemoryData>, t: Throwable) {
+                }
+
+            override fun onFailure(call: Call<GetDataClass>, t: Throwable) {
                 Log.d("=+--=", "onResponse: ${t.localizedMessage}")
             }
         })
+    }
+    fun fragmentmanager(){
+        val fragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        // Replace current fragment with the new fragment
+        fragmentTransaction.replace(R.id.cat_frame, NullDataFragment())
+        // If you want to add the new fragment to the back stack, allowing the user to navigate back to the previous fragment
+        fragmentTransaction.addToBackStack(null)
+        // Commit the transaction
+        fragmentTransaction.commit()
     }
 }

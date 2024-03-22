@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import android.widget.CalendarView
@@ -42,12 +43,11 @@ class VerticalCalendar : AppCompatActivity() {
            val DateString = clickedDate
            val parsedDate = parseApiDate(DateString)
            val formattedDate = formatDateForCalendar(parsedDate)
-
-           var z=SplaseScreen.edit.putString("formattedDate",formattedDate)
+           SplaseScreen.edit.putString("formattedDate",formattedDate.toString())
            SplaseScreen.edit.apply()
-            println("Formatted Date: $formattedDate")
+           Log.d("--======", "onCreate: Formatted Date: $formattedDate")
            startActivity(Intent(this@VerticalCalendar,JournalingDataActivity::class.java)
-               .putExtra("formattedDate",formattedDate))
+               .putExtra("formattedDate",formattedDate.toString()))
 
        }
 

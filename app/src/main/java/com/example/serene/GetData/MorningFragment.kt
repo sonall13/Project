@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.example.First
 import com.example.serene.Apidata.RetrofitInstance
+import com.example.serene.GetData.Getapidata.GetDataClass
 import com.example.serene.R
 import com.example.serene.SplaseScreen
 import retrofit2.Call
@@ -44,35 +45,49 @@ class MorningFragment : Fragment() {
         Toast.makeText(context, "please wait", Toast.LENGTH_SHORT).show()
 
 //
-        RetrofitInstance().method().fetchmornign(token!!).enqueue(object : Callback<First> {
+        RetrofitInstance().method().fetchmornign(token!!,s.toString()).enqueue(object : Callback<GetDataClass> {
             override fun onResponse(
-                call: Call<First>,
-                response: Response<First>,
+                call: Call<GetDataClass>,
+                response: Response<GetDataClass>,
             ) {
                 Log.d("==-++----", "onResponse: ${response.body()}")
                 if (response.body()?.status == "success"){
 
                     Log.d("==+-+--", "onResponse: ${response.body()?.status}")
-                    Log.d("==+-+--", "onResponse: ${response.body()?.data?.get(0)?.updatedAt.toString()}")
+                    Log.d("==+-+--", "onResponse: ${response.body()?.data?.morning?.updatedAt.toString()}")
 
-                    if (response.body()!!.data.get(0).category.toString() == "morning" ) {
+                    if (response.body()!!.data?.morning?.category.toString() == "morning" ) {
 
-                        Log.d("==+-+--", "onResponse: ${response.body()?.data?.get(0)?.Id.toString()}")
+                        Log.d("==+-+--", "onResponse: ${response.body()?.data?.morning?.answers.toString()}")
 
-                        multianswer1.text = response.body()!!.data.get(0).answers?.q1?.get(0).toString()
-                        multianswer2.text = response.body()!!.data.get(0).answers?.q1?.get(1).toString()
-                        multianswer3.text = response.body()!!.data.get(0).answers?.q1?.get(2).toString()
+                        multianswer1.text = response.body()!!.data?.morning?.answers?.q1?.get(0).toString()
+                        multianswer2.text = response.body()!!.data?.morning?.answers?.q1?.get(1).toString()
+                        multianswer3.text = response.body()!!.data?.morning?.answers?.q1?.get(2).toString()
 
-                        seconanswer.text = response.body()!!.data.get(0).answers?.q2.toString()
-                        thirdanswer.text = response.body()!!.data.get(0).answers?.q3.toString()
+                        seconanswer.text = response.body()!!.data?.morning?.answers?.q2.toString()
+                        thirdanswer.text = response.body()!!.data?.morning?.answers?.q3.toString()
 
 //                        multianswerarray.addAll(listOf(response.body()!!.data?.answers?.q2.toString()))
                     }
+                    else {
+                        fragmentmanager()
+                    }
                 }
             }
-            override fun onFailure(call: Call<First>, t: Throwable) {
+            override fun onFailure(call: Call<GetDataClass>, t: Throwable) {
                 Log.d("=+=", "onResponse: ${t.localizedMessage}")
             }
         })
+    }
+    fun fragmentmanager(){
+        val fragmentManager = requireActivity().supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        // Replace current fragment with the new fragment
+        fragmentTransaction.replace(R.id.cat_frame, NullDataFragment())
+        // If you want to add the new fragment to the back stack, allowing the user to navigate back to the previous fragment
+        fragmentTransaction.addToBackStack(null)
+        // Commit the transaction
+        fragmentTransaction.commit()
     }
 }

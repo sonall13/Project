@@ -24,7 +24,7 @@ class MorningJournal : AppCompatActivity() {
     private lateinit var thirdanswer : EditText
     private lateinit var savemornign : Button
     private lateinit var back : ImageButton
-
+    var cnt =1
         private var multianswerarray = arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,35 +54,48 @@ class MorningJournal : AppCompatActivity() {
             multianswerarray.add(multianswer2.text.toString())
             multianswerarray.add(multianswer3.text.toString())
 
-            var token = SplaseScreen.sp.getString("token"," ")
+            var token = SplaseScreen.sp.getString("token", " ")
+            var formattedDate = SplaseScreen.sp.getString("formattedDate", " ")
+
             Log.d("=m-token", "onCreate: ${token}")
 
-            var modelclass = Answers(multianswerarray,seconanswer.text.toString(),thirdanswer.text.toString())
-            var dataaa = MyData("morning",modelclass)
+            var modelclass =
+                Answers(multianswerarray, seconanswer.text.toString(), thirdanswer.text.toString())
+            var dataaa = MyData("morning", modelclass)
             Log.d("=m-dataa=", "onCreate: ${dataaa}")
 
-            RetrofitInstance().method().create(token!!,dataaa)
-                .enqueue(object : Callback<JournalingCreateDataClass> {
-                    override fun onResponse(
-                        call: Call<JournalingCreateDataClass>,
-                        response: Response<JournalingCreateDataClass>,
-                    ) {
-                        Log.d("=m-response=", "onResponse: ${response.body()}")
 
-                        if(response.body()?.status == "success"){
+                RetrofitInstance().method().create(token!!, dataaa)
+                    .enqueue(object : Callback<JournalingCreateDataClass> {
+                        override fun onResponse(
+                            call: Call<JournalingCreateDataClass>,
+                            response: Response<JournalingCreateDataClass>,
+                        ) {
+                            Log.d("=m-response=", "onResponse: ${response.body()}")
 
-                            var q= response.body()?.data?.Id.toString()
-                            SplaseScreen.edit.putString("getid" , q)
-                            SplaseScreen.edit.apply()
-                            Log.d("=m-status=", "onResponse: $q")
-                            Log.d("=m-status=", "onResponse: data entered")
-                            Toast.makeText(this@MorningJournal, "data entered", Toast.LENGTH_SHORT).show()
+                            if (response.body()?.status == "success") {
+
+                                var q = response.body()?.data?.Id.toString()
+                                SplaseScreen.edit.putString("getid", q)
+                                SplaseScreen.edit.apply()
+                                Log.d("=m-status=", "onResponse: $q")
+                                Log.d("=m-status=", "onResponse: data entered")
+                                Toast.makeText(
+                                    this@MorningJournal,
+                                    "data entered",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
                         }
-                    }
-                    override fun onFailure(call: Call<JournalingCreateDataClass>, t: Throwable) {
-                        Log.d("=m-fail=", "onFailure: ${t.localizedMessage}")
-                    }
-                })
+
+                        override fun onFailure(
+                            call: Call<JournalingCreateDataClass>,
+                            t: Throwable
+                        ) {
+                            Log.d("=m-fail=", "onFailure: ${t.localizedMessage}")
+                        }
+                    })
+
 
         }
         back.setOnClickListener {
