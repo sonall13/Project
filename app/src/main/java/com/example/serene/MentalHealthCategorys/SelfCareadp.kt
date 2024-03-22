@@ -14,6 +14,7 @@ import com.example.serene.SelfCare.EmpowermentEden
 import com.example.serene.SelfCare.SelfCareSage
 import com.example.serene.SelfCare.SerenitySelf
 import com.example.serene.SelfCare.TranquiTouches
+import com.example.serene.StressReduce.ChillOutCove
 
 class SelfCareadp(var context: M_CtegoryFragmentActivity,var selfCare: ArrayList<String>,var drawablearray: ArrayList<Int>) : RecyclerView.Adapter<SelfCareadp.ViewHolder>() {
     class ViewHolder(selfcare : View):RecyclerView.ViewHolder(selfcare) {
@@ -39,12 +40,11 @@ class SelfCareadp(var context: M_CtegoryFragmentActivity,var selfCare: ArrayList
 
             when (position) {
 
-                0 -> context.startActivity(Intent(context, SerenitySelf::class.java))
-                1 -> context.startActivity(Intent(context, SelfCareSage::class.java))
-                2 -> context.startActivity(Intent(context, EmpowermentEden::class.java))
-                3 -> context.startActivity(Intent(context, CalmCoCoon::class.java))
-                4 -> context.startActivity(Intent(context, TranquiTouches::class.java))
-                5 -> context.startActivity(Intent(context, BlissfulBreak::class.java))
+                0 -> context.startActivity(Intent(context, CalmCoCoon::class.java))
+                1 -> context.startActivity(Intent(context, EmpowermentEden::class.java))
+                2 -> context.startActivity(Intent(context, BlissfulBreak::class.java))
+                3 -> context.startActivity(Intent(context, SelfCareSage::class.java))
+                4 -> context.startActivity(Intent(context, SerenitySelf::class.java))
             }
         }
     }

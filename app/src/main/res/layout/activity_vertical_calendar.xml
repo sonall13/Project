@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF0F1D44"
     tools:context=".GetData.VerticalCalendar">
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/back"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/pre"/>
+
 
     <TextView
         android:id="@+id/dateTV"
@@ -15,7 +26,7 @@
         android:padding="8dp"
         android:text="Current Date"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -24,6 +35,8 @@
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dateTV"/>
+        android:dateTextAppearance="@style/CustomCalendarDateTextAppearance"
+        android:weekDayTextAppearance="@style/CustomCalendarDateTextAppearance"
+        android:layout_below="@id/dateTV" />
 
 </RelativeLayout>

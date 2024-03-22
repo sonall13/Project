@@ -97,7 +97,7 @@ class VerifyOtp : AppCompatActivity() {
                                 Intent(
                                     this@VerifyOtp,
                                     ResetPassword::class.java
-                                ).putExtra("uid", uid)
+                                ).putExtra("uid", uid.toString())
                             )
                     }
                        }

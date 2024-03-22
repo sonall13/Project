@@ -69,8 +69,8 @@ class CleanCuisine : AppCompatActivity() {
         "\n" +
                 "In addition to prioritizing whole, minimally processed foods, CleanCuisine also emphasizes the importance of mindful eating. This means paying attention to your body's hunger and fullness cues, as well as the taste, texture, and enjoyment of your food. By slowing down and savoring each bite, you can better appreciate the flavors and nourishment that whole foods provide.\n" +
                 "\n" +
-                "Ultimately, CleanCuisine is about nourishing your body with wholesome, nutrient-rich foods while minimizing your exposure to artificial additives and processed ingredients. By embracing the principles of clean eating and prioritizing whole, minimally processed foods, you can fuel your body with the nutrients it needs to thrive and support your overall health and well-being."
-
+                "Ultimately, CleanCuisine is about nourishing your body with wholesome, nutrient-rich foods while minimizing your exposure to artificial additives and processed ingredients. By embracing the principles of clean eating and prioritizing whole, minimally processed foods, you can fuel your body with the nutrients it needs to thrive and support your overall health and well-being."+
+                "\n"
 
     }
 }

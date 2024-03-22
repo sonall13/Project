@@ -12,6 +12,7 @@ import android.widget.ScrollView
 import com.example.serene.Apidata.RetrofitInstance
 import com.example.serene.Home_page
 import com.example.serene.R
+import com.example.serene.SplaseScreen
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -68,7 +69,7 @@ class ResetPassword : AppCompatActivity() {
         resetbtn.setOnClickListener {
 
             if (uidd != null) {
-                RetrofitInstance().method().resetpassword(uidd,ResetPassword.text.toString())
+                RetrofitInstance().method().resetpassword(uidd.toString(),ResetPassword.text.toString())
                     .enqueue(object : Callback<ResetPassworddataClass> {
                         override fun onResponse(
                             call: Call<ResetPassworddataClass>?,
@@ -77,6 +78,16 @@ class ResetPassword : AppCompatActivity() {
 
                             Log.d("-=---=", "onResponse: ${response!!.body()}")
                             if(response.body()?.status == "success"){
+
+//                              var a=  SplaseScreen.edit.putString("uid",uidd.toString())
+//                                SplaseScreen.edit.apply()
+
+                                SplaseScreen.edit.putBoolean("status", true)
+                                SplaseScreen.edit.apply()
+//                                SplaseScreen.sp.getString("token"," ")
+
+                                SplaseScreen.edit.putString("token" ,uidd.toString())
+                                SplaseScreen.edit.apply()
 
                                 startActivity(Intent(this@ResetPassword,Home_page::class.java))
 

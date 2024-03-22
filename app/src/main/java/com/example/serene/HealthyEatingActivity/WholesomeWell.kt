@@ -27,7 +27,7 @@ class WholesomeWell : AppCompatActivity() {
         articaltext =findViewById(R.id.articaltext)
 
 
-        articaltext.text = "\n 1. WholesomeWell: Nourishing Your Body with Nutrient-Rich Foods\n" +
+        articaltext.text =  "\n  WholesomeWell: Nourishing Your Body with Nutrient-Rich Foods\n" +
                 "\n" +
                 "In today's fast-paced world, prioritizing our health and well-being is more important than ever. One key aspect of leading a healthy lifestyle is ensuring that we nourish our bodies with wholesome, nutrient-rich foods that provide the fuel and nutrients needed to thrive. The WholesomeWell approach to eating emphasizes the consumption of whole, minimally processed foods that are packed with essential vitamins, minerals, fiber, and antioxidants.\n" +
                 "\n" +

@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.R
+import com.example.serene.SelfCare.SerenitySelf
 import com.example.serene.StressReduce.ChillOutCove
 import com.example.serene.StressReduce.PeacefulPause
 import com.example.serene.StressReduce.RelaxationRealm
@@ -41,13 +42,13 @@ class StressReduceadp(var contaxt: M_CtegoryFragmentActivity,var stressReduce: A
         holder.drawableimg.setOnClickListener {
         when (position) {
             0 -> contaxt.startActivity(Intent(contaxt, ChillOutCove::class.java))
-            1 -> contaxt.startActivity(Intent(contaxt, SereneSolutions::class.java))
-            2 -> contaxt.startActivity(Intent(contaxt, StressBusterHub::class.java))
-            3 -> contaxt.startActivity(Intent(contaxt, RelaxationRealm::class.java))
-            4 -> contaxt.startActivity(Intent(contaxt, StressEase::class.java))
-            5 -> contaxt.startActivity(Intent(contaxt, SereneSanctuary::class.java))
+            1 -> contaxt.startActivity(Intent(contaxt, PeacefulPause::class.java))
+            2 -> contaxt.startActivity(Intent(contaxt, RelaxationRealm::class.java))
+            3 -> contaxt.startActivity(Intent(contaxt, SereneSanctuary::class.java))
+            4 -> contaxt.startActivity(Intent(contaxt, SereneSolutions::class.java))
+            5 -> contaxt.startActivity(Intent(contaxt, StressBusterHub::class.java))
+            6 -> contaxt.startActivity(Intent(contaxt, StressEase::class.java))
             6 -> contaxt.startActivity(Intent(contaxt, StressFreeZone::class.java))
-            7 -> contaxt.startActivity(Intent(contaxt, PeacefulPause::class.java))
         }
     }
     }

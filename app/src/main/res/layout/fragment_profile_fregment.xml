@@ -1,251 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#0C1125"
     tools:context=".Bottumnavigation.ProfileFregment">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-      android:layout_marginTop="20dp"
-        android:src="@drawable/prof"
-        android:scaleType="centerCrop"
-        android:layout_centerHorizontal="true"/>
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:id="@+id/setprofile"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"/>
-
     <!-- Username -->
     <TextView
-        android:id="@+id/usernameTextView"
+        android:id="@+id/settingtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="user name"
+        android:text="Setting"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
-        android:layout_below="@id/profileImageView"
         android:layout_centerHorizontal="true"
     />
 
+    <androidx.cardview.widget.CardView
 
-            <!--    <TextView-->
-            <!--        android:layout_width="match_parent"-->
-            <!--        android:layout_height="wrap_content"-->
-            <!--        android:layout_below="@id/textname"-->
-            <!--        android:layout_marginTop="5dp"-->
-            <!--        android:textAlignment="center"-->
-            <!--        android:background="#FEAA00"-->
-            <!--        />-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:id="@+id/card1"
-                android:alpha="0.3"
-                android:layout_below="@+id/usernameTextView"
-                android:layout_marginTop="10dp"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="20dp" />
+        android:id="@+id/card"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/settingtext"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#091E3F"
+        android:elevation="40dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
 
-            <TextView
-                android:id="@+id/textemail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="your email"
-                android:textColor="@color/white"
-                android:layout_below="@+id/usernameTextView"
-                android:layout_marginTop="17dp"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="40dp" />
-            <TextView
-                android:id="@+id/setemail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:layout_toRightOf="@id/textemail"
-                android:textColor="@color/white"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/usernameTextView"
-                android:layout_marginTop="17dp"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="30dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card1"
-                android:layout_marginTop="20dp"
-                android:textSize="15sp"
-                android:id="@+id/card2"
-                android:alpha="0.4"
-                android:layout_marginHorizontal="20dp" />
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/img"
+            android:layout_marginLeft="310dp"
+            android:layout_toRightOf="@+id/card"
+            android:backgroundTint="#091E3F"
+            android:text=">"
+            android:textColor="@color/white"
+            android:textSize="20dp"
 
-            <TextView
-                android:id="@+id/changepass"
-                android:layout_width="330dp"
-                android:textAlignment="viewStart"
-                android:layout_height="30dp"
-                android:text="change password"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card1"
-                android:layout_marginTop="27dp"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="30dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card2"
-                android:layout_marginTop="20dp"
-                android:id="@+id/card3"
-                android:alpha="0.4"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="20dp" />
+            />
 
-            <TextView
-                android:id="@+id/text2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="theame"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card2"
-                android:layout_marginTop="27dp"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="34dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card3"
-                android:layout_marginTop="15dp"
-                android:textSize="15sp"
-                android:alpha="0.4"
-                android:id="@+id/card4"
-                android:layout_marginHorizontal="20dp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:id="@+id/settext"
+            android:layout_marginStart="200dp"
+            android:text=""/>
 
-            <TextView
-                android:id="@+id/shareButton"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:text="Share with Friends"
-                android:layout_below="@+id/card3"
-                android:layout_marginTop="22dp"
-                android:textSize="15sp"
-                android:textAlignment="viewStart"
-                android:backgroundTint="#0C1125"
-                android:textColor="@color/white"
-                android:layout_marginHorizontal="32dp" />
+        <TextView
+            android:id="@+id/changepass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="Change Password"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+    </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:layout_below="@+id/card4"
-                android:layout_marginTop="20dp"
-                android:id="@+id/card5"
-                android:alpha="0.4"
-                android:textColorHint="@color/white"
-                android:layout_marginHorizontal="20dp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/card"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:animationCache="true"
+        android:background="@color/black"
+        android:backgroundTint="#091E3F"
+        android:elevation="40dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
 
-            <EditText
-                android:id="@+id/editTextFeedback"
-                android:layout_below="@+id/card4"
-                android:textColor="@color/white"
-                android:textSize="15dp"
-                android:text=""
-                android:textColorHint="@color/white"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_height="40dp"
-                android:hint="Enter your feedback"/>
-            <Button
-                android:id="@+id/fb"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                android:layout_width="wrap_content"
-                android:layout_below="@+id/editTextFeedback"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#0C1125"
-               android:layout_marginLeft="200dp"
-                android:text="Submit Feedback"/>
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/card3"
+            android:layout_marginHorizontal="280dp"
+            android:layout_toRightOf="@+id/card"
+            android:backgroundTint="#091E3F"
+            android:text=">"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/borderr"
-                android:textColor="@color/white"
-                android:layout_below="@+id/fb"
-                android:layout_marginTop="20dp"
-                android:id="@+id/card6"
-                android:alpha="0.4"
-                android:textSize="15sp"
-                android:layout_marginHorizontal="20dp" />
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="387dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="Turams and Conditions"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/terms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Turms and Conditions"
-                android:layout_below="@+id/fb"
-                android:layout_marginTop="30dp"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:layout_marginHorizontal="30dp"
-                />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/card2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:animationCache="true"
+        android:background="@color/black"
+        android:backgroundTint="#091E3F"
+        android:elevation="40dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
 
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/card3"
+            android:layout_marginHorizontal="280dp"
+            android:layout_toRightOf="@+id/card"
+            android:backgroundTint="#091E3F"
+            android:text=">"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
 
-
-<!--            <ImageButton-->
-<!--                android:id="@+id/logouticon"-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_below="@+id/text5"-->
-<!--                android:layout_marginHorizontal="30dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                />-->
-
-            <Button
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:layout_marginHorizontal="130dp"
-                android:backgroundTint="#8C9EFF"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/card6"
-                android:textSize="15sp" />
+        <TextView
+            android:id="@+id/shareButton"
+            android:layout_width="387dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="Share with Friend"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
 
 
 
 
 
-        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+        android:id="@+id/card4"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card3"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:animationCache="true"
+        android:background="@color/black"
+        android:backgroundTint="#091E3F"
+        android:elevation="40dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
 
-</ScrollView>
+        <Button
+            android:id="@+id/fb"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginLeft="300dp"
+            android:text="Submit"
+            android:backgroundTint="#091E3F"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/editTextFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:hint="enter your feedback"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

@@ -82,23 +82,26 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                     true
                 }
 
-                R.id.progress -> {
-                    loadFragment(ProgressFregment())
-                    true
-                }
+//                R.id.progress -> {
+//                    loadFragment(ProgressFregment())
+//                    true
+//                }
 
                 R.id.profile -> {
                     loadFragment(ProfileFregment())
+                    toolbar.title = "Serene"
                     true
                 }
 
                 R.id.journaling -> {
                     loadFragment(JournalingFregment())
+                    toolbar.title = "Serene"
                     true
                 }
 
                 R.id.sleep_traker -> {
                     loadFragment(SleepTrekarFregment())
+                    toolbar.title = "Serene"
                     true
                 }
 

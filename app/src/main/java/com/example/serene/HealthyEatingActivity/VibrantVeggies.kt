@@ -68,7 +68,8 @@ class VibrantVeggies : AppCompatActivity() {
                 "\n" +
                 "In addition to their nutritional benefits, Vibrant Veggies are also incredibly versatile and can be enjoyed in a variety of ways. From raw salads and smoothies to roasted vegetables and stir-fries, there are countless ways to incorporate colorful produce into your meals and snacks.\n" +
                 "\n" +
-                "Ultimately, embracing a diet rich in Vibrant Veggies is about celebrating the health benefits of colorful produce and prioritizing a wide range of nutrients to support our overall health and well-being. By including plenty of colorful fruits and vegetables in our diets, we can nourish our bodies with the essential nutrients they need to thrive and live our best lives."
+                "Ultimately, embracing a diet rich in Vibrant Veggies is about celebrating the health benefits of colorful produce and prioritizing a wide range of nutrients to support our overall health and well-being. By including plenty of colorful fruits and vegetables in our diets, we can nourish our bodies with the essential nutrients they need to thrive and live our best lives." +
+                "\n"
 
     }
 }

@@ -23,7 +23,6 @@ class Sleepadp(var sleepdata: ArrayList<String>, var sleepdraw: ArrayList<Int>) 
 
     override fun getItemCount(): Int {
         return sleepdata.size
-        return sleepdraw.size
 
     }
 

@@ -39,9 +39,9 @@ class NightFragment : Fragment() {
         var token = SplaseScreen.sp.getString("token"," ")
         var s = SplaseScreen.sp.getString("formattedDate","gh")
 
+
 //        Log.d("=m-token", "onCreate: ${token}")
 //
-//        fragmentmanager()
         Toast.makeText(context, "please wait", Toast.LENGTH_SHORT).show()
         RetrofitInstance().method().fetchNight(token!!,s.toString()).enqueue(object : Callback<GetDataClass> {
             override fun onResponse(
@@ -90,9 +90,11 @@ class NightFragment : Fragment() {
         fragmentTransaction.replace(R.id.cat_frame, NullDataFragment())
         // If you want to add the new fragment to the back stack, allowing the user to navigate back to the previous fragment
         fragmentTransaction.addToBackStack(null)
+
         // Commit the transaction
         fragmentTransaction.commit()
     }
+
 
 
 

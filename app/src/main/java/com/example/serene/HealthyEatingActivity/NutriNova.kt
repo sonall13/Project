@@ -70,7 +70,7 @@ class NutriNova : AppCompatActivity() {
                 "\n" +
                 "Incorporating nutrient-dense foods into your diet can have numerous health benefits, including improved energy levels, enhanced immune function, better digestion, and reduced risk of chronic disease. By prioritizing foods that nourish your body from the inside out, you can support your overall health and well-being and feel your best every day.\n" +
                 "\n" +
-                "Ultimately, NutriNova is about elevating your nutrition and taking a proactive approach to your health by fueling your body with the nutrients it needs to thrive. By incorporating nutrient-dense foods into your diet and prioritizing quality and variety in your food choices, you can optimize your nutrition and support your long-term health and vitality."
-
+                "Ultimately, NutriNova is about elevating your nutrition and taking a proactive approach to your health by fueling your body with the nutrients it needs to thrive. By incorporating nutrient-dense foods into your diet and prioritizing quality and variety in your food choices, you can optimize your nutrition and support your long-term health and vitality."+
+        "\n"
     }
 }

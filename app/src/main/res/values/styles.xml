@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="CustomCalendarDateTextAppearance" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textColor">#fff</item>
+        <!-- You can add more attributes here if needed -->
+    </style>
 
 </resources>
 

@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:textAlignment="center"
-                android:text="CleanEatsCorner"
+                android:text="CleanCuisine"
                 android:layout_marginHorizontal="30dp"
                 android:textSize="25sp"
                 />

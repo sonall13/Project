@@ -25,7 +25,8 @@ class CleanEatsCorner : AppCompatActivity() {
 
         articaltext =findViewById(R.id.articaltext)
 
-  articaltext.text = "CleanEats Corner: Embracing Clean Eating for Optimal Health\n" +
+     articaltext.text =  "CleanEats Corner: Embracing Clean Eating for Optimal Health\n" +
+
           "\n" +
           "In a world filled with processed foods and artificial additives, many people are turning to clean eating as a way to prioritize their health and well-being. CleanEats Corner is all about embracing a clean eating lifestyle that focuses on consuming whole, minimally processed foods that are as close to their natural state as possible.\n" +
           "\n" +

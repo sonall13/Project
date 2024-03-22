@@ -1,5 +1,6 @@
 package com.example.serene.HealthyEatingActivity
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import com.example.serene.R
 class HealthfulHaven : AppCompatActivity() {
     lateinit var  articaltext : TextView
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -24,7 +26,7 @@ class HealthfulHaven : AppCompatActivity() {
 
         articaltext =findViewById(R.id.articaltext)
 
-        articaltext.text = "5. HealthfulHaven: Creating a Nurturing Environment for Healthy Eating\n" +
+        articaltext.text = "  HealthfulHaven: Creating a Nurturing Environment for Healthy Eating\n" +
                 "\n" +
                 "HealthfulHaven is more than just a way of eating—it's a lifestyle that encompasses creating a supportive environment for healthy eating habits to thrive. From stocking your kitchen with nutritious foods to planning and preparing meals ahead of time, HealthfulHaven is all about setting yourself up for success on your health journey.\n" +
                 "\n" +
@@ -66,8 +68,8 @@ class HealthfulHaven : AppCompatActivity() {
                 "\n" +
                 "Creating a supportive environment for healthy eating also means surrounding yourself with positive influences and support systems. Whether it's joining a cooking class, finding a workout buddy, or seeking out online communities that share your health goals, surrounding yourself with like-minded individuals can help keep you motivated and accountable on your health journey.\n" +
                 "\n" +
-                "Ultimately, HealthfulHaven is about creating a nurturing environment that supports your health and well-being. By stocking your kitchen with nutritious foods, planning and preparing meals ahead of time, and surrounding yourself with positive influences, you can set yourself up for success on your health journey and create a life filled with health and vitality."
-
+                "Ultimately, HealthfulHaven is about creating a nurturing environment that supports your health and well-being. By stocking your kitchen with nutritious foods, planning and preparing meals ahead of time, and surrounding yourself with positive influences, you can set yourself up for success on your health journey and create a life filled with health and vitality."+
+        "\n"
 
     }
 }

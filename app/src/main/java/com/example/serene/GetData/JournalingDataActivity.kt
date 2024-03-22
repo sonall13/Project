@@ -1,9 +1,11 @@
 package com.example.serene.GetData
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,8 @@ import com.example.serene.R
 class JournalingDataActivity : AppCompatActivity() {
 
     lateinit var date : TextView
+    private lateinit var back : ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -29,6 +33,12 @@ class JournalingDataActivity : AppCompatActivity() {
 
         val cat_frame = findViewById<FrameLayout>(R.id.cat_frame)
         date = findViewById(R.id.date)
+        back = findViewById(R.id.back)
+
+        back.setOnClickListener {
+          startActivity(Intent(this,VerticalCalendar::class.java))
+            finish()
+        }
 
         date.text=intent.getStringExtra("formattedDate")
         val sliderRecyclerView = findViewById<RecyclerView>(R.id.sliderRecyclerView)
@@ -61,4 +71,5 @@ class JournalingDataActivity : AppCompatActivity() {
         sliderRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         sliderRecyclerView.adapter = adapter
     }
+
 }

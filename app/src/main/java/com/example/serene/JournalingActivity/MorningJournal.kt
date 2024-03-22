@@ -102,4 +102,5 @@ class MorningJournal : AppCompatActivity() {
             onBackPressed()
         }
     }
+
 }

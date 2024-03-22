@@ -8,8 +8,11 @@ import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import android.widget.CalendarView
+import android.widget.ImageButton
 import android.widget.TextView
+import android.window.OnBackInvokedDispatcher
 import com.example.serene.Apidata.RetrofitInstance
+import com.example.serene.Home_page
 import com.example.serene.R
 import com.example.serene.SplaseScreen
 import java.text.SimpleDateFormat
@@ -20,7 +23,9 @@ import java.util.Locale
 class VerticalCalendar : AppCompatActivity() {
     lateinit var calendarView : CalendarView
     lateinit var dateTV : TextView
-   override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var back : ImageButton
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        // Make the activity fullscreen
 //        window.requestFeature(Window.FEATURE_NO_TITLE)
@@ -35,8 +40,14 @@ class VerticalCalendar : AppCompatActivity() {
 
         calendarView=findViewById(R.id.calendarView)
             dateTV=findViewById(R.id.dateTV)
+        back = findViewById(R.id.back)
 
-       calendarView.setOnDateChangeListener { view, year, month, dayOfMonth, ->
+        back.setOnClickListener {
+            startActivity(Intent(this,Home_page::class.java))
+            finish()
+        }
+
+        calendarView.setOnDateChangeListener { view, year, month, dayOfMonth, ->
            val clickedDate = formatDateForApi(year, month, dayOfMonth)
            fetchDataFromApi(clickedDate)
 
@@ -90,4 +101,5 @@ class VerticalCalendar : AppCompatActivity() {
         // Implement your API request here
         // Use the 'date' parameter to fetch data for the specific date
     }
+
 }
