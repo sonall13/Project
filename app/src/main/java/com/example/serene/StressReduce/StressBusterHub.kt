@@ -9,6 +9,7 @@ import com.example.serene.R
 
 class StressBusterHub : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,11 @@ class StressBusterHub : AppCompatActivity() {
         play.setOnClickListener {
 
             mp.start()
+        }
+        pause=findViewById(R.id.pause)
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }

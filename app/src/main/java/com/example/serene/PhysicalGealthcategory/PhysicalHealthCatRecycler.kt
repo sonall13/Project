@@ -14,14 +14,18 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
     lateinit var recycler :RecyclerView
 
     var stretching = ArrayList<String>()
-    var strdrw = ArrayList<String>()
+    var strdrw = ArrayList<Int>()
     var healthyEating = ArrayList<String>()
     var yoga = ArrayList<String>()
-    var ActiveAura = ArrayList<String>()
-    var VitalVibe = ArrayList<String>()
-    var StaminaSculpt = ArrayList<String>()
-
     var drawablearray = ArrayList<Int>()
+    var ActiveAura = ArrayList<String>()
+    var Auradraw = ArrayList<Int>()
+    var VitalVibe = ArrayList<String>()
+    var vitaldraw = ArrayList<Int>()
+    var StaminaSculpt = ArrayList<String>()
+    var staminadraw = ArrayList<Int>()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,17 +45,10 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         var data = intent.getIntExtra("data",0)
 
 
-        drawablearray.add(R.drawable.y1)
-        drawablearray.add(R.drawable.y2)
-        drawablearray.add(R.drawable.y3)
-        drawablearray.add(R.drawable.y4)
-        drawablearray.add(R.drawable.y5)
-        drawablearray.add(R.drawable.yogga3)
-        drawablearray.add(R.drawable.y6)
-        drawablearray.add(R.drawable.staggered2)
-        drawablearray.add(R.drawable.staggered4)
-        drawablearray.add(R.drawable.staggered6)
-//        strdrw.add(R.drawable.stretching)
+
+
+
+
 
 
         stretching.add("FlexFlow")
@@ -59,6 +56,11 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         stretching.add("FlexEase")
         stretching.add("StretchRevive")
         stretching.add("FlexibilityFocus")
+        strdrw.add(R.drawable.stretching)
+        strdrw.add(R.drawable.stretching1)
+        strdrw.add(R.drawable.stretching2)
+        strdrw.add(R.drawable.stretching3)
+        strdrw.add(R.drawable.stretching4)
 
 
         healthyEating.add("WholesomeWell")
@@ -79,12 +81,29 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         yoga.add("SuryaNamskar")
         yoga.add("AnlomVilom")
 
+        drawablearray.add(R.drawable.y1)
+        drawablearray.add(R.drawable.y2)
+        drawablearray.add(R.drawable.y3)
+        drawablearray.add(R.drawable.y4)
+        drawablearray.add(R.drawable.y5)
+        drawablearray.add(R.drawable.yogga3)
+        drawablearray.add(R.drawable.y6)
+        drawablearray.add(R.drawable.staggered2)
+        drawablearray.add(R.drawable.staggered4)
+
+
 
         ActiveAura.add("DynamicGlow")
         ActiveAura.add("AuraActivator")
         ActiveAura.add("AuraAscend")
         ActiveAura.add("SparkSphere")
         ActiveAura.add("EnergeticEden")
+
+        Auradraw.add(R.drawable.activeaura)
+        Auradraw.add(R.drawable.activaura2)
+        Auradraw.add(R.drawable.activaura3)
+        Auradraw.add(R.drawable.activaura4)
+        Auradraw.add(R.drawable.activeaura6)
 
 
         VitalVibe.add("RadiantRhythms")
@@ -94,18 +113,31 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         VitalVibe.add("Energize")
         VitalVibe.add("VitalityVortex")
 
+        vitaldraw.add(R.drawable.vitalvibe1)
+        vitaldraw.add(R.drawable.vitalvibe2)
+        vitaldraw.add(R.drawable.vitalvibe3)
+        vitaldraw.add(R.drawable.vitalvibe4)
+        vitaldraw.add(R.drawable.vitalvibe5)
+        vitaldraw.add(R.drawable.vitalvibe)
+
 
         StaminaSculpt.add("CoreCharge")
         StaminaSculpt.add("SculptSquad")
         StaminaSculpt.add("SculptStrong")
         StaminaSculpt.add("VigorVista")
         StaminaSculpt.add("SculptifyStrenght")
+        staminadraw.add(R.drawable.stamina1)
+        staminadraw.add(R.drawable.stamina2)
+        staminadraw.add(R.drawable.stamina3)
+        staminadraw.add(R.drawable.stamina4)
+        staminadraw.add(R.drawable.stamina5)
+
 
 
         when(data){
 
             0 ->{
-                var stretchingadp = Stretchingadp(this,stretching,drawablearray)
+                var stretchingadp = Stretchingadp(this,stretching,strdrw)
                 recycler.adapter = stretchingadp
             }
             1 ->{
@@ -117,15 +149,15 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
                 recycler.adapter = yoga_adp
             }
             3 ->{
-                var ActiveAuraadp = ActiveAuraadp(this,ActiveAura,drawablearray)
+                var ActiveAuraadp = ActiveAuraadp(this,ActiveAura,Auradraw)
                 recycler.adapter = ActiveAuraadp
             }
             4 ->{
-                var VitalVibeadp = VitalVibeadp(this,VitalVibe,drawablearray)
+                var VitalVibeadp = VitalVibeadp(this,VitalVibe,vitaldraw)
                 recycler.adapter = VitalVibeadp
             }
             5 ->{
-                var StaminaSculptadp = StaminaSculptadp(this,StaminaSculpt,drawablearray)
+                var StaminaSculptadp = StaminaSculptadp(this,StaminaSculpt,staminadraw)
                 recycler.adapter = StaminaSculptadp
             }
 

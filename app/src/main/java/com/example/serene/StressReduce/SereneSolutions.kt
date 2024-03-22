@@ -9,6 +9,7 @@ import com.example.serene.R
 
 class SereneSolutions : AppCompatActivity() {
     lateinit var play: Button
+    lateinit var pause: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -26,6 +27,12 @@ class SereneSolutions : AppCompatActivity() {
         play.setOnClickListener {
 
             mp.start()
+        }
+
+        pause=findViewById(R.id.pause)
+        pause.setOnClickListener {
+
+            mp.stop()
         }
     }
 }
