@@ -10,13 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.MeditationActivity.Chakra
 import com.example.serene.MeditationActivity.Concentrate
 import com.example.serene.MeditationActivity.Focused
-import com.example.serene.MeditationActivity.Kindness
 import com.example.serene.MeditationActivity.Mantra
 import com.example.serene.MeditationActivity.MindFulness
 import com.example.serene.MeditationActivity.SereneSoul
 import com.example.serene.MeditationActivity.SereneSoulSpace
 import com.example.serene.MeditationActivity.Spiritual
-import com.example.serene.MeditationActivity.serenitySphere
 import com.example.serene.R
 
 class Meditationadp(var context: M_CtegoryFragmentActivity,var meditation: ArrayList<String>,var drawablearray: ArrayList<Int>) : RecyclerView.Adapter<Meditationadp.ViewHolder>() {
@@ -51,12 +49,11 @@ class Meditationadp(var context: M_CtegoryFragmentActivity,var meditation: Array
                 1 -> context.startActivity(Intent(context,Spiritual::class.java))
                 2 -> context.startActivity(Intent(context,Focused::class.java))
                 3 -> context.startActivity(Intent(context,Mantra::class.java))
-                4 -> context.startActivity(Intent(context,Kindness::class.java))
-                5 -> context.startActivity(Intent(context,Chakra::class.java))
-                6 -> context.startActivity(Intent(context, Concentrate::class.java))
-                7 -> context.startActivity(Intent(context, SereneSoul::class.java))
-                8 -> context.startActivity(Intent(context, serenitySphere::class.java))
-                9 -> context.startActivity(Intent(context, SereneSoulSpace::class.java))
+                4 -> context.startActivity(Intent(context,Chakra::class.java))
+                5 -> context.startActivity(Intent(context, Concentrate::class.java))
+                6 -> context.startActivity(Intent(context, SereneSoul::class.java))
+                7 -> context.startActivity(Intent(context, SereneSoulSpace::class.java))
+
 
             }
 

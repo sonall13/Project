@@ -3,13 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#0C1125"
     android:layout_height="match_parent"
     tools:context=".AnxietyActivity.Calmcare">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="70dp"
+        app:lottie_rawRes="@raw/star"
+        android:id="@+id/i1"
+        android:layout_marginTop="70dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="170dp"
+        app:lottie_rawRes="@raw/star"
+        android:layout_marginTop="310dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/star"
+        android:id="@+id/i2"
+        android:layout_marginTop="120dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calmcare"
+        android:id="@+id/play"
         android:textSize="20sp"
         android:layout_centerInParent="true"/>
 

@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AffirmationActivity.ZenAffirm">
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ZenAffirm"
+        android:id="@+id/play"
         android:textSize="20sp"
         android:layout_centerInParent="true"/>
 

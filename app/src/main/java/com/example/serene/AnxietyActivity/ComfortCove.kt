@@ -1,11 +1,14 @@
 package com.example.serene.AnxietyActivity
 
+import android.media.MediaPlayer
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.serene.R
 
 class ComfortCove : AppCompatActivity() {
+    lateinit var play: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -18,5 +21,11 @@ class ComfortCove : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_comfort_cove)
+        play=findViewById(R.id.play)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a3)
+        play.setOnClickListener {
+
+            mp.start()
+        }
     }
 }

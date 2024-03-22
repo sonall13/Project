@@ -6,6 +6,8 @@ import android.os.Bundle
 import com.example.serene.R
 
 class CoreCharge : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen

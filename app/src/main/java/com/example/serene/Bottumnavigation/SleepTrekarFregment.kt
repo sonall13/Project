@@ -38,8 +38,16 @@ class SleepTrekarFregment : Fragment() {
 
         val sleeprec = view.findViewById<RecyclerView>(R.id.sleeprec)
         val sleepdata = ArrayList<String>()
-        val adapter = Sleepadp(sleepdata)
+        val sleepdraw = ArrayList<Int>()
+        val adapter = Sleepadp(sleepdata,sleepdraw)
         sleeprec.adapter = adapter
+
+        sleepdraw.add(R.drawable.sleep6)
+        sleepdraw.add(R.drawable.sleep5)
+        sleepdraw.add(R.drawable.sleep3)
+        sleepdraw.add(R.drawable.sleep4)
+        sleepdraw.add(R.drawable.sleep2)
+        sleepdraw.add(R.drawable.sleeep1)
 
         b1 = view.findViewById(R.id.b1)
         b2 = view.findViewById(R.id.b2)
@@ -51,6 +59,8 @@ class SleepTrekarFregment : Fragment() {
         sleepdata.add("dlsm")
         sleepdata.add("dlsm")
         sleepdata.add("dlsm")
+        sleepdata.add("dlsm")
+
 
         b1.setOnClickListener {
             var inte = Intent(context, SleepGoal::class.java)

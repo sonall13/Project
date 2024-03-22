@@ -1,11 +1,14 @@
 package com.example.serene.AffirmationActivity
 
+import android.media.MediaPlayer
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.serene.R
 
 class DreamDestiny : AppCompatActivity() {
+    lateinit var play: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -18,5 +21,11 @@ class DreamDestiny : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_dream_destiny)
+        play=findViewById(R.id.play)
+        val mp: MediaPlayer = MediaPlayer.create(this, R.raw.af3)
+        play.setOnClickListener {
+
+            mp.start()
+        }
     }
 }
