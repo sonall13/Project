@@ -1,16 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#102039"
     tools:context=".StretchingActivity.FlexFlow">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FlexFlow"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:background="@color/black"
+            android:text="Surya namskar"
+            android:textAlignment="center"/>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_below="@+id/title"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sn1"
+            android:id="@+id/imagge"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/t1"
+            android:textColor="@color/white"
+            android:layout_below="@+id/title"
+            android:layout_marginHorizontal="20dp"
+            android:text="Prayer Pose (Pranamasana):
+
+Stand at the front of your mat with your feet together
+ and your palms pressed together in a prayer position
+  at your chest.
+Take a few deep breaths, centering yourself and preparing for the practice."
+            android:layout_toRightOf="@+id/imagge"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/imagge"
+            android:background="@drawable/sn2"
+            android:id="@+id/imagge2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t1"
+            android:id="@+id/t2"
+            android:layout_marginHorizontal="20dp"
+            android:text="Raised Arms Pose (Hasta Uttanasana):
+
+Inhale deeply as you raise your arms overhead, lengthening your spine and stretching your arms up towards the sky.
+Arch your back slightly, opening up your chest and lifting your gaze towards your hands."
+            android:layout_toRightOf="@+id/imagge2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/imagge2"
+            android:background="@drawable/sn3"
+            android:id="@+id/imagge3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t2"
+            android:id="@+id/t3"
+            android:text="Forward Bend (Hasta Padasana):
+
+Exhale as you fold forward from the hips, bringing your hands down to touch the floor on either side of your feet.
+Keep your back straight and extend your spine forward as much as possible. You can bend your knees if needed."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/imagge3"
+            android:background="@drawable/sn4"
+            android:id="@+id/imagge4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t3"
+            android:id="@+id/t4"
+            android:text="Equestrian Pose (Ashwa Sanchalanasana):
+
+Inhale as you step your right foot back into a lunge position, keeping your left knee bent at a 90-degree angle and your hands planted on the mat.
+Keep your gaze forward and your chest lifted, sinking your hips down towards the ground."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/imagge4"
+            android:background="@drawable/sn5"
+            android:id="@+id/imagge5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:text="Plank Pose (Dandasana):
+
+Exhale as you step your left foot back to meet your right, coming into a high plank position.
+Keep your body in a straight line from head to heels,
+ engaging your core and pressing firmly
+into the ground with your hands."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/imagge5"
+            android:background="@drawable/sn6"
+            android:id="@+id/imagge6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:text="Eight-Limbed Pose (Ashtanga Namaskara):
+
+Lower your knees, chest, and chin to the floor, keeping your elbows close to your body.
+Your hips should be slightly lifted off the mat, and your toes should be pointed back with the tops of your
+ feet pressing into the ground."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/imagge6"
+            android:background="@drawable/sn7"
+            android:id="@+id/imagge7"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t6"
+            android:id="@+id/t7"
+            android:text="Cobra Pose (Bhujangasana):
+
+Inhale as you slide forward and straighten your arms, lifting your chest up into a gentle backbend.
+Keep your shoulders relaxed and your gaze forward,
+opening up through
+ the front of your body."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge7"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/imagge7"
+            android:background="@drawable/sn8"
+            android:id="@+id/imagge8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:text="Downward Facing Dog (Adho Mukha Svanasana):
+
+Exhale as you lift your hips up and back, coming into an inverted V-shape with your body.
+Press your palms firmly into the ground, straighten your arms and legs as much as possible,
+and lengthen your spine."
+            android:layout_marginHorizontal="20dp"
+            android:layout_toRightOf="@+id/imagge7"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagge8"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="110dp"
+            android:text="now rewind this step "/>
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

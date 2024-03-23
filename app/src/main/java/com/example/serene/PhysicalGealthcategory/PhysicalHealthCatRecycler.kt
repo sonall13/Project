@@ -118,7 +118,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         vitaldraw.add(R.drawable.vitalvibe3)
         vitaldraw.add(R.drawable.vitalvibe4)
         vitaldraw.add(R.drawable.vitalvibe5)
-        vitaldraw.add(R.drawable.vitalvibe)
+        vitaldraw.add(R.drawable.stamina1)
 
 
         StaminaSculpt.add("CoreCharge")
