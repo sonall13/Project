@@ -103,7 +103,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="Turams and Conditions"
+            android:text="Terms and Conditions"
             android:textColor="@color/white"
             android:textSize="15dp" />
     </androidx.cardview.widget.CardView>

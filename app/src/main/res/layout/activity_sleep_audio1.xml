@@ -7,12 +7,20 @@
     android:alpha="0.8"
     android:background="@drawable/sleep1"
     tools:context=".sleepHome.Sleep_audio1">
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/back"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/pre"/>
+
     <ImageView
         android:layout_width="300dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp"
         android:id="@+id/i1"
-
         android:layout_height="300dp"/>
 
 

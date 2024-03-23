@@ -16,7 +16,6 @@ class BalancedBite : AppCompatActivity() {
     lateinit var  subtext4 :TextView
     lateinit var  back : ImageButton
 
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
