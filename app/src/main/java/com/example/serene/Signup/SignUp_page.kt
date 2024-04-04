@@ -15,10 +15,12 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.ScrollView
 import android.widget.Toast
+import com.example.serene.AllFunctionsClass
 import com.example.serene.Login.Login_pae
 import com.example.serene.Home_page
 import com.example.serene.R
 import com.example.serene.Apidata.RetrofitInstance
+import com.example.serene.SplaseScreen
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,6 +57,8 @@ class SignUp_page : AppCompatActivity() {
         scrollView=findViewById(R.id.scrollView)
         //scroll.................................
 
+
+
         scrollView .viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
             override fun onPreDraw(): Boolean {
                 // Check if the content size has changed
@@ -75,22 +79,38 @@ class SignUp_page : AppCompatActivity() {
 
             pb.visibility= View.VISIBLE
 
-            RetrofitInstance().method().myname(username.text.toString(),email.text.toString(),
-                password.text.toString()).
-            enqueue(object : Callback<RegisterDataClass> {
+            var w=AllFunctionsClass()
 
-                override fun onResponse(call: Call<RegisterDataClass>?, response: Response<RegisterDataClass>?) {
-                    Log.d("---=-==", "onResponse: ${response!!.body()}")
+            val email1 = email.text.toString().trim()
+            val password1 = password.text.toString().trim()
 
-                    pb.visibility= View.GONE
-                    startActivity(Intent(this@SignUp_page, Login_pae::class.java))
-                    finish()
-                }
+            if (w.isValidEmail(email1) && w.isValidPassword(password1)) {
 
-                override fun onFailure(call: Call<RegisterDataClass>?, t: Throwable?) {
-                    Log.d("===----=", "onFailure: ${t!!.localizedMessage}")
-                }
-            })
+                RetrofitInstance().method().myname(
+                    username.text.toString(), email.text.toString(),
+                    password.text.toString()
+                ).enqueue(object : Callback<RegisterDataClass> {
+
+                    override fun onResponse(
+                        call: Call<RegisterDataClass>?,
+                        response: Response<RegisterDataClass>?
+                    ) {
+                        Log.d("---=-==", "onResponse: ${response!!.body()}")
+
+                        pb.visibility = View.GONE
+                        startActivity(Intent(this@SignUp_page, Login_pae::class.java))
+                        finish()
+                    }
+
+                    override fun onFailure(call: Call<RegisterDataClass>?, t: Throwable?) {
+                        Log.d("===----=", "onFailure: ${t!!.localizedMessage}")
+                    }
+                })
+            }
+            else{
+                pb.visibility= View.INVISIBLE
+                Toast.makeText(this@SignUp_page, "Invalid email or password", Toast.LENGTH_SHORT).show()
+            }
 
         }
         login.setOnClickListener {
@@ -98,6 +118,13 @@ class SignUp_page : AppCompatActivity() {
             startActivity(Intent(this@SignUp_page, Login_pae::class.java))
             finish()
         }
-
     }
+//    private fun isValidEmail(email1: String): Boolean {
+//        val emailRegex = "[a-z[0-9._-]]+@[gmail]+\\.+com"
+//        return email1.matches(emailRegex.toRegex())
+//    }
+//    private fun isValidPassword(password1: String): Boolean {
+//        val passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@\$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+//        return password1.matches(passwordRegex.toRegex())
+//    }
 }

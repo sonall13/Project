@@ -71,7 +71,7 @@ class CleanEatsCorner : AppCompatActivity() {
           "\n" +
           " 10. Experiment with new recipes and cooking techniques to keep meals interesting and flavorful. Explore different cuisines and cooking methods to discover new favorite dishes.\n"
 
-       subtext4.text=  "Be mindful of portion sizes and avoid overeating, even with clean, healthy foods. Practice moderation and listen to your body's hunger and fullness cues to maintain a balanced approach to eating.\n" +
+        subtext4.text=  "Be mindful of portion sizes and avoid overeating, even with clean, healthy foods. Practice moderation and listen to your body's hunger and fullness cues to maintain a balanced approach to eating.\n" +
           "\n" +
           "Choose sustainable and ethically sourced foods whenever possible to support environmental and social responsibility. Look for certifications such as Fair Trade and Rainforest Alliance to ensure ethical production practices.\n" +
           "\n" +

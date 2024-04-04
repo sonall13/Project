@@ -88,8 +88,8 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         drawablearray.add(R.drawable.y5)
         drawablearray.add(R.drawable.yogga3)
         drawablearray.add(R.drawable.y6)
-        drawablearray.add(R.drawable.staggered2)
-        drawablearray.add(R.drawable.staggered4)
+        drawablearray.add(R.drawable.y1)
+        drawablearray.add(R.drawable.y2)
 
 
 

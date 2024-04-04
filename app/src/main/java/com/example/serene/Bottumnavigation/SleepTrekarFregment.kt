@@ -1,5 +1,6 @@
 package com.example.serene.Bottumnavigation
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -75,6 +76,8 @@ class SleepTrekarFregment : Fragment() {
         b3.setOnClickListener {
             var inte = Intent(context, Alarm::class.java)
             startActivity(inte)
+
+
         }
     }
 

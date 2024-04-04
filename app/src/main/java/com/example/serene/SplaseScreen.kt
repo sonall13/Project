@@ -15,6 +15,9 @@ class SplaseScreen : AppCompatActivity() {
     companion object {
         lateinit var sp: SharedPreferences
         lateinit var edit: SharedPreferences.Editor
+        val patten = "[a-z[0-9._-]]+@[gmail]+\\.+com"
+        val pass = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%])(?=\\S+$).{4,}$"
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

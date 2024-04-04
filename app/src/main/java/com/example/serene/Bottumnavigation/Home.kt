@@ -1,27 +1,21 @@
 package com.example.serene.Bottumnavigation
 
-import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.serene.GetData.JournalingDataActivity
 import com.example.serene.R
 import devs.mulham.horizontalcalendar.HorizontalCalendar
 import devs.mulham.horizontalcalendar.HorizontalCalendarListener
 import devs.mulham.horizontalcalendar.HorizontalCalendarView
-import java.text.DateFormat
 import java.util.Date
 
-
 class Home : Fragment() {
-
      lateinit var calendarView : HorizontalCalendarView
      lateinit var text : TextView
      lateinit var happy : ImageView
@@ -33,7 +27,6 @@ class Home : Fragment() {
      lateinit var good : ImageView
      lateinit var notgreat : ImageView
      var array1 = ArrayList<String>()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         text = view.findViewById(R.id.text)
@@ -48,39 +41,36 @@ class Home : Fragment() {
 
 
         happy.setOnClickListener {
-            Toast1()
+            Toast1("Happy",happy)
         }
         angry.setOnClickListener {
-            Toast1()
+            Toast1("Angry", angry)
         }
         sick.setOnClickListener {
-            Toast1()
+            Toast1("Sick", sick)
         }
         crying.setOnClickListener {
-            Toast1()
+            Toast1("Crying", crying)
         }
         gretful.setOnClickListener {
-            Toast1()
+            Toast1("Great full", gretful)
         }
         stressed.setOnClickListener {
-            Toast1()
+            Toast1("Stressed", stressed)
         }
         good.setOnClickListener {
-            Toast1()
+            Toast1("good", good)
         }
         notgreat.setOnClickListener {
-            Toast1()
+            Toast1("not Great", notgreat)
         }
-
         array1.add("A healthy outside starts from the inside. - Robert Urich")
         array1.add("\"The groundwork of all happiness is health.\" - Leigh Hunt")
         array1.add("\"Happiness is the highest form of health.\" - Dalai Lama")
         array1.add("A healthy outside starts from the inside. - Robert Urich")
         array1.add("\"Happiness is the highest form of health.\" - Dalai Lama")
         array1.add("\"The groundwork of all happiness is health.\" - Leigh Hunt")
-
 //        data1 = view.findViewById(R.id.data)
-//
 //        data1.setOnClickListener {
 //
 //            activity?.let{
@@ -89,8 +79,6 @@ class Home : Fragment() {
 //            }
 //
 //        }
-
-
         val startDate = Calendar.getInstance()
         startDate.add(Calendar.MONTH, -1)
 
@@ -120,8 +108,9 @@ class Home : Fragment() {
         var f=inflater.inflate(R.layout.fragment_home, container, false)
         return f
     }
-    fun Toast1(){
-      Toast.makeText(context, "saved your Day! ", Toast.LENGTH_SHORT).show()
-    }
+    fun Toast1(s: String, i: ImageView){
+        i.visibility=View.INVISIBLE
+        Toast.makeText(context, "saved your Day! as $s ", Toast.LENGTH_SHORT).show()
 
+    }
 }

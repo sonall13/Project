@@ -45,7 +45,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
     lateinit var toolbar: Toolbar
     lateinit var data1: ImageView
     lateinit var bottom_navigation: BottomNavigationView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -137,7 +136,6 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         transaction.commit()
 
     }
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
@@ -154,14 +152,9 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                 toolbar.title = "Physical Health"
             }
         }
-
         drawer.closeDrawer(GravityCompat.START)
         return true
-
-
     }
-
-
     override fun onBackPressed() {
         super.onBackPressed()
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -170,7 +163,4 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             onBackPressedDispatcher.onBackPressed()
         }
     }
-
-
-
 }
