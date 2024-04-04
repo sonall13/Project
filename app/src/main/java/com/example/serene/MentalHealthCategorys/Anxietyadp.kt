@@ -45,9 +45,8 @@ class Anxietyadp(var context: M_CtegoryFragmentActivity,var anxiety: ArrayList<S
                 2 -> context.startActivity(Intent(context, Harmonyheal::class.java))
                 3 -> context.startActivity(Intent(context, Calmcare::class.java))
                 4 -> context.startActivity(Intent(context, RelaxationRefuge::class.java))
-                5 -> context.startActivity(Intent(context, ComfortCove::class.java))
-                6 -> context.startActivity(Intent(context, CalmWave::class.java))
-                7 -> context.startActivity(Intent(context, EaseAnx::class.java))
+                5 -> context.startActivity(Intent(context, CalmWave::class.java))
+                6 -> context.startActivity(Intent(context, EaseAnx::class.java))
 
 
             }

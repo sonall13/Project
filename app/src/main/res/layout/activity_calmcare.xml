@@ -14,20 +14,22 @@
         app:lottie_rawRes="@raw/star"
         android:id="@+id/i1"
         android:layout_marginTop="70dp"
-        app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/i1"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="190dp"
         android:orientation="horizontal"
+        android:layout_centerInParent="true"
         >
 
         <SeekBar
             android:id="@+id/seekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="14dp"
@@ -42,14 +44,15 @@
             android:layout_below="@id/seekBar"
             android:layout_marginTop="10dp"
             android:layout_marginStart="200dp"
+            android:layout_centerInParent="true"
             android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/pauseButton"
-
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:visibility="invisible"
+            android:layout_centerInParent="true"
             android:background="@drawable/pause"
             android:layout_marginTop="10dp"
             android:layout_marginStart="200dp"
@@ -67,7 +70,7 @@
             android:background="@drawable/forward" />
         <Button
             android:id="@+id/rewind"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="90dp"
             android:layout_below="@id/seekBar"
             android:layout_marginTop="10dp"
             android:layout_width="30dp"

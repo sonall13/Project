@@ -102,7 +102,6 @@ class ZenBreath : AppCompatActivity() {
             )
 
         }
-
         pauseButton.setOnClickListener {
 
             val result = w.pause1(

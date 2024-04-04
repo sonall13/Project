@@ -11,8 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.5"
-        android:id="@+id/i1"
         android:background="#0C1125"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginVertical="60dp"
+        android:layout_marginHorizontal="70dp"
+        android:id="@+id/i1"
+        android:layout_marginTop="70dp"
+        app:lottie_loop="true"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
