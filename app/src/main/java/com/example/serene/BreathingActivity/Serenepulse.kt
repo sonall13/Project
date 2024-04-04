@@ -8,8 +8,7 @@ import android.widget.Button
 import com.example.serene.R
 
 class Serenepulse : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,16 +22,8 @@ class Serenepulse : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_serenepulse)
-        play=findViewById(R.id.play)
-        pause=findViewById(R.id.pause)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

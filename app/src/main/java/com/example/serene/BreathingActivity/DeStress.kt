@@ -9,8 +9,7 @@ import com.airbnb.lottie.LottieAnimationView
 import com.example.serene.R
 
 class DeStress : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     lateinit var i1:LottieAnimationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +24,9 @@ class DeStress : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_de_stress)
-        play=findViewById(R.id.play)
-        pause=findViewById(R.id.pause)
+
         i1=findViewById(R.id.i1)
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

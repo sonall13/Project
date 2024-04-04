@@ -8,8 +8,7 @@ import android.widget.Button
 import com.example.serene.R
 
 class Focus : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -22,16 +21,8 @@ class Focus : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_focus)
-        play=findViewById(R.id.play)
-        pause=findViewById(R.id.pause)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a4)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

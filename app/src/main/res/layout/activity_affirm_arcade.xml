@@ -12,7 +12,6 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp"
         android:id="@+id/i1"
-
         android:layout_height="300dp"/>
 
 
