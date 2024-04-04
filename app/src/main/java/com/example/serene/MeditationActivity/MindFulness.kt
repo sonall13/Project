@@ -8,8 +8,7 @@ import android.widget.Button
 import com.example.serene.R
 
 class MindFulness : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -22,16 +21,8 @@ class MindFulness : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_mind_fulness)
-        play=findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.mt5)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause=findViewById(R.id.pause)
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

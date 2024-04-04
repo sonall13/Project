@@ -3,9 +3,12 @@ package com.example.serene.StretchingActivity
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.example.serene.R
 
 class StretchSync : AppCompatActivity() {
+    lateinit var imagge : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -18,5 +21,9 @@ class StretchSync : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_stretch_sync)
+        imagge = findViewById(R.id.imagg1)
+
+        Glide.with(this).asGif().load(R.raw.anahatasana).into(imagge);
+
     }
 }

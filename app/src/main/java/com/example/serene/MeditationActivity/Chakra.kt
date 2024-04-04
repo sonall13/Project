@@ -24,16 +24,8 @@ class Chakra : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_chakra)
-        play=findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.mt1)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause=findViewById(R.id.pause)
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

@@ -11,50 +11,58 @@
         android:layout_height="match_parent">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:layout_height="50dp"
+            android:text="Anahatasana  "
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:id="@+id/title"
-            android:background="@color/black"
-            android:text="Tadaasana"
-            android:textAlignment="center"/>
+            android:textSize="25dp"
+            android:background="#181E37"
 
+            android:gravity="center"
+            />
 
         <ImageView
-    android:layout_width="200dp"
-    android:layout_height="200dp"
-            android:id="@+id/img"
-            android:layout_marginLeft="40dp"
-            android:layout_below="@+id/title"
-    android:background="@drawable/tadasan"/>
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginVertical="100dp"
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/imagg1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
+            android:layout_below="@id/imagg1"
+            android:textColor="@color/white"
             android:id="@+id/t1"
-            android:textColor="@color/white"
-            android:text="Stand Tall: Begin by standing at the front of your mat with your feet together or hip-width apart. Distribute your weight evenly across both feet and
-             ground down through all four corners of each foot.
-
-Engage Your Muscles: Activate your leg muscles by lifting your kneecaps and engaging your quadriceps. Draw your thigh muscles
- upward to stabilize your legs and pelvis"
-            android:layout_below="@id/img"/>
-
+            android:layout_marginHorizontal="20dp"
+            android:text="Kneel on your mat, ensuring your knees are hip-width apart.
+Extend your arms straight out in front of you.
+Slowly lower your torso forward, bringing your forehead or chest toward the mat.
+Rest your forehead or chest on the mat and extend your arms alongside your body, palms facing up.."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_below="@id/t1"
             android:textColor="@color/white"
-            android:text="Engage Your Muscles:
-            Activate your leg muscles by lifting your kneecaps and engaging your quadriceps. Draw your thigh muscles upward to stabilize your legs and pelvis.
+            android:layout_marginTop="20dp"
+            android:id="@+id/t2"
+            android:layout_marginHorizontal="20dp"
+            android:text="Relax your shoulders and breathe deeply."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t2"
+            android:id="@+id/t3"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Hold the pose for 30 seconds to 1 minute, focusing on deep, steady breaths."/>     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t3"
+            android:id="@+id/t4"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="To release, gently lift your torso back up, returning to a kneeling position."/>
 
-Align Your Spine: Lengthen your spine by gently lifting your chest and elongating the crown of your head towards the ceiling.
- Imagine a string pulling you up from the top of your head.
 
-Relax Your Shoulders: Soften your shoulders and roll them back and down away from your ears. Broaden across your collarbones and open your chest."
-            android:layout_below="@id/t1"/>
-
-    </RelativeLayout>
-</RelativeLayout>
+    </RelativeLayout></RelativeLayout>

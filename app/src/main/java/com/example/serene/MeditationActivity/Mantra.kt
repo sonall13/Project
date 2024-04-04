@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.R
 
 class Mantra : AppCompatActivity() {
-    lateinit var play: Button
+
     var music: MediaPlayer? = null
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -23,17 +23,9 @@ class Mantra : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_mantra)
-        play = findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.mt4)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause=findViewById(R.id.pause)
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
 
     }
 }

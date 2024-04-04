@@ -1,16 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF0C1125"
     tools:context=".StretchingActivity.FlexibilityFocus">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ardha_salabhasana"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:background="#181E37"
+
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginVertical="100dp"
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/imagg1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagg1"
+            android:textColor="@color/white"
+            android:id="@+id/t1"
+            android:layout_marginHorizontal="20dp"
+            android:text="Lie on your stomach with your legs together and arms alongside your body, palms facing up.
+On an inhale, lift your chest and head slightly off the mat, engaging your lower back muscles.
+Keep your gaze forward and your neck in a neutral position"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t1"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:id="@+id/t2"
+            android:layout_marginHorizontal="20dp"
+            android:text="If comfortable, lift one leg off the mat, keeping it straight and engaged.
+Hold the pose for a few breaths, then lower the leg back down.
+Repeat with the other leg if desired, or try lifting both legs simultaneously for a full locust pose.
+ "/>  <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FlexibilityFocus"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/t2"
+        android:id="@+id/t3"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Keep the movement slow and controlled, avoiding any strain or tension in your lower back.
+To release"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t3"
+            android:id="@+id/t4"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="exhale as you lower your chest and head back down to the mat."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Benefits:"
+            android:textStyle="bold"
+            android:id="@+id/t5"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Strengthens the muscles along the spine, especially the lower back.
+Improves posture and spinal alignment.
+Stimulates the abdominal organs and aids digestion.
+Tones the buttocks and legs.
+Increases flexibility in the spine and shoulders."/>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraindications:"
+            android:textStyle="bold"
+            android:id="@+id/t7"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/t6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Avoid if you have recent or chronic lower back pain or injury.
+Use caution if you have a herniated disc or sciatica, and consult a healthcare provider.
+Pregnant individuals should avoid this pose, especially in the later stages of pregnancy."/>
+    </RelativeLayout>
+
+
+
+</ScrollView>

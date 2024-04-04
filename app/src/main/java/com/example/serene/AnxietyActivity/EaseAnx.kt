@@ -8,8 +8,7 @@ import android.widget.Button
 import com.example.serene.R
 
 class EaseAnx : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 // Make the activity fullscreen
@@ -21,17 +20,8 @@ class EaseAnx : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_ease_anx)
-        play=findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a5)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause=findViewById(R.id.pause)
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }

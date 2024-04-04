@@ -8,8 +8,7 @@ import android.widget.Button
 import com.example.serene.R
 
 class Calmcare : AppCompatActivity() {
-    lateinit var play: Button
-    lateinit var pause: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -23,16 +22,8 @@ class Calmcare : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_calmcare)
-        play=findViewById(R.id.play)
+
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.a1)
-        play.setOnClickListener {
 
-            mp.start()
-        }
-        pause=findViewById(R.id.pause)
-        pause.setOnClickListener {
-
-            mp.stop()
-        }
     }
 }
