@@ -78,13 +78,13 @@ class SignUp_page : AppCompatActivity() {
         signup.setOnClickListener {
 
             pb.visibility= View.VISIBLE
-
             var w=AllFunctionsClass()
-
             val email1 = email.text.toString().trim()
             val password1 = password.text.toString().trim()
 
             if (w.isValidEmail(email1) && w.isValidPassword(password1)) {
+
+
 
                 RetrofitInstance().method().myname(
                     username.text.toString(), email.text.toString(),

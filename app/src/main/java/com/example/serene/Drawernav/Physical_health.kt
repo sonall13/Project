@@ -31,7 +31,6 @@ class Physical_health : Fragment()  {
         Physicalhealthcat.add("Stretching")
         Physicalhealthcat.add("Healthy Eating")
         Physicalhealthcat.add("Yoga")
-
         Physicalhealthcat.add("VitalVibe")
         Physicalhealthcat.add("StaminaSculpt")
         Physicalhealthcat.add("ActiveAura")
