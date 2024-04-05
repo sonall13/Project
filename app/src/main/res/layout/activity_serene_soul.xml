@@ -14,7 +14,6 @@
         app:lottie_rawRes="@raw/meditation8"
         android:id="@+id/i1"
         android:layout_marginTop="70dp"
-        app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
     <RelativeLayout
         android:layout_width="match_parent"

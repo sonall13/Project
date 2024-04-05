@@ -71,7 +71,7 @@ Repeat: Continue the shoulder rotations for 1-2 minutes, allowing the movement t
             android:layout_marginHorizontal="20dp"
             android:text="Close with Awareness: After completing the rotations, stand still for a moment and notice how your shoulders and neck feel. Observe any changes in sensation or relaxation.
 
-Optional: You can incorporate variations such as arm circles or neck stretches to further release tension in the upper body."/>
+Optional: You can incorporate variations such as arm circles or neck stretches to further release tension in the upper body.\n\n"/>
 
     </RelativeLayout>
 

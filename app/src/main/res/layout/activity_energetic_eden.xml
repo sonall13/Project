@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -69,9 +69,9 @@ Alignment of Arms: As you find your balance, extend your arms overhead, parallel
             android:layout_marginHorizontal="20dp"
             android:text="Lengthen: Lengthen your spine upward as you reach through your fingertips. Engage your core muscles to stabilize your torso and prevent leaning to one side.
 
-Breathing: Maintain steady and controlled breathing throughout the pose. Inhale deeply to elongate the spine, and exhale to ground down through the standing leg."/>
+Breathing: Maintain steady and controlled breathing throughout the pose. Inhale deeply to elongate the spine, and exhale to ground down through the standing leg.\n\n"/>
 
     </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

@@ -9,11 +9,11 @@
 
         <item
             android:id="@+id/mental_health"
-            android:title="Mental Health"/>
+            android:title="Mental WellBeing"/>
 
         <item
             android:id="@+id/physical_health"
-            android:title="Physical Health"/>
+            android:title="Physical WellBeing"/>
 
     </group>
 

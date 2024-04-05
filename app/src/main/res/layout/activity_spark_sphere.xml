@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -69,8 +69,8 @@ Twisting Action: Use the strength of your core and the rotation of your torso to
             android:layout_marginHorizontal="20dp"
             android:text="Gaze: Turn your head to look over your right shoulder, directing your gaze behind you. Keep your chin parallel to the ground and your neck relaxed.
 
-Breathing: Maintain smooth and steady breathing as you hold the twist. Use each exhale to deepen the twist slightly without forcing it."/>
+Breathing: Maintain smooth and steady breathing as you hold the twist. Use each exhale to deepen the twist slightly without forcing it.\n\n"/>
 
     </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.example.serene.R
 import com.example.serene.SliderData
@@ -20,7 +21,7 @@ SliderAdapter(val context: Context,
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object` as RelativeLayout
+        return view === `object` as ConstraintLayout
     }
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         // in this method we will initialize all our layout
@@ -63,7 +64,7 @@ SliderAdapter(val context: Context,
         // which is use to remove a view.
         // this is a destroy view method
         // which is use to remove a view.
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as ConstraintLayout)
     }
 
 }

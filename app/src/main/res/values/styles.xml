@@ -5,5 +5,10 @@
         <!-- You can add more attributes here if needed -->
     </style>
 
+    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item> <!-- Change the text size as per your requirement -->
+        <!-- You can also add more attributes here if needed -->
+    </style>
+
 </resources>
 

@@ -27,7 +27,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_below="@+id/calendarView"
                 app:cardCornerRadius="35dp"
@@ -40,10 +40,9 @@
                     android:id="@+id/text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginVertical="40dp"
+                    android:layout_marginVertical="20dp"
                     android:lineSpacingExtra="7dp"
-                    android:text="`YOU CAN DO IT
-                         DON'T GIVE UP`"
+                    android:text="Invest in your mental and physical health, for they are the true treasures that enrich every aspect of life."
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textAlignment="center"

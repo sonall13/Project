@@ -28,8 +28,6 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
     var staminadraw = ArrayList<Int>()
     var yogadraw = ArrayList<Int>()
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -50,12 +48,6 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
 
         recycler =findViewById(R.id.recycler)
         var data = intent.getIntExtra("data",0)
-
-
-
-
-
-
 
 
         stretching.add("FlexFlow")
@@ -86,7 +78,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         yoga.add("YogaEssence")
         yoga.add("OmOasis")
         yoga.add("SuryaNamskar")
-        yoga.add("AnlomVilom")
+        yoga.add("katichakrasana")
         yogadraw.add(R.drawable.yogaasan)
         yogadraw.add(R.drawable.y2)
         yogadraw.add(R.drawable.namste)
@@ -149,8 +141,6 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         staminadraw.add(R.drawable.stamina4)
         staminadraw.add(R.drawable.stamina5)
 
-
-
         when(data){
 
             0 ->{
@@ -179,7 +169,6 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
             }
 
         }
-
 
     }
 }

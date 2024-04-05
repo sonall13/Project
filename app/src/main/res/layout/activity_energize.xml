@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -71,9 +71,9 @@ Inhale and Lengthen: Inhale deeply to lengthen your spine and lift your chest to
 
 Hands and Arms: Place your hands on either side of your right foot, either on the floor or on blocks for support. Keep your fingertips in line with your toes and avoid collapsing your chest.
 
-Shoulders Away from Ears: Relax your shoulders away from your ears and broaden across your collarbones. Draw your shoulder blades down your back to open the chest."/>
+Shoulders Away from Ears: Relax your shoulders away from your ears and broaden across your collarbones. Draw your shoulder blades down your back to open the chest.\n\n"/>
 
     </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

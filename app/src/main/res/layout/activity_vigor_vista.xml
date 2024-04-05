@@ -73,7 +73,7 @@ Breathing: Maintain steady and even breathing throughout the pose. Inhale to len
             android:layout_marginHorizontal="20dp"
             android:text="Explore Range of Motion: Move into the side bend only as far as feels comfortable for your body. Respect your limits and avoid pushing into pain or discomfort.
 
-Hold and Feel the Stretch: Hold the pose for 3-5 breaths or longer if comfortable, feeling the stretch along the left side of your body. Allow each breath to deepen the sensation of the stretch."/>
+Hold and Feel the Stretch: Hold the pose for 3-5 breaths or longer if comfortable, feeling the stretch along the left side of your body. Allow each breath to deepen the sensation of the stretch.\n\n"/>
 
     </RelativeLayout>
 

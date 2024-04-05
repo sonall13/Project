@@ -95,7 +95,7 @@ Improves circulation and energy flow in the body."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have a groin or knee injury.
 Use caution if you have a hip injury or arthritis.
-Pregnant individuals should practice with props or consult a healthcare provider."/>
+Pregnant individuals should practice with props or consult a healthcare provider.\n\n"/>
 
     </RelativeLayout>
 

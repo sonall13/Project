@@ -40,6 +40,7 @@ class Deepdiaphragm : AppCompatActivity() {
         }
         setContentView(R.layout.activity_deepdiaphragm)
         val mp: MediaPlayer = MediaPlayer.create(this, R.raw.deep)
+
         playButton = findViewById(R.id.playButton)
         pauseButton = findViewById(R.id.pauseButton)
         rewind = findViewById(R.id.rewind)

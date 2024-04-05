@@ -97,7 +97,7 @@ Enhances focus, concentration, and mindfulness."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have wrist, shoulder, or knee injuries.
 Use caution if you have high blood pressure or vertigo.
-If you experience any discomfort or pain, gently come out of the pose and modify as needed."/>
+If you experience any discomfort or pain, gently come out of the pose and modify as needed.\n\n"/>
 
 
     </RelativeLayout>

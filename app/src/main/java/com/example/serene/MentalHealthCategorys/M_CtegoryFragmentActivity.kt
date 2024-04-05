@@ -159,8 +159,8 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         StressReduce.add("CalmCoCoon")
         StressReduce.add("TranquiTouches")
         StressReduce.add("BlissfulBreak")
-        SelfCare.add("SereneSanctuary")
-        SelfCare.add("StressFreeZone")
+//        SelfCare.add("SereneSanctuary")
+//        SelfCare.add("StressFreeZone")
 
         when(breathing){
 

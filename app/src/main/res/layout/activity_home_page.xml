@@ -13,25 +13,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:id="@+id/toolbar"
         android:elevation="4dp"
         android:background="#FF0C1125"
+        app:titleTextAppearance="@style/ToolbarTitleTextAppearance"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- ImageView with ID 'data' -->
         <ImageView
             android:id="@+id/data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/date"
-            android:backgroundTint="@color/white"
-            android:layout_marginLeft="150dp"
-            />
+            android:backgroundTint="@color/white" />
 
     </androidx.appcompat.widget.Toolbar>
+
+
 
         <FrameLayout
             android:layout_below="@+id/toolbar"

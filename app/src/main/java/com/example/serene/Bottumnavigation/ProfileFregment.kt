@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Login.ForgetPasswordActivity
 import com.example.serene.Login.Login_pae
 import com.example.serene.R
+import com.example.serene.SplaseScreen
 import com.example.serene.Termsandconditions
 
 class
@@ -52,13 +53,17 @@ ProfileFregment : Fragment() {
         val Terms: TextView = view.findViewById(R.id.terms)
         val shareButton: TextView = view.findViewById(R.id.shareButton)
         val changepass: TextView = view.findViewById(R.id.changepass)
-
+        val logouttext: TextView = view.findViewById(R.id.logouttext)
 
 //
 //        var value = Login_pae().intent.getStringExtra("setemail")
 //        setemail.text = value.toString()
 
-
+        logouttext.setOnClickListener {
+            SplaseScreen.edit.putBoolean("status", false)
+            SplaseScreen.edit.apply()
+            startActivity(Intent(context,Login_pae::class.java))
+        }
         changepass.setOnClickListener {
             var inte=Intent(context,ForgetPasswordActivity::class.java)
             startActivity(inte)
@@ -99,37 +104,6 @@ ProfileFregment : Fragment() {
 
         }
     }
-//    private fun openGallery() {
-//        val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-//        startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST)
-//    }
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<String>,
-//        grantResults: IntArray,
-//    ) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        if (requestCode == READ_EXTERNAL_STORAGE_PERMISSION_CODE) {
-//            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                openGallery()
-//            } else {
-//                // Permission denied
-//                // Handle accordingly (show a message, request again, etc.)
-//            }
-//        }
-//    }
-//        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//            super.onActivityResult(requestCode, resultCode, data)
-//            if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
-//                selectedImage = data.data
-//                // Set the selected image URI in the ImageView
-//                setprofile.setImageURI(selectedImage)
-//                Log.d("ppooopppppppp", "onActivityResult: ${selectedImage}")
-//                profileImageView.visibility = View.INVISIBLE
-//                setprofile.setOnClickListener {
-//                    openGallery()
-//                }
-//            }
-//        }
+
 }
 

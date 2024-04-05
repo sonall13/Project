@@ -97,7 +97,7 @@ Enhances overall body awareness and coordination."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have recent abdominal surgery or hernia.
 Use caution if you have a back injury or chronic back pain.
-If you feel any discomfort or strain during the practice, gently come out of the posture and rest\n"/>
+If you feel any discomfort or strain during the practice, gently come out of the posture and rest\n\n"/>
     </RelativeLayout>
 
 

@@ -97,7 +97,7 @@ Promotes self-awareness."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid with knee injury or recent surgery.
 Use caution with lower back issues.
-Discontinue if sharp pain occurs."/>
+Discontinue if sharp pain occurs.\n\n"/>
 
 
     </RelativeLayout>

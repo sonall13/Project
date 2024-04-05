@@ -71,7 +71,7 @@ Breathe: Take deep breaths as you hold the twist, feeling the stretch along your
             android:layout_marginHorizontal="20dp"
             android:text="Inhale to Center: Inhale as you return to the center, arms outstretched.
 
-Exhale and Repeat: Exhale as you twist to the left, bringing your right hand to your left shoulder and your left hand behind your back. Gaze over your left shoulder."/>
+Exhale and Repeat: Exhale as you twist to the left, bringing your right hand to your left shoulder and your left hand behind your back. Gaze over your left shoulder.\n\n"/>
 
     </RelativeLayout>
 

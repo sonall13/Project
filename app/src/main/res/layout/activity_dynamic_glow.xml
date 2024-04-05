@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -69,9 +69,9 @@ Forward Bend: Continue to fold forward until your torso is resting on your thigh
             android:layout_marginHorizontal="20dp"
             android:text="Head Position: Keep your neck in line with your spine and avoid dropping your head towards your knees. Instead, focus on lengthening the back of your neck and bringing your chin slightly towards your chest.
 
-Breathing: Maintain steady and deep breathing as you hold the pose. Inhale to lengthen the spine, and exhale to deepen the forward fold."/>
+Breathing: Maintain steady and deep breathing as you hold the pose. Inhale to lengthen the spine, and exhale to deepen the forward fold.\n\n"/>
 
     </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

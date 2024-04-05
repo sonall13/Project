@@ -94,7 +94,7 @@ Can be used as a resting pose between more active yoga postures."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have knee or ankle injuries.
 Use caution if you have diarrhea or are pregnant.
-Modify by placing a blanket under the knees or a bolster between the thighs if needed."/>
+Modify by placing a blanket under the knees or a bolster between the thighs if needed.\n\n"/>
 
     </RelativeLayout>
 

@@ -8,7 +8,6 @@
     tools:context=".Bottumnavigation.ProfileFregment">
 
 
-    <!-- Username -->
     <TextView
         android:id="@+id/settingtext"
         android:layout_width="wrap_content"
@@ -46,7 +45,6 @@
             android:text=">"
             android:textColor="@color/white"
             android:textSize="20dp"
-
             />
 
         <TextView
@@ -185,6 +183,31 @@
             android:textColorHint="@color/white"
             android:layout_marginTop="50dp"
             android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoutcard"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/card4"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#091E3F"
+        android:elevation="40dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp">
+
+        <TextView
+            android:id="@+id/logouttext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Logout"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="15dp"/>
     </androidx.cardview.widget.CardView>

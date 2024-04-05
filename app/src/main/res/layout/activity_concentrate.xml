@@ -15,7 +15,6 @@
         android:id="@+id/i1"
         android:background="#0C1125"
         android:layout_marginTop="70dp"
-        app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="350dp"

@@ -96,7 +96,7 @@ Promotes relaxation and stress relief."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have a recent abdominal injury or surgery.
 Use caution if you have a herniated disc or back pain.
-Modify or skip if you experience discomfort or pain.\n\n\n"/>
+Modify or skip if you experience discomfort or pain.\n\n"/>
 
 
     </RelativeLayout>

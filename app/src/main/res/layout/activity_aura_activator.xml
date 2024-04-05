@@ -69,7 +69,7 @@ Breathing: Coordinate your breath with movement. Inhale as you come into a neutr
             android:layout_marginHorizontal="20dp"
             android:text="Core Engagement: Engage your abdominal muscles to support your lower back and protect your spine. Draw your belly button towards your spine to create a strong and stable core.
 
-Neck Alignment: Avoid compressing the back of your neck. Keep your neck in line with your spine and gaze towards your thighs or navel."/>
+Neck Alignment: Avoid compressing the back of your neck. Keep your neck in line with your spine and gaze towards your thighs or navel.\n\n"/>
 
     </RelativeLayout>
 
