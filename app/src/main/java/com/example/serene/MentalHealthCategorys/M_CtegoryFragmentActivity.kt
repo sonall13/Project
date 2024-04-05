@@ -3,6 +3,7 @@ package com.example.serene.MentalHealthCategorys
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Adapters.Breathingadpter
 import com.example.serene.R
@@ -11,6 +12,7 @@ import kotlin.collections.ArrayList
 class M_CtegoryFragmentActivity : AppCompatActivity() {
 
     lateinit var fragmentrecycler : RecyclerView
+    lateinit var  back : ImageButton
 
 
     var BreathingArray = ArrayList<String>()
@@ -42,6 +44,10 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
 
         fragmentrecycler =findViewById(R.id.fragmentrecycler)
 
+        back =findViewById(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
         bdraw.add(R.drawable.bcat1)
         bdraw.add(R.drawable.vv2)
         bdraw.add(R.drawable.vv1)

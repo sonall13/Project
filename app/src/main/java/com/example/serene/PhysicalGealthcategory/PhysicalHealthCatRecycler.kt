@@ -3,6 +3,7 @@ package com.example.serene.PhysicalGealthcategory
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Adapters.Breathingadpter
 import com.example.serene.MentalHealthCategorys.Anxietyadp
@@ -12,6 +13,7 @@ import com.example.serene.R
 class PhysicalHealthCatRecycler : AppCompatActivity() {
 
     lateinit var recycler :RecyclerView
+    lateinit var  back : ImageButton
 
     var stretching = ArrayList<String>()
     var strdrw = ArrayList<Int>()
@@ -40,6 +42,10 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         }
         setContentView(R.layout.activity_physical_health_cat_recycler)
 
+        back =findViewById(R.id.back)
+        back.setOnClickListener {
+            onBackPressed()
+        }
 
         recycler =findViewById(R.id.recycler)
         var data = intent.getIntExtra("data",0)

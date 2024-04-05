@@ -7,10 +7,21 @@
     android:background="#0C3150"
     tools:context=".PhysicalGealthcategory.PhysicalHealthCatRecycler">
 
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/back"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/pre"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/back"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         />
