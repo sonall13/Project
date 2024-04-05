@@ -11,7 +11,6 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.serene.NotificationUtils.AlarmReceiver
-import com.example.serene.NotificationUtils.NotificationReceiver
 import com.example.serene.R
 import com.example.serene.SplaseScreen
 import java.util.Calendar
@@ -111,12 +110,12 @@ object Notifications {
     private const val ACTION_SHOW_NOTIFICATION = "ACTION_SHOW_NOTIFICATION"
 
     @SuppressLint("ScheduleExactAlarm")
-    fun setNotificationAlarm(context: Context, hour: Int, minute: Int, second: Int, id: Int) {
+    fun setNotificationAlarm(context: Context, hour: Comparable<*>, minute: Int, second: Int, id: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         //val intent = Intent(context, NotificationReceiver::class.java)
         val intent = Intent(context, AlarmReceiver::class.java)
-        //intent.putExtra("name", "${zonedDateTime.hour}:${zonedDateTime.minute}")
-        //intent.action = ACTION_SHOW_NOTIFICATION
+//        intent.putExtra("name", "${zonedDateTime.hour}:${zonedDateTime.minute}")
+//        intent.action = ACTION_SHOW_NOTIFICATION
         val broadcast = PendingIntent.getBroadcast(
             context,
             id,
@@ -132,6 +131,12 @@ object Notifications {
         alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), broadcast);
 
         //Toast.makeText(context, "Notification set successfully", Toast.LENGTH_LONG).show()
+
+    }
+
+    private fun set(hourOfDay: Int, hour: Comparable<*>) {
+
+
     }
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state for snooze button -->
+    <item android:state_pressed="true" android:color="#FFA726" android:id="@+id/snooze_button_pressed"/>
+    <!-- Default state for snooze button -->
+    <item android:color="#FFB74D" android:id="@+id/snooze_button_default"/>
+
+    <!-- Pressed state for dismiss button -->
+    <item android:state_pressed="true" android:color="#FF8A65" android:id="@+id/dismiss_button_pressed"/>
+    <!-- Default state for dismiss button -->
+    <item android:color="#FF7043" android:id="@+id/dismiss_button_default"/>
+
+    <!-- Background color for the dialog -->
+    <item android:color="#303F9F" android:id="@+id/dialog_background"/>
+</selector>

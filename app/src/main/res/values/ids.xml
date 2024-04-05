@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="snooze_button_pressed" type="id" />
+    <item name="snooze_button_default" type="id" />
+    <item name="dismiss_button_pressed" type="id" />
+    <item name="dismiss_button_default" type="id" />
+    <item name="dialog_background" type="id" />
+</resources>

@@ -1,53 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#171B29"
     tools:context=".sleepHome.Alarm">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:text="Set your Alarm"
-        android:id="@+id/txt">
-
-    </TextView>
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/txt"
-        android:layout_marginTop="30dp"
-        android:numbersBackgroundColor="#0C3150"
-        android:layout_height="500dp"
-        android:numbersSelectorColor="#0374BA"
-        android:numbersTextColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:timePickerMode="clock" />
-
+    <!-- TextView to display the selected time -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_alignBottom="@+id/timePicker"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:textColor="@color/white"
-        android:layout_marginLeft="130dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Time is: -- : -- --"
+        android:visibility="gone"/>
+
+    <!-- TimePicker to select the alarm time -->
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:headerBackground="#121520"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numbersInnerTextColor="@color/white"
+        android:layout_below="@id/textView"
+        android:numbersTextColor="@color/white"
+        android:animateLayoutChanges="true"
+        android:tooltipText="@string/appbar_scrolling_view_behavior"
+        android:numbersSelectorColor="@color/black"
+        android:autoHandwritingEnabled="true"
+        android:numbersBackgroundColor="#4F78BC"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"/>
+
+    <!-- Button to set the alarm -->
     <Button
         android:id="@+id/buttonAlarm"
-        android:layout_width="200dp"
-        android:elevation="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_centerInParent="true"
-        android:background="#0374BA"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:text="Set Alarm" />
+        android:layout_below="@id/timePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4F78BC"
+        android:text="Set Alarm"/>
 
+    <!-- Button to dismiss the alarm -->
+    <Button
+        android:id="@+id/buttonDismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Dismiss Alarm"/>
 
 </RelativeLayout>

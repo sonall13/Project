@@ -5,47 +5,46 @@ import android.content.Context
 import android.content.Intent
 import android.media.Ringtone
 import android.media.RingtoneManager
+import android.os.Handler
+import android.os.Looper
 import android.os.Vibrator
 import android.widget.Toast
-import com.example.serene.Home_page
-
+import com.example.serene.sleepHome.Alarm
+import com.example.serene.sleepHome.Dismiss
 
 class AlarmReceiver : BroadcastReceiver() {
 
     companion object {
         lateinit var ringtone: Ringtone
     }
+
     override fun onReceive(context: Context, intent: Intent) {
 
-        Toast.makeText(context, "AlarmReceiver", Toast.LENGTH_SHORT).show()
-
-/*
-//        var ab = Myclassaa()
-        // we will use vibrator first
+        // Initialize vibrator
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        //vibrator.vibrate(4000)
-        Toast.makeText(context, "Alarm! Wake up! Wake up!", Toast.LENGTH_LONG).show()
+        //vibrator.vibrate(4000) // Uncomment this line to enable vibration
+
+        // Show toast for alarm
+        // Get default alarm ringtone URI
         var alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
         if (alarmUri == null) {
             alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         }
 
-        // setting default ringtone
+        // Create ringtone from URI
         ringtone = RingtoneManager.getRingtone(context, alarmUri)
 
-        // play ringtone
+        // Play ringtone
         ringtone.play()
 
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            ringtone.stop()
-//        }, 5000)
-*/
+        // Stop ringtone after 5 seconds
+        Handler(Looper.getMainLooper()).postDelayed({
+            ringtone.stop()
+        }, 10000)
 
-        val i = Intent(context, Home_page::class.java)
-        i.setFlags(
-            Intent.FLAG_ACTIVITY_NEW_TASK
-        )
+        // Start Alarm activity
+        val i = Intent(context, Dismiss::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         context.startActivity(i)
-
     }
 }
