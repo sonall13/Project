@@ -17,6 +17,8 @@ class EnergeticEden : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
+
+
         setContentView(R.layout.activity_energetic_eden)
     }
 }
