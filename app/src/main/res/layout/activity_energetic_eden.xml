@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by standing tall in Tadasana (Mountain Pose) with your feet hip-width apart and parallel to each other. Ground down through all four corners of your feet and engage your leg muscles.
+
+Alignment: Extend your arms alongside your body with your palms facing inward. Keep your spine long, shoulders relaxed, and chest open."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Shift Weight: Shift your weight onto your left foot and firmly press it into the ground. Engage your left leg muscles to create a stable foundation.
+
+Extend Right Leg: Inhale as you lift your right leg off the ground and externally rotate it, bringing your right foot to rest on the inner left thigh, calf, or ankle. Avoid placing your foot directly on the knee joint to prevent strain."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Balance: Find a focal point or drishti (gaze point) in front of you to help maintain balance. Keep your gaze steady and focus on a non-moving object.
+
+Alignment of Arms: As you find your balance, extend your arms overhead, parallel to each other, with your palms facing each other or bring your palms together in prayer position (Namaste) at the heart center."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lengthen: Lengthen your spine upward as you reach through your fingertips. Engage your core muscles to stabilize your torso and prevent leaning to one side.
+
+Breathing: Maintain steady and controlled breathing throughout the pose. Inhale deeply to elongate the spine, and exhale to ground down through the standing leg."/>
 
     </RelativeLayout>
 

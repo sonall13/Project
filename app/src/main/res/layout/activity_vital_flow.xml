@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by standing tall at the top of your mat with your feet together and your arms by your sides. Distribute your weight evenly between both feet.
+
+Root Down: Ground through your feet, pressing evenly into all four corners of each foot. Engage your leg muscles and lift your kneecaps to activate your thighs."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lengthen the Spine: Inhale deeply and lengthen your spine, lifting the crown of your head towards the ceiling. Roll your shoulders back and down, opening up the chest.
+
+Interlace Fingers: On an inhale, interlace your fingers and extend your arms overhead with your palms facing up. Keep your arms straight and close to your ears."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Side Stretch: As you exhale, lean gently to the right side, creating a lateral stretch along the left side of your body. Avoid collapsing forward or backward; instead, maintain an upright position.
+
+Grounding Through Feet: Press firmly into the outer edge of your left foot to stabilize your stance. Keep both feet firmly rooted on the ground throughout the pose."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lengthen Both Sides: Reach actively through your left fingertips while grounding down through your left foot, creating length along the entire left side of your body.
+
+Engage Core Muscles: Draw your navel towards your spine to engage your core muscles. This helps to stabilize your torso and maintain balance in the pose."/>
 
     </RelativeLayout>
 

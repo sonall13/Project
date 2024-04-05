@@ -33,7 +33,12 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Sit on the floor with legs extended.
+Bend left knee, sole of foot to inner right thigh.
+Inhale, extend arms up.
+Exhale, hinge at hips, fold forward.
+Hold foot, shin, or ankle.
+Keep both hips grounded."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,16 +47,21 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Relax neck, gaze toward toes.
+Breathe deeply, hold for breaths.
+Lengthen spine with inhales, deepen fold with exhales.
+To release, inhale, lift torso.
+Repeat on opposite side."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/t2"
             android:id="@+id/t3"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +71,34 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Stretches hamstrings, groins, spine.
+Stimulates abdominal organs.
+Calms mind, relieves anxiety, fatigue.
+Alleviates menstrual discomfort, sciatica.
+Promotes self-awareness."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Avoid with knee injury or recent surgery.
+Use caution with lower back issues.
+Discontinue if sharp pain occurs."/>
+
 
     </RelativeLayout>
 

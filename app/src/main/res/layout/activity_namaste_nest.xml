@@ -32,7 +32,11 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Sit comfortably with a straight spine and close your eyes.
+Take a deep breath in, then exhale forcefully through your nose by contracting your abdomen.
+The inhalation should be passive and natural.
+Repeat this process rapidly in a rhythmic manner, focusing on the forceful exhalations.
+Start with a few rounds and gradually increase the duration as you build stamina."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +45,8 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Kapalabhati helps in clearing the mind, energizing the body, and improving respiratory function.
+Avoid this practice if you have high blood pressure, heart conditions, or are pregnant. Always practice under the guidance of a qualified instructor."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +55,11 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Improves respiratory health: Kapalabhati Pranayama helps in clearing the respiratory passages, removing excess mucus, and increasing lung capacity, thereby enhancing overall respiratory health.
+
+Boosts energy levels: The rapid and forceful exhalations in Kapalabhati Pranayama help in oxygenating the body and stimulating the nervous system, leading to increased energy levels and vitality.
+
+Detoxifies the body: The vigorous exhalations in Kapalabhati Pranayama help in eliminating toxins from the body, cleansing the internal organs, and improving the functioning of the digestive system."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,7 +69,34 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Improves mental clarity: Kapalabhati Pranayama enhances blood circulation to the brain, improving concentration, focus, and mental clarity. It also helps in reducing stress, anxiety, and depression."/>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t4"
+        android:id="@+id/t5"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Stimulates abdominal organs: The rhythmic contractions of the abdominal muscles in Kapalabhati Pranayama massage the internal organs, including the liver, pancreas, and spleen, promoting their optimal functioning.
+
+Promotes weight loss: Regular practice of Kapalabhati Pranayama can aid in weight management by boosting metabolism, burning calories, and reducing abdominal fat.
+
+Increases lung capacity: Kapalabhati Pranayama strengthens the respiratory muscles and expands lung capacity, leading to improved oxygen intake and better endurance during physical activities."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Be consistent: Practice Kapalabhati Pranayama regularly for optimal benefits. Aim for 3-5 rounds of 20-30 breaths per round, gradually increasing the duration over time.
+
+Stay aware: Maintain mindfulness throughout the practice. Notice any sensations, thoughts, or emotions that arise without judgment."/>
+
+
 
     </RelativeLayout>
 

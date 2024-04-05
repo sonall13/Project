@@ -3,9 +3,13 @@ package com.example.serene.YogaActivity
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.example.serene.R
 
 class yogazen : AppCompatActivity() {
+
+    lateinit var imagg1 : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -18,5 +22,11 @@ class yogazen : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_yogazen)
+        imagg1 = findViewById(R.id.imagg1)
+
+        Glide.with(this).asGif().load(R.raw.baddha_konasana).into(imagg1);
+
+
+
     }
 }

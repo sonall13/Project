@@ -33,7 +33,11 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lie on your back with arms extended to the sides in a T position.
+Bend your knees and bring them toward your chest.
+Extend your arms out to the sides at shoulder height, palms facing down.
+Inhale, then exhale, lower both knees to the right side, keeping them stacked.
+Keep both shoulders grounded on the mat."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,16 +46,21 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Turn your head to the left, gaze toward your left hand.
+Hold the position for a few breaths.
+Inhale, return to the center, then exhale and repeat on the other side.
+Focus on twisting from the waist, keeping the movement smooth and controlled.
+Repeat the twist several times on each side, breathing deeply throughout."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/t2"
+            android:textSize="20dp"
             android:id="@+id/t3"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +70,34 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Stretches the spine, hips, and chest.
+Massages and stimulates abdominal organs.
+Improves digestion and relieves bloating.
+Releases tension in the back and hips.
+Promotes relaxation and stress relief."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Avoid if you have a recent abdominal injury or surgery.
+Use caution if you have a herniated disc or back pain.
+Modify or skip if you experience discomfort or pain.\n\n\n"/>
+
 
     </RelativeLayout>
 

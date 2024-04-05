@@ -33,7 +33,12 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Begin by sitting on your heels with your knees hip-width apart.
+Place your hands on your lower back with fingers pointing downward.
+Inhale deeply, lifting your chest and arching your back.
+As you exhale, lean back, supporting your weight on your hands and heels.
+Engage your core muscles to protect your lower back.
+Inhale again, then  exhale as you swing your torso forward and down, bringing your forehead toward the mat."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,16 +47,20 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Keep your gaze forward and maintain a smooth, controlled movement.
+Inhale as you return to the starting position, lifting your chest and arching your back.
+Repeat the swinging motion for several breaths, moving with the rhythm of your breath.
+After completing the desired number of repetitions, return to a neutral seated position."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/t2"
             android:id="@+id/t3"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +70,35 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Stretches the entire front of the body, including the abdomen, chest, and throat.
+Strengthens the back muscles and improves posture.
+Stimulates digestion and massages the abdominal organs.
+Relieves stress and fatigue.
+Promotes flexibility in the spine and hips."/>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t4"
+        android:id="@+id/t5"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Avoid if you have a recent or chronic injury to the knees, ankles, or lower back.
+Use caution if you have high or low blood pressure.
+Modify or skip if you experience discomfort or pain."/>
+
+
 
     </RelativeLayout>
 

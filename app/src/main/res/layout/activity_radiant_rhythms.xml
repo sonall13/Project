@@ -33,7 +33,11 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by sitting comfortably on the floor or on a yoga mat in a cross-legged position. Ensure that your spine is straight and your shoulders are relaxed.
+
+Cross-Legged Position: Place your right leg in front of the left one, allowing the right knee to be slightly higher than the left. Keep your feet flexed to protect your ankles.
+
+Root Down: Ground your sitting bones evenly into the floor or mat, creating a stable foundation for the pose. Engage your core muscles to support your lower back."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +46,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lengthen the Spine: Inhale deeply and elongate your spine, lifting the crown of your head towards the ceiling. Keep your shoulders relaxed and away from your ears.
+
+Raise the Right Arm: As you exhale, reach your right arm up and over towards the left side, creating a gentle side stretch. Keep your left hand resting on the floor beside your left hip for support."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +57,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Side Stretch: Lean towards the left side, feeling a lengthening sensation along the right side of your torso. Avoid collapsing forward or backward; instead, maintain an upright position.
+
+Open the Chest: Rotate your chest slightly towards the ceiling to open up the heart center. Keep your shoulders stacked vertically over your hips to maintain alignment."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +69,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Gaze: Keep your neck relaxed and your gaze soft. You can look straight ahead or gently turn your gaze towards the ceiling to deepen the stretch.
+
+Breath Awareness: Focus on your breath as you hold the pose. Inhale deeply to create space in the side body, and exhale to release any tension or tightness.Hold and Breathe: Hold Parsva Sukhasana on the right side for 30 seconds to 1 minute, or longer if comfortable. Continue to breathe deeply and evenly throughout the pose.\n\n"/>
 
     </RelativeLayout>
 

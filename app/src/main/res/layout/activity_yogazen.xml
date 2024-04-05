@@ -33,7 +33,10 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Sit on the floor with your legs extended in front of you.
+Bend your knees and bring the soles of your feet together, allowing your knees to drop out to the sides.
+Hold your feet or ankles with your hands, drawing them as close to your pelvis as comfortable.
+Sit up tall, lengthening your spine, and engage your core muscles."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,16 +45,21 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Press the outer edges of your feet together firmly while keeping your spine straight.
+Relax your shoulders away from your ears and broaden your collarbones.
+If comfortable, gently flap your knees up and down to encourage opening in the hips.
+Hold the pose for 30 seconds to 1 minute, breathing deeply and evenly.
+To release, slowly straighten your legs and extend them out in front of you"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/t2"
             android:id="@+id/t3"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +69,33 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Stretches the inner thighs, groins, and knees.
+Stimulates abdominal organs and improves digestion.
+Helps relieve menstrual discomfort and symptoms of menopause.Calms the mind and reduces stress and anxiety.
+Improves circulation and energy flow in the body."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Avoid if you have a groin or knee injury.
+Use caution if you have a hip injury or arthritis.
+Pregnant individuals should practice with props or consult a healthcare provider."/>
 
     </RelativeLayout>
 

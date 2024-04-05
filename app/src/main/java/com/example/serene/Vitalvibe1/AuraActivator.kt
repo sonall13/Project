@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide;
 class AuraActivator : AppCompatActivity() {
 
 
+    lateinit var imagg1 : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -21,6 +22,9 @@ class AuraActivator : AppCompatActivity() {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
         setContentView(R.layout.activity_aura_activator)
+        imagg1 = findViewById(R.id.imagg1)
+
+        Glide.with(this).asGif().load(R.raw.marjaryasana).into(imagg1);
 //
 //
 //        Glide.with(this).asGif().load(R.raw.test123).into(imagge);

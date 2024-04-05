@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by sitting on the floor with your legs extended in front of you. Keep your spine tall and your pelvis in a neutral position.
+
+Foot Placement: Flex your feet and press your heels firmly into the ground. Keep your toes pointing up towards the ceiling."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Engage the Quadriceps: Engage the muscles in your thighs by pressing your thighs down towards the ground. This will help to stabilize your legs and protect your knees.
+
+Inhale to Lengthen: Inhale deeply and lengthen your spine, lifting your arms up overhead. Reach through your fingertips to create space between your vertebrae."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Exhale to Fold: As you exhale, hinge at your hips and slowly fold forward from your hips, leading with your chest. Keep your spine long and your back flat as you fold forward.
+
+Forward Bend: Continue to fold forward until your torso is resting on your thighs. You can reach for your shins, ankles, or feet, depending on your flexibility. Avoid forcing yourself to reach further than your body allows."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Head Position: Keep your neck in line with your spine and avoid dropping your head towards your knees. Instead, focus on lengthening the back of your neck and bringing your chin slightly towards your chest.
+
+Breathing: Maintain steady and deep breathing as you hold the pose. Inhale to lengthen the spine, and exhale to deepen the forward fold."/>
 
     </RelativeLayout>
 

@@ -61,7 +61,7 @@ class SliderView : AppCompatActivity() {
             SliderData(
                 "Improve Health",
                 "Learn to live more" + "Mindfully",
-                R.drawable.demoslider,
+                R.drawable.sliderr1,
                 abc,
                 "",
                 ""
@@ -71,7 +71,7 @@ class SliderView : AppCompatActivity() {
             SliderData(
                 "Reduce Stress",
                 "Calm your mind and " + "Relex your mind",
-                R.drawable.slider2,
+                R.drawable.slideer2,
                 abc,
                 "",
                 ""

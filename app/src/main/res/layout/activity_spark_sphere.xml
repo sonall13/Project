@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by standing tall in Tadasana (Mountain Pose) with your feet together or hip-width apart and arms relaxed by your sides.
+
+Grounding: Ground down through your feet, evenly distributing your weight across all four corners of each foot."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Engage Core: Engage your core muscles by gently pulling your navel towards your spine. This will provide stability and support for the spine during the twist.
+
+Inhale and Exhale: Inhale deeply to lengthen your spine, and as you exhale, begin to twist your torso to the right."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Twist to the Right: Place your right hand on your right hip or lower back. Keep your left hand relaxed by your side or reach it across your body to grab onto your right thigh or hip.
+
+Twisting Action: Use the strength of your core and the rotation of your torso to deepen the twist. Keep your hips facing forward and avoid collapsing into the twist."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Gaze: Turn your head to look over your right shoulder, directing your gaze behind you. Keep your chin parallel to the ground and your neck relaxed.
+
+Breathing: Maintain smooth and steady breathing as you hold the twist. Use each exhale to deepen the twist slightly without forcing it."/>
 
     </RelativeLayout>
 

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="AnlomVilom"
+            android:text="Katichakrasana"
             android:textColor="@color/white"
             android:textSize="25dp"
             android:background="#181E37"
@@ -33,7 +33,11 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Stand tall with your feet hip-width apart and arms by your sides.
+
+Ground Yourself: Root down through your feet, feeling stable and balanced.
+
+Inhale: As you inhale, raise your arms out to the sides, parallel to the floor, with palms facing down."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +46,11 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Exhale: On the exhale, twist your torso to the right, bringing your left hand to your right shoulder and your right hand behind your back.
+
+Gaze: Look over your right shoulder, keeping your chin parallel to the floor.
+
+Maintain Alignment: Keep your hips facing forward and both feet firmly planted on the ground."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +59,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Breathe: Take deep breaths as you hold the twist, feeling the stretch along your spine and across your chest.
+
+Inhale to Center: Inhale as you return to the center, arms outstretched."/>
 
         <TextView
         android:layout_width="wrap_content"
@@ -61,7 +71,33 @@
         android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
-        android:text=""/>
+        android:text="Exhale and Repeat: Exhale as you twist to the left, bringing your right hand to your left shoulder and your left hand behind your back. Gaze over your left shoulder.
+
+Repeat: Continue alternating sides for several rounds, moving with your breath and maintaining fluidity in the movement."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Mindfulness: Stay present and mindful throughout the practice, focusing on the sensations in your body and the rhythm of your breath.
+
+Modifications: If you have any back or spinal issues, practice the twist gently and avoid over-twisting. You can also perform the movement with your hands on your hips for support.
+
+Duration: Hold each twist for a few breaths, gradually increasing the duration as you become more comfortable with the pose."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Relaxation: After completing the practice, take a moment to stand tall and breathe deeply, allowing your body to integrate the benefits of the pose.\n\n"/>
+
 
     </RelativeLayout>
 

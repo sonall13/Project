@@ -26,6 +26,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
     var vitaldraw = ArrayList<Int>()
     var StaminaSculpt = ArrayList<String>()
     var staminadraw = ArrayList<Int>()
+    var yogadraw = ArrayList<Int>()
 
 
 
@@ -86,16 +87,26 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         yoga.add("OmOasis")
         yoga.add("SuryaNamskar")
         yoga.add("AnlomVilom")
+        yogadraw.add(R.drawable.yogaasan)
+        yogadraw.add(R.drawable.y2)
+        yogadraw.add(R.drawable.namste)
+        yogadraw.add(R.drawable.sasan)
+        yogadraw.add(R.drawable.y5)
+        yogadraw.add(R.drawable.y6)
+        yogadraw.add(R.drawable.y3)
+        yogadraw.add(R.drawable.surya)
+        yogadraw.add(R.drawable.anulom)
 
-        drawablearray.add(R.drawable.y1)
-        drawablearray.add(R.drawable.y2)
-        drawablearray.add(R.drawable.y3)
-        drawablearray.add(R.drawable.y4)
-        drawablearray.add(R.drawable.y5)
-        drawablearray.add(R.drawable.yogga3)
-        drawablearray.add(R.drawable.y6)
-        drawablearray.add(R.drawable.y1)
-        drawablearray.add(R.drawable.y2)
+
+
+        drawablearray.add(R.drawable.ss1)
+        drawablearray.add(R.drawable.ss2)
+        drawablearray.add(R.drawable.ss3)
+        drawablearray.add(R.drawable.ss4)
+        drawablearray.add(R.drawable.sss8)
+        drawablearray.add(R.drawable.sss7)
+        drawablearray.add(R.drawable.ss7)
+
 
 
 
@@ -151,7 +162,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
                 recycler.adapter = healthyEatingadp
             }
             2 ->{
-                var yoga_adp = Yoga_adp(this,yoga,drawablearray)
+                var yoga_adp = Yoga_adp(this,yoga,yogadraw)
                 recycler.adapter = yoga_adp
             }
             3 ->{

@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin standing in Tadasana (Mountain Pose) at the top of your mat, with your feet hip-width apart and arms relaxed by your sides.
+
+Step Back: Take a large step back with your left foot, keeping your left toes pointing slightly outwards at a 45-degree angle."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Alignment: Ensure your right foot is facing forward, with the toes pointing directly towards the top of your mat. Align your right heel with the arch of your left foot.
+
+Hips Square: Square your hips towards the front of the mat by gently rotating your left hip forward and your right hip back. This helps to maintain alignment and prevents strain on the lower back."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Engage Core: Engage your core muscles by drawing your navel towards your spine. This provides stability and support for the spine during the forward bend.
+
+Inhale and Lengthen: Inhale deeply to lengthen your spine and lift your chest towards the sky, creating space between the vertebrae."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,11 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Exhale and Fold: As you exhale, hinge forward from your hips and fold your torso over your right leg. Keep your spine long and extend your chest forward, leading with your heart.
+
+Hands and Arms: Place your hands on either side of your right foot, either on the floor or on blocks for support. Keep your fingertips in line with your toes and avoid collapsing your chest.
+
+Shoulders Away from Ears: Relax your shoulders away from your ears and broaden across your collarbones. Draw your shoulder blades down your back to open the chest."/>
 
     </RelativeLayout>
 

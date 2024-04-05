@@ -33,7 +33,9 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Starting Position: Begin by lying flat on your back (supine position) on your yoga mat. Keep your legs extended and your arms resting alongside your body, palms facing down.
+
+Placement of Hands: Slide your hands palm-down under your hips, with your elbows tucked close to your sides. Press your forearms and elbows into the ground to lift your chest and upper body."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,9 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lifting the Chest: Inhale deeply and press down through your elbows and forearms to lift your chest towards the ceiling. Arch your back and allow your head to gently drop back, extending your neck.
+
+Engage the Legs: Keep your legs active and engaged, pressing your thighs and knees firmly into the mat. Point your toes and flex your feet to create stability in the lower body."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Opening the Throat: Focus on lengthening the front of your neck and opening the throat area. Imagine lifting your throat towards the sky while maintaining a slight chin tuck to avoid straining the neck.
+
+Breathing: Maintain smooth and steady breathing throughout the pose. Take deep inhales to expand the chest and exhale fully to deepen the stretch in the upper body."/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +67,9 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Shoulder Placement: Roll your shoulder blades down and back to open the chest even more. Avoid shrugging your shoulders towards your ears; instead, broaden across the collarbones.
+
+Head Position: Allow your head to rest gently on the mat, with the crown of your head lightly touching the ground. Avoid putting excessive pressure on the neck by keeping the weight evenly distributed.\n\n"/>
 
     </RelativeLayout>
 
