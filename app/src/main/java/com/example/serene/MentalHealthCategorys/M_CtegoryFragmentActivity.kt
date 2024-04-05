@@ -4,16 +4,18 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.Adapters.Breathingadpter
 import com.example.serene.R
+import com.example.serene.SliderData
 import kotlin.collections.ArrayList
 
 class M_CtegoryFragmentActivity : AppCompatActivity() {
 
     lateinit var fragmentrecycler : RecyclerView
     lateinit var  back : ImageButton
-
+    lateinit var tittlename : TextView
 
     var BreathingArray = ArrayList<String>()
     var Meditation = ArrayList<String>()
@@ -29,6 +31,8 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
     var sdraw = ArrayList<Int>()
     var sedraw = ArrayList<Int>()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -43,11 +47,24 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_mctegory_fragment)
 
         fragmentrecycler =findViewById(R.id.fragmentrecycler)
+        tittlename =findViewById(R.id.tittlename)
 
         back =findViewById(R.id.back)
         back.setOnClickListener {
             onBackPressed()
         }
+        var breathing = intent.getIntExtra("breathing",0)
+
+
+        when(breathing){
+            0 -> tittlename.text = "Breathing"
+            1 -> tittlename.text = "Meditation"
+            2 -> tittlename.text = "Anxiety"
+            3 -> tittlename.text = "Affirmation"
+            4 -> tittlename.text = "Selfcare"
+            5 -> tittlename.text = "Stress Reduce"
+        }
+
         bdraw.add(R.drawable.bcat1)
         bdraw.add(R.drawable.vv2)
         bdraw.add(R.drawable.vv1)
@@ -103,7 +120,6 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
 
 
 
-        var breathing = intent.getIntExtra("breathing",0)
 
         //BreathingArray
             BreathingArray.add("deep diaphragm")

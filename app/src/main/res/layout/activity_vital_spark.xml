@@ -33,7 +33,7 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Steps :"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +42,10 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Sit on the floor with your legs extended in front of you and your hands placed several inches behind your hips, fingers pointing toward your feet.\n\n
+Press into your hands and lift your hips toward the ceiling, coming into a reverse tabletop position.\n\n
+Straighten your arms and legs, lifting your hips as high as possible while keeping your chest open and facing forward.\n\n
+Hold the pose for a few breaths, then release by lowering your hips back to the floor."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +54,7 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +64,35 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Strengthens the arms, wrists, shoulders, and legs.
+Stretches the chest, shoulders, and front of the body.\n\n
+Improves posture and counteracts the effects of prolonged sitting.\n\n
+Stimulates the abdominal organs and improves digestion.\n\n
+Energizes the body and mind."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Wrist or shoulder injuries: Individuals with injuries in the wrists or shoulders should avoid or modify this pose.\n
+High blood pressure: People with uncontrolled high blood pressure should be cautious with inversions like Purvottanasana.\n
+Neck issues: Those with neck problems should avoid excessive strain on the neck in this pose.\n
+Carpal tunnel syndrome: People with carpal tunnel syndrome should use caution and modify the pose to avoid exacerbating symptoms.\n
+Pregnancy: Pregnant women should avoid or modify this pose to ensure comfort and safety.\n\n"/>
 
     </RelativeLayout>
 

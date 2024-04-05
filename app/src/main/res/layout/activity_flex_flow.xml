@@ -83,6 +83,59 @@ Modifications: Use forearms for support if wrists hurt, bend knees generously fo
             android:layout_marginHorizontal="20dp"
             android:text="Transitions: Exhale, lower knees to floor, rest in Child's Pose or another comfortable position." />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Benefits :"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t6"
+            android:id="@+id/t7"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Stretches and Strengthens: Engages and stretches the spine, hamstrings, calves, shoulders, and hands while strengthening the arms, shoulders, and legs.
+Improves Posture: Lengthens the spine and strengthens the muscles supporting it, aiding in better posture.
+Increases Circulation: Enhances blood flow throughout the body, including to the brain, due to the inversion.
+Relieves Tension: Alleviates tension and stress, particularly in the back, shoulders, and neck.
+Energizing: Serves as a transitional pose, boosting energy and vitality in the body and mind."
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t8"
+            android:id="@+id/t9"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="High Blood Pressure: Caution advised or avoidance for those with uncontrolled high blood pressure due to potential elevation during inversion.
+Carpal Tunnel Syndrome: Requires caution or modification for individuals with wrist injuries or carpal tunnel syndrome.
+Pregnancy: Pregnant women should be cautious, especially in later stages, and avoid full inversions unless modified.
+Recent Injury: Those with recent injuries to the back, shoulders, arms, or wrists should avoid or modify the pose.
+Eye Conditions: Individuals with certain eye conditions, like detached retina or glaucoma, should avoid inversions due to increased intraocular pressure.\n\n"
+            />
+
+
     </RelativeLayout>
+
 
 </ScrollView>

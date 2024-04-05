@@ -90,6 +90,30 @@ Stretches the lower back, hips, and glutes.
 Massages and stimulates the digestive organs.
 Calms the mind and promotes relaxation.
 Can help alleviate gas and bloating."/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t6"
+            android:id="@+id/t7"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Recent Abdominal Surgery: People who have undergone recent abdominal surgery should avoid Apanasana as it may strain the surgical site.
+Herniated Disc: Those with herniated discs or severe back injuries should avoid pulling the knees too close to the chest, as it may exacerbate the condition.
+Pregnancy: Pregnant women should practice Apanasana with caution, especially in the later stages of pregnancy, to avoid putting pressure on the abdomen.\n\n"/>
     </RelativeLayout>
 
 

@@ -4,16 +4,15 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.serene.Adapters.Breathingadpter
-import com.example.serene.MentalHealthCategorys.Anxietyadp
-import com.example.serene.MentalHealthCategorys.Meditationadp
 import com.example.serene.R
 
 class PhysicalHealthCatRecycler : AppCompatActivity() {
 
     lateinit var recycler :RecyclerView
     lateinit var  back : ImageButton
+    lateinit var  tittlename : TextView
 
     var stretching = ArrayList<String>()
     var strdrw = ArrayList<Int>()
@@ -42,6 +41,7 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         setContentView(R.layout.activity_physical_health_cat_recycler)
 
         back =findViewById(R.id.back)
+        tittlename =findViewById(R.id.tittlename)
         back.setOnClickListener {
             onBackPressed()
         }
@@ -49,17 +49,25 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         recycler =findViewById(R.id.recycler)
         var data = intent.getIntExtra("data",0)
 
+        when(data){
+            0 -> tittlename.text = "Stretching"
+            1 -> tittlename.text = "Healthy Eating"
+            2 -> tittlename.text = "Yoga"
+            3 -> tittlename.text = "Vital Vibe"
+            4 -> tittlename.text = "Stamina Sculpt"
+            5 -> tittlename.text = "Active Aura"
+        }
 
         stretching.add("FlexFlow")
         stretching.add("StretchSync")
         stretching.add("FlexEase")
         stretching.add("StretchRevive")
         stretching.add("FlexibilityFocus")
-        strdrw.add(R.drawable.stretching)
-        strdrw.add(R.drawable.stretching1)
-        strdrw.add(R.drawable.stretching2)
-        strdrw.add(R.drawable.stretching3)
-        strdrw.add(R.drawable.stretching4)
+        strdrw.add(R.drawable.str1)
+        strdrw.add(R.drawable.str2)
+        strdrw.add(R.drawable.str3)
+        strdrw.add(R.drawable.str4)
+        strdrw.add(R.drawable.str5)
 
 
         healthyEating.add("WholesomeWell")

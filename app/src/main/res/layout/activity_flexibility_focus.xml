@@ -112,7 +112,11 @@ Increases flexibility in the spine and shoulders."/>
             android:layout_marginHorizontal="20dp"
             android:text="Avoid if you have recent or chronic lower back pain or injury.
 Use caution if you have a herniated disc or sciatica, and consult a healthcare provider.
-Pregnant individuals should avoid this pose, especially in the later stages of pregnancy."/>
+Pregnant individuals should avoid this pose, especially in the later stages of pregnancy.\n\n"/>
+
+
+
+
     </RelativeLayout>
 
 

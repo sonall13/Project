@@ -75,6 +75,51 @@ Hand Position: Rest your hands on your knees or thighs with your palms facing do
             android:layout_marginHorizontal="20dp"
             android:text="Breathe Deeply: Take slow, deep breaths in and out through your nose. Feel the breath moving in and out of your body, and allow it to help you relax deeper into the pose."
 />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Benifits :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t6"
+            android:id="@+id/t7"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Relaxation: Promotes a sense of calmness and relaxation by reducing stress and anxiety.
+Hip Flexibility: Improves flexibility in the hips and groin area, which can help alleviate tension and discomfort.
+Spine Alignment: Encourages proper alignment of the spine, reducing strain on the back muscles.
+Mindfulness: Enhances mindfulness and focus by allowing practitioners to connect with their breath and inner sensations.
+Preparation for Meditation: Prepares the body and mind for meditation practice by creating a stable and comfortable seated position."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t8"
+            android:id="@+id/t9"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Knee or Hip Injury: Individuals with knee or hip injuries should use caution or avoid Mukha Sukhasana, as it may exacerbate discomfort or strain.
+Pregnancy: Pregnant women should modify this pose to ensure comfort and avoid putting pressure on the abdomen.
+Recent Surgery: People who have recently undergone knee or hip surgery should avoid this pose until fully healed, as it may interfere with the recovery process.\n\n"/>
 
     </RelativeLayout>
 

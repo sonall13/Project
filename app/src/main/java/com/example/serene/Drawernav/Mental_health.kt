@@ -39,7 +39,6 @@ class Mental_health : Fragment() {
         Mentalhealthcat.add("Stress Reduce")
 
         mrecyclerview = view.findViewById(mrecyclerView)
-
         mrecyclerview.layoutManager = LinearLayoutManager(context)
 
 

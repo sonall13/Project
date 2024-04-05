@@ -53,7 +53,8 @@ Rest your forehead or chest on the mat and extend your arms alongside your body,
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Hold the pose for 30 seconds to 1 minute, focusing on deep, steady breaths."/>     <TextView
+            android:text="Hold the pose for 30 seconds to 1 minute, focusing on deep, steady breaths."/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/t3"
@@ -62,6 +63,54 @@ Rest your forehead or chest on the mat and extend your arms alongside your body,
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
             android:text="To release, gently lift your torso back up, returning to a kneeling position."/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Benifits :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Heart Opening: Anahatasana gently stretches the chest and shoulders, creating an opening in the heart region. This can help relieve tension and tightness in the chest and upper back.
+Shoulder Flexibility: The pose encourages flexibility in the shoulders and arms, which can be beneficial for those who experience stiffness in these areas.
+Spinal Extension: Anahatasana elongates the spine, promoting good posture and alignment. It also helps to counteract the effects of prolonged sitting or hunching over electronic devices.
+Stress Relief: Practicing this pose may induce a sense of calmness and relaxation, making it an effective way to release stress and anxiety.
+Preparation for Backbends: Anahatasana serves as a preparatory pose for deeper backbends by warming up and mobilizing the spine and shoulders."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t6"
+            android:id="@+id/t7"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t7"
+            android:id="@+id/t8"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Shoulder or Neck Injury: Individuals with shoulder or neck injuries should approach this pose with caution or avoid it altogether, as it involves stretching and opening these areas.
+Pregnancy: Pregnant women should modify Anahatasana by using props or reducing the depth of the stretch to ensure comfort and safety for themselves and their baby.
+Low Blood Pressure: People with low blood pressure may experience dizziness or lightheadedness in this pose due to the inversion. It's essential to come out of the pose slowly and mindfully if you feel any discomfort.\n\n"/>
+
 
 
     </RelativeLayout>

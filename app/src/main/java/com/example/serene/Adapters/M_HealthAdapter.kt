@@ -36,7 +36,8 @@ class M_HealthAdapter(
         holder.img.setBackgroundResource(image)
 
         holder.cat_layout.setOnClickListener {
-              mentalHealth.startActivity(Intent(mentalHealth.context,M_CtegoryFragmentActivity::class.java).putExtra("breathing",position))
+          var i= Intent(mentalHealth.context,M_CtegoryFragmentActivity::class.java).putExtra("breathing",position)
+            mentalHealth.startActivity(i)
         }
 
     }

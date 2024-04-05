@@ -33,7 +33,7 @@
             android:textColor="@color/white"
             android:id="@+id/t1"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Steps :"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +42,11 @@
             android:layout_marginTop="20dp"
             android:id="@+id/t2"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Lie on your back with your legs extended and arms by your sides.\n\n
+Inhale and bring your right knee towards your chest, clasping your hands around it.\n\n
+Exhale and lift your head and chest, bringing your nose towards your knee.\n\n
+Hold for a few breaths, then release and repeat on the other side.\n\n
+For the double-leg variation, bring both knees towards the chest simultaneously."/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +55,7 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Benefits:"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,7 +65,34 @@
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="20dp"
-            android:text=""/>
+            android:text="Relieves gas and bloating in the digestive system.\n
+Stretches the lower back and massages the abdominal organs.\n
+Improves digestion and helps alleviate constipation.\n
+Stimulates the colon and promotes bowel movement.\n
+Relaxes the mind and body, reducing stress and tension."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t4"
+            android:id="@+id/t5"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contraindications:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t5"
+            android:id="@+id/t6"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Recent abdominal surgery: Avoid this pose if you have had recent abdominal surgery.\n
+Hernia: Individuals with hernia should avoid or modify this pose to prevent exacerbating the condition.\n
+Pregnancy: Pregnant women should practice this pose with caution and avoid excessive pressure on the abdomen.\n
+Neck or back injury: Use caution if you have a neck or back injury and modify the pose as needed to avoid discomfort.\n\n"/>
 
     </RelativeLayout>
 

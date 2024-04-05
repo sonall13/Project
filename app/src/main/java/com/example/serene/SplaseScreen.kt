@@ -31,12 +31,23 @@ class SplaseScreen : AppCompatActivity() {
         sp = getSharedPreferences("name", MODE_PRIVATE)
         edit = sp.edit()
 
+//        Notifications.createNotificationChannel(this)
+//        Notifications.setNotificationAlarm(this,18,46,0,0)
+//        Notifications.setDailyNotificationAlarm(this,18,46,0,1)
 
+        // Check if Android M or higher
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            // Show alert dialog to the user saying a separate permission is needed
+            // Launch the settings activity if the user prefers
+            val myIntent: Intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
+            startActivity(myIntent)
+        }*/
 
         Handler(Looper.getMainLooper()).postDelayed({
             if(sp.getBoolean("status",false))
             {
-//
+//                startActivity(Intent(this,Home_page::class.java))
+//                finish()
                 startActivity(Intent(this,Home_page::class.java))
                 finish()
             }
