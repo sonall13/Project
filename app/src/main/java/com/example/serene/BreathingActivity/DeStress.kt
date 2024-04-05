@@ -34,7 +34,7 @@ class DeStress : AppCompatActivity() {
 //            WindowManager.LayoutParams.FLAG_FULLSCREEN
 //        )
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.statusBarColor = getColor(R.color.statusbarcolor)
+            window.statusBarColor = getColor(R.color.black)
         }
         setContentView(R.layout.activity_de_stress)
 

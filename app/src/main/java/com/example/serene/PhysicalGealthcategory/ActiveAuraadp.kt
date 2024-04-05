@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.serene.ActiveAuraActivity.AuraActivator
-import com.example.serene.ActiveAuraActivity.AuraAscend
-import com.example.serene.ActiveAuraActivity.DynamicGlow
-import com.example.serene.ActiveAuraActivity.EnergeticEden
-import com.example.serene.ActiveAuraActivity.SparkSphere
+import com.example.serene.Vitalvibe1.AuraActivator
+import com.example.serene.Vitalvibe1.AuraAscend
+import com.example.serene.Vitalvibe1.DynamicGlow
+import com.example.serene.Vitalvibe1.EnergeticEden
+import com.example.serene.Vitalvibe1.SparkSphere
 import com.example.serene.R
 
 class ActiveAuraadp(var context: PhysicalHealthCatRecycler,var activeAura: ArrayList<String>,var drawablearray: ArrayList<Int>) : RecyclerView.Adapter<ActiveAuraadp.ViewHolder>() {

@@ -144,6 +144,7 @@ class Home_page : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                     .replace(R.id.fragment_container, Mental_health()).commit()
                 toolbar.title = "Mental Health"
 
+
             }
 
             R.id.physical_health -> {

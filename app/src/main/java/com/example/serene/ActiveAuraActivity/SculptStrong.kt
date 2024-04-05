@@ -3,13 +3,9 @@ package com.example.serene.ActiveAuraActivity
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import com.example.serene.R
-import com.bumptech.glide.Glide;
-class AuraActivator : AppCompatActivity() {
 
-    lateinit var imagge : ImageView
-
+class SculptStrong : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -21,10 +17,6 @@ class AuraActivator : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_aura_activator)
-        imagge = findViewById(R.id.imagge)
-
-        Glide.with(this).asGif().load(R.raw.test123).into(imagge);
-
+        setContentView(R.layout.activity_sculpt_strong)
     }
 }

@@ -1,11 +1,11 @@
-package com.example.serene.VitalVibeActivity
+package com.example.serene.Vitalvibe1
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.serene.R
 
-class VitalFlow : AppCompatActivity() {
+class SparkSphere : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -17,6 +17,6 @@ class VitalFlow : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_vital_flow)
+        setContentView(R.layout.activity_spark_sphere)
     }
 }

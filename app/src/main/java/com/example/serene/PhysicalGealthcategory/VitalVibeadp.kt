@@ -8,12 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.R
-import com.example.serene.VitalVibeActivity.Energize
-import com.example.serene.VitalVibeActivity.RadiantRhythms
-import com.example.serene.VitalVibeActivity.VibrantVista
-import com.example.serene.VitalVibeActivity.VitalFlow
-import com.example.serene.VitalVibeActivity.VitalSpark
-import com.example.serene.VitalVibeActivity.VitalityVortex
+import com.example.serene.StaminaSculptActivity.Energize
+import com.example.serene.StaminaSculptActivity.RadiantRhythms
+import com.example.serene.StaminaSculptActivity.VibrantVista
+import com.example.serene.StaminaSculptActivity.VitalFlow
+import com.example.serene.StaminaSculptActivity.VitalSpark
+import com.example.serene.StaminaSculptActivity.VitalityVortex
 
 class VitalVibeadp(var context: PhysicalHealthCatRecycler,var vitalVibe: ArrayList<String>,var drawablearray: ArrayList<Int>) : RecyclerView.Adapter<VitalVibeadp.ViewHolder>() {
     class ViewHolder(vitalVibe: View):RecyclerView.ViewHolder(vitalVibe) {

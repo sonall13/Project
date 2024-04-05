@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.serene.R
 
-class CoreCharge : AppCompatActivity() {
-
-
+class VibrantVista : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -19,6 +17,6 @@ class CoreCharge : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_core_charge)
+        setContentView(R.layout.activity_vibrant_vista)
     }
 }

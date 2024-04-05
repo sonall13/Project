@@ -1,11 +1,11 @@
-package com.example.serene.StaminaSculptActivity
+package com.example.serene.ActiveAuraActivity
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.serene.R
 
-class SculptifyStrenght : AppCompatActivity() {
+class VigorVista : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -17,6 +17,6 @@ class SculptifyStrenght : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_sculptify_strenght)
+        setContentView(R.layout.activity_vigor_vista)
     }
 }

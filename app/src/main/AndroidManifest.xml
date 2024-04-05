@@ -96,52 +96,52 @@
             android:name=".JournalingActivity.MorningJournal"
             android:exported="false" />
         <activity
-            android:name=".StaminaSculptActivity.SculptifyStrenght"
+            android:name=".ActiveAuraActivity.SculptifyStrenght"
             android:exported="false" />
         <activity
-            android:name=".StaminaSculptActivity.VigorVista"
+            android:name=".ActiveAuraActivity.VigorVista"
             android:exported="false" />
         <activity
-            android:name=".StaminaSculptActivity.SculptStrong"
+            android:name=".ActiveAuraActivity.SculptStrong"
             android:exported="false" />
         <activity
-            android:name=".StaminaSculptActivity.SculptSquad"
+            android:name=".ActiveAuraActivity.SculptSquad"
             android:exported="false" />
         <activity
-            android:name=".StaminaSculptActivity.CoreCharge"
+            android:name=".ActiveAuraActivity.CoreCharge"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.RadiantRhythms"
+            android:name=".StaminaSculptActivity.RadiantRhythms"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.VibrantVista"
+            android:name=".StaminaSculptActivity.VibrantVista"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.VitalSpark"
+            android:name=".StaminaSculptActivity.VitalSpark"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.VitalFlow"
+            android:name=".StaminaSculptActivity.VitalFlow"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.Energize"
+            android:name=".StaminaSculptActivity.Energize"
             android:exported="false" />
         <activity
-            android:name=".VitalVibeActivity.VitalityVortex"
+            android:name=".StaminaSculptActivity.VitalityVortex"
             android:exported="false" />
         <activity
-            android:name=".ActiveAuraActivity.EnergeticEden"
+            android:name=".Vitalvibe1.EnergeticEden"
             android:exported="false" />
         <activity
-            android:name=".ActiveAuraActivity.SparkSphere"
+            android:name=".Vitalvibe1.SparkSphere"
             android:exported="false" />
         <activity
-            android:name=".ActiveAuraActivity.AuraAscend"
+            android:name=".Vitalvibe1.AuraAscend"
             android:exported="false" />
         <activity
-            android:name=".ActiveAuraActivity.AuraActivator"
+            android:name=".Vitalvibe1.AuraActivator"
             android:exported="false" />
         <activity
-            android:name=".ActiveAuraActivity.DynamicGlow"
+            android:name=".Vitalvibe1.DynamicGlow"
             android:exported="false" />
         <activity
             android:name=".YogaActivity.AnlomVilom"

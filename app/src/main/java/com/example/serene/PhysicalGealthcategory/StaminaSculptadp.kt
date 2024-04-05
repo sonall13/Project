@@ -8,11 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.R
-import com.example.serene.StaminaSculptActivity.CoreCharge
-import com.example.serene.StaminaSculptActivity.SculptSquad
-import com.example.serene.StaminaSculptActivity.SculptStrong
-import com.example.serene.StaminaSculptActivity.SculptifyStrenght
-import com.example.serene.StaminaSculptActivity.VigorVista
+import com.example.serene.ActiveAuraActivity.CoreCharge
+import com.example.serene.ActiveAuraActivity.SculptSquad
+import com.example.serene.ActiveAuraActivity.SculptStrong
+import com.example.serene.ActiveAuraActivity.SculptifyStrenght
+import com.example.serene.ActiveAuraActivity.VigorVista
 
 class StaminaSculptadp(var context: PhysicalHealthCatRecycler,var staminaSculpt: ArrayList<String>,var drawablearray: ArrayList<Int>) : RecyclerView.Adapter<StaminaSculptadp.ViewHolder>() {
     class ViewHolder(staminaSculpt: View) : RecyclerView.ViewHolder(staminaSculpt) {

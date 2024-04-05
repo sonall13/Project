@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/date"
             android:backgroundTint="@color/white"
-            android:layout_marginLeft="180dp"
+            android:layout_marginLeft="150dp"
             />
 
     </androidx.appcompat.widget.Toolbar>

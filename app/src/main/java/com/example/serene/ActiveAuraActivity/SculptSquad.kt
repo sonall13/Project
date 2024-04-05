@@ -1,4 +1,4 @@
-package com.example.serene.StaminaSculptActivity
+package com.example.serene.ActiveAuraActivity
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity

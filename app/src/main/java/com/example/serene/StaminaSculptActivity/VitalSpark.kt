@@ -1,11 +1,11 @@
-package com.example.serene.ActiveAuraActivity
+package com.example.serene.StaminaSculptActivity
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.serene.R
 
-class AuraAscend : AppCompatActivity() {
+class VitalSpark : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -17,6 +17,6 @@ class AuraAscend : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = getColor(R.color.statusbarcolor)
         }
-        setContentView(R.layout.activity_aura_ascend)
+        setContentView(R.layout.activity_vital_spark)
     }
 }
