@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,8 +17,8 @@ import com.example.serene.R
 class JournalingDataActivity : AppCompatActivity() {
 
     lateinit var date : TextView
+    lateinit var selectcattext : TextView
     private lateinit var back : ImageButton
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -34,6 +36,7 @@ class JournalingDataActivity : AppCompatActivity() {
         val cat_frame = findViewById<FrameLayout>(R.id.cat_frame)
         date = findViewById(R.id.date)
         back = findViewById(R.id.back)
+        selectcattext = findViewById(R.id.selectcattext)
 
         back.setOnClickListener {
           startActivity(Intent(this,VerticalCalendar::class.java))
@@ -53,16 +56,25 @@ class JournalingDataActivity : AppCompatActivity() {
         val categories = listOf("Morning", "Night", "Gratitude","Freestyle", "Memories") // Sample categories
         val adapter = CategoryAdapter(categories) { position ->
             val fragment = when (position) {
-                0 -> MorningFragment()
-                1 -> NightFragment()
-                2 -> GratitudeFragment()
-                3 -> FreestyleFragment()
-                4 -> MemoriesFragment()
+                0 -> {selectcattext.visibility =View.INVISIBLE
+                    MorningFragment()}
+                1 ->  {selectcattext.visibility =View.INVISIBLE
+                    NightFragment()}
 
-                else -> MorningFragment()
+                2 ->  {selectcattext.visibility =View.INVISIBLE
+                    GratitudeFragment()}
+
+                3 ->  {selectcattext.visibility =View.INVISIBLE
+                    FreestyleFragment()}
+
+                4 ->  {selectcattext.visibility =View.INVISIBLE
+                    MemoriesFragment()}
+
+                else -> {selectcattext.visibility =View.INVISIBLE
+                    MorningFragment()}
             }
 
-            fragment?.let {
+            fragment.let {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.cat_frame, it as Fragment)
                     .commit()

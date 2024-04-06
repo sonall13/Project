@@ -40,6 +40,7 @@ class FreestyleFragment : Fragment() {
                 Log.d("==-----", "onResponse: ${response.body()}")
                 if (response.body()?.status == "success") {
 
+//                    JournalingDataActivity.progressbar.visibility=View.INVISIBLE
                     Log.d("==+---", "onResponse: ${response.body()?.data?.freestyle?.createdAt.toString()}")
 
 

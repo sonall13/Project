@@ -41,7 +41,7 @@
         android:background="#5690C3"
         android:textColorHint="@color/white"
         android:id="@+id/freestyletext"
-        android:hint="write here......"
+        android:hint="please wait......"
         android:layout_below="@+id/tt1"
         android:textColor="@color/white" />
 
