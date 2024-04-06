@@ -65,7 +65,8 @@ class M_CtegoryFragmentActivity : AppCompatActivity() {
             5 -> tittlename.text = "Stress Reduce"
         }
 
-        bdraw.add(R.drawable.bcat1)
+
+        bdraw.add(R.drawable.deepdiaphragm)
         bdraw.add(R.drawable.vv2)
         bdraw.add(R.drawable.vv1)
         bdraw.add(R.drawable.bb2)

@@ -24,7 +24,6 @@ class SliderView : AppCompatActivity() {
     lateinit var skipBtn: Button
     lateinit var indicatorSlideOneTV: TextView
     lateinit var indicatorSlideTwoTV: TextView
-    lateinit var indicatorSlideThreeTV: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Make the activity fullscreen
@@ -43,7 +42,6 @@ class SliderView : AppCompatActivity() {
         skipBtn = findViewById(R.id.idBtnSkip)
         indicatorSlideOneTV = findViewById(R.id.idTVSlideOne)
         indicatorSlideTwoTV = findViewById(R.id.idTVSlideTwo)
-        indicatorSlideThreeTV = findViewById(R.id.idTVSlideThree)
 
         // on below line we are adding click listener for our skip button
         skipBtn.setOnClickListener {
@@ -61,7 +59,7 @@ class SliderView : AppCompatActivity() {
             SliderData(
                 "Improve Health",
                 "Learn to live more" + "Mindfully",
-                R.drawable.sliderr1,
+                R.drawable.newslider1,
                 abc,
                 "",
                 ""
@@ -77,16 +75,7 @@ class SliderView : AppCompatActivity() {
                 ""
             )
         )
-        sliderList.add(
-            SliderData(
-                "Self care",
-                "Enhance your Mental" + "physical energy levels",
-                R.drawable.sss,
-                abc,
-                "",
-                ""
-            )
-        )
+
 
         // on below line we are adding slider list
         // to our adapter class.
@@ -118,16 +107,10 @@ class SliderView : AppCompatActivity() {
             // on below line we are checking position and updating text view text color.
             if (position == 0) {
                 indicatorSlideTwoTV.setTextColor(resources.getColor(R.color.grey))
-                indicatorSlideThreeTV.setTextColor(resources.getColor(R.color.grey))
                 indicatorSlideOneTV.setTextColor(resources.getColor(R.color.white))
 
             } else if (position == 1) {
                 indicatorSlideTwoTV.setTextColor(resources.getColor(R.color.white))
-                indicatorSlideThreeTV.setTextColor(resources.getColor(R.color.grey))
-                indicatorSlideOneTV.setTextColor(resources.getColor(R.color.grey))
-            } else {
-                indicatorSlideTwoTV.setTextColor(resources.getColor(R.color.grey))
-                indicatorSlideThreeTV.setTextColor(resources.getColor(R.color.white))
                 indicatorSlideOneTV.setTextColor(resources.getColor(R.color.grey))
             }
 

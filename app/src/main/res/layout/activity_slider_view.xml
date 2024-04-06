@@ -9,7 +9,7 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/idViewPager"
-        android:background="#1A2643"
+        android:background="#1D4875"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
@@ -72,17 +72,6 @@
 
         <!--on below line we are creating a text view
             for displaying our dots-->
-        <TextView
-            android:id="@+id/idTVSlideThree"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="3dp"
-            android:layout_weight="1"
-            android:text="•"
-            android:textAlignment="center"
-            android:textSize="40sp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 

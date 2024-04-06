@@ -18,6 +18,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.serene.Home_page
 import com.example.serene.Login.ForgetPasswordActivity
 import com.example.serene.Login.Login_pae
 import com.example.serene.R
@@ -63,6 +64,8 @@ ProfileFregment : Fragment() {
             SplaseScreen.edit.putBoolean("status", false)
             SplaseScreen.edit.apply()
             startActivity(Intent(context,Login_pae::class.java))
+            activity?.finish()
+
         }
         changepass.setOnClickListener {
             var inte=Intent(context,ForgetPasswordActivity::class.java)

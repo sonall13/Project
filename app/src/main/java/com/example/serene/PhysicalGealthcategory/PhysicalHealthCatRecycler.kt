@@ -87,15 +87,15 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         yoga.add("OmOasis")
         yoga.add("SuryaNamskar")
         yoga.add("katichakrasana")
-        yogadraw.add(R.drawable.yogaasan)
-        yogadraw.add(R.drawable.y2)
-        yogadraw.add(R.drawable.namste)
-        yogadraw.add(R.drawable.sasan)
-        yogadraw.add(R.drawable.y5)
-        yogadraw.add(R.drawable.y6)
-        yogadraw.add(R.drawable.y3)
-        yogadraw.add(R.drawable.surya)
-        yogadraw.add(R.drawable.anulom)
+        yogadraw.add(R.drawable.yogazen)
+        yogadraw.add(R.drawable.yogavibe)
+        yogadraw.add(R.drawable.namstenest)
+        yogadraw.add(R.drawable.sereneasanas)
+        yogadraw.add(R.drawable.yogicjourny)
+        yogadraw.add(R.drawable.yogaesswnce)
+        yogadraw.add(R.drawable.omoasis)
+        yogadraw.add(R.drawable.janu_sirsasana)
+        yogadraw.add(R.drawable.katichakrasana)
 
 
 
@@ -108,19 +108,17 @@ class PhysicalHealthCatRecycler : AppCompatActivity() {
         drawablearray.add(R.drawable.ss7)
 
 
-
-
         ActiveAura.add("DynamicGlow")
         ActiveAura.add("AuraActivator")
         ActiveAura.add("AuraAscend")
         ActiveAura.add("SparkSphere")
         ActiveAura.add("EnergeticEden")
 
-        Auradraw.add(R.drawable.activeaura)
-        Auradraw.add(R.drawable.activaura2)
-        Auradraw.add(R.drawable.activaura3)
-        Auradraw.add(R.drawable.activaura4)
-        Auradraw.add(R.drawable.activeaura6)
+        Auradraw.add(R.drawable.dy)
+        Auradraw.add(R.drawable.auractivator)
+        Auradraw.add(R.drawable.auraascend)
+        Auradraw.add(R.drawable.sparksphere)
+        Auradraw.add(R.drawable.energeticeden)
 
 
         VitalVibe.add("RadiantRhythms")

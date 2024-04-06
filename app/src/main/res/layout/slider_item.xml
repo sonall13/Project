@@ -22,7 +22,9 @@
     <ImageView
         android:id="@+id/idIVSlider"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
        />
 
     <!--text view for displaying our
@@ -34,8 +36,8 @@
         android:layout_below="@id/idIVSlider"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/idIVSlider"
         android:padding="10dp"
         android:text=""
         android:textAlignment="center"

@@ -10,5 +10,9 @@
         <!-- You can also add more attributes here if needed -->
     </style>
 
+    <style name="TimePickerTextColor">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>
 
